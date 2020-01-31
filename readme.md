@@ -22,10 +22,10 @@
 
 Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than [120 countries](https://snapcraft.io/ao).
 
-The original repo is [here](https://github.com/klaussinani/ao), but seems to have been abandoned by the creator. My fork incorporates some of my own changes and pulls from other repos to fix themes and so on.
+The original repo is [here](https://github.com/klaussinani/ao), but seems to have been abandoned by the creator. My fork incorporates some of my own changes and pulls from other repos to fix themes and so on. I do not care for credits or otherwise and to abide by the original MIT license, I've left anything alone that needs not be changed.
 
-Please check the original page for info about the application. I will not be making any real readme changes.
+Please check the original page readme for info about the application. I will not be making any real readme changes except to keep track of updates.
 
-## Changes made
+## Changes made from original repo
 
 31/01/20 - Broken UI and themes fixed thanks to [kahless364](https://github.com/kahless364)
