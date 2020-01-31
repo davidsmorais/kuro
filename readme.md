@@ -28,4 +28,10 @@ Please check the original page readme for info about the application. I will not
 
 ## Changes made from original repo
 
-31/01/20 - Broken UI and themes fixed thanks to [kahless364](https://github.com/kahless364)
+31/01/20:
+
+Broken UI and themes fixed thanks to [kahless364](https://github.com/kahless364)
+
+MacOS quit option fixed thanks to [LXZE](https://github.com/LXZE)
+
+i18n support added thanks to [MisLink](https://github.com/MisLink)
