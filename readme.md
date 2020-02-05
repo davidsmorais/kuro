@@ -35,3 +35,7 @@ Broken UI and themes fixed thanks to [kahless364](https://github.com/kahless364)
 MacOS quit option fixed thanks to [LXZE](https://github.com/LXZE)
 
 i18n support added thanks to [MisLink](https://github.com/MisLink)
+
+## Known issues in my repo
+
+Some emojis displaying white background on dark/black theme
