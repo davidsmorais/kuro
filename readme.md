@@ -37,6 +37,7 @@ _________________________________________________________
 * index.html CSS updated thanks to [1703310](https://github.com/1703310)
 * Shortcut key reference fixed thanks to [greymond1](https://github.com/greymond1)
 * dom-ready update thanks to [nfusionz](https://github.com/nfusionz)
+* Deleted incompatible travis.yml config
 
 
 31/01/20:
