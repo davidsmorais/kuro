@@ -31,9 +31,12 @@ _________________________________________________________
 
 08/10/20:
 
-* Merged all pending pull requests from the main branch into my own branch.
-* Bumped up multiple depenency versions and updated electron base
+* Merged all pending pull requests from 01/2020 to 10/2020 via main branch into this fork
+* Bumped up multiple depenency versions and made a massive update to electron base
 * Removed old releases from January
+* index.html CSS updated thanks to [1703310](https://github.com/1703310)
+* Shortcut key reference fixed thanks to [greymond1](https://github.com/greymond1)
+* dom-ready update thanks to [nfusionz](https://github.com/nfusionz)
 
 
 31/01/20:
@@ -42,6 +45,6 @@ _________________________________________________________
 * MacOS quit option fixed thanks to [LXZE](https://github.com/LXZE)
 * i18n support added thanks to [MisLink](https://github.com/MisLink)
 
-## Known issues/differences in my repo
+## Known issues
 
-* Colourful image headers are no longer compatible
+* Nothing so far
