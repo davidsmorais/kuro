@@ -2,7 +2,6 @@
 , makeWrapper, makeDesktopItem, mkYarnPackage
 , electron_9, yarn2nix
 }:
-# the Yarn dependency expression must be updated with yarn2nix
 
 let
   executableName = "ao";
@@ -16,7 +15,7 @@ in mkYarnPackage rec {
   src = ./.;  # TODO: replace with fetchFromGitHub
 
   packageJSON = ./package.json;
-  yarnNix = ./yarn.nix;
+  yarnLock = ./yarn.lock;
 
   nativeBuildInputs = [ makeWrapper ];
 
