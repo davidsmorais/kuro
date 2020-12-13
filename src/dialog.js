@@ -70,7 +70,7 @@ class Dialog {
   }
 
   _create(options) {
-    return dialog.showMessageBox(
+    return dialog.showMessageBoxSync(
       Object.assign({
         cancelId: 1,
         defaultId: 0,
