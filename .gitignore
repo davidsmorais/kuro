@@ -15,3 +15,6 @@ node_modules
 
 # compiled
 dist
+
+# Nix compiled
+result
