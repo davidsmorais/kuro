@@ -6,11 +6,11 @@ const settings = require('./settings');
 class Nav {
   constructor() {
     this._defaultZoomFactor = 1.0;
-    this._listItem = '.listItem';
+    this._listItem = '.listItem-container';
     this._lists = '.lists';
     this._lowerZoomLimit = 0.7;
     this._myDayList = '.todayToolbar-item';
-    this._selectedListItem = '.active';
+    this._selectedListClass = 'active';
     this._upperZoomLimit = 1.3;
     this._zoomStep = 0.05;
   }
@@ -28,17 +28,15 @@ class Nav {
   }
 
   _currentIdx() {
-    let currentIdx = 0;
     const lists = this._getLists();
-    const selectedList = this.select(this._selectedListItem);
 
     for (let i = 0; i < lists.length; i++) {
-      if (lists[i] === selectedList) {
-        currentIdx += i;
+      if (lists[i].classList.contains(this._selectedListClass)) {
+        return i;
       }
     }
-
-    return currentIdx;
+    
+    return 0;
   }
 
   _getLists() {
@@ -85,7 +83,7 @@ class Nav {
   selectList(idx) {
     if (idx >= 0 && idx <= this._lastIdx) {
       const lists = this._getLists();
-      const {id, className} = lists[idx];
+      const {id, className} = lists[idx].children[0];
       return id ? this._clickId(id) : this._clickClass(className);
     }
   }
