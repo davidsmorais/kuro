@@ -29,6 +29,11 @@ _________________________________________________________
 
 ## Changes made from original repo
 
+15/12/20:
+
+* NixOS support, thanks to [chekoopa](https://github.com/chekoopa) for adding this
+* Dialogue fixes by [chekoopa](https://github.com/chekoopa)
+
 08/10/20:
 
 * Merged all pending pull requests from 01/2020 to 10/2020 via main branch into this fork
