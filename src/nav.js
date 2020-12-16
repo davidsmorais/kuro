@@ -27,8 +27,8 @@ class Nav {
     document.getElementById(x).click();
   }
 
-  _currentIdx() {
-    const lists = this._getLists();
+  _currentIdx(lists) {
+    if (lists == null) lists = this._getLists();
 
     for (let i = 0; i < lists.length; i++) {
       if (lists[i].classList.contains(this._selectedListClass)) {
@@ -67,22 +67,24 @@ class Nav {
   }
 
   nextList() {
-    const idx = this._currentIdx();
-    this.selectList(idx === this._lastIdx ? 0 : idx + 1);
+    const lists = this._getLists();
+    const idx = this._currentIdx(lists);
+    this.selectList(idx === this._lastIdx ? 0 : idx + 1, lists);
   }
 
   previousList() {
-    const idx = this._currentIdx();
-    return this.selectList(idx === 0 ? this._lastIdx : idx - 1);
+    const lists = this._getLists();
+    const idx = this._currentIdx(lists);
+    return this.selectList(idx === 0 ? this._lastIdx : idx - 1, lists);
   }
 
   select(x) {
     return document.querySelector(x);
   }
 
-  selectList(idx) {
+  selectList(idx, lists) {
     if (idx >= 0 && idx <= this._lastIdx) {
-      const lists = this._getLists();
+      if (lists == null) lists = this._getLists();
       const {id, className} = lists[idx].children[0];
       return id ? this._clickId(id) : this._clickClass(className);
     }
