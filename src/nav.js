@@ -6,11 +6,11 @@ const settings = require('./settings');
 class Nav {
   constructor() {
     this._defaultZoomFactor = 1.0;
-    this._listItem = '.listItem';
+    this._listItem = '.listItem-container';
     this._lists = '.lists';
     this._lowerZoomLimit = 0.7;
     this._myDayList = '.todayToolbar-item';
-    this._selectedListItem = '.active';
+    this._selectedListClass = 'active';
     this._upperZoomLimit = 1.3;
     this._zoomStep = 0.05;
   }
@@ -27,18 +27,16 @@ class Nav {
     document.getElementById(x).click();
   }
 
-  _currentIdx() {
-    let currentIdx = 0;
-    const lists = this._getLists();
-    const selectedList = this.select(this._selectedListItem);
+  _currentIdx(lists) {
+    if (lists == null) lists = this._getLists();
 
     for (let i = 0; i < lists.length; i++) {
-      if (lists[i] === selectedList) {
-        currentIdx += i;
+      if (lists[i].classList.contains(this._selectedListClass)) {
+        return i;
       }
     }
-
-    return currentIdx;
+    
+    return 0;
   }
 
   _getLists() {
@@ -69,23 +67,25 @@ class Nav {
   }
 
   nextList() {
-    const idx = this._currentIdx();
-    this.selectList(idx === this._lastIdx ? 0 : idx + 1);
+    const lists = this._getLists();
+    const idx = this._currentIdx(lists);
+    this.selectList(idx === this._lastIdx ? 0 : idx + 1, lists);
   }
 
   previousList() {
-    const idx = this._currentIdx();
-    return this.selectList(idx === 0 ? this._lastIdx : idx - 1);
+    const lists = this._getLists();
+    const idx = this._currentIdx(lists);
+    return this.selectList(idx === 0 ? this._lastIdx : idx - 1, lists);
   }
 
   select(x) {
     return document.querySelector(x);
   }
 
-  selectList(idx) {
+  selectList(idx, lists) {
     if (idx >= 0 && idx <= this._lastIdx) {
-      const lists = this._getLists();
-      const {id, className} = lists[idx];
+      if (lists == null) lists = this._getLists();
+      const {id, className} = lists[idx].children[0];
       return id ? this._clickId(id) : this._clickClass(className);
     }
   }

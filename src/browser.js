@@ -56,11 +56,11 @@ ipc.on('my-day', () => {
 });
 
 ipc.on('important', () => {
-  nav.click('#smart_list_important');
+  nav.click('.listItem-container > #important');
 });
 
 ipc.on('planned', () => {
-  nav.click('#smart_list_planned');
+  nav.click('.listItem-container > #planned');
 });
 
 ipc.on('tasks', () => {
