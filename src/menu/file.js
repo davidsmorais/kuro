@@ -166,7 +166,7 @@ module.exports = {
       label: 'Edit Shortcut Keys',
       accelerator: 'CmdorCtrl+.',
       click() {
-        shell.openExternal(file.localConfig);
+        shell.openPath(file.localConfig);
       }
     }, {
       label: 'Enable Global Shortcut Keys',
