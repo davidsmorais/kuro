@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub
+{ lib, fetchFromGitHub
 , makeWrapper, makeDesktopItem, mkYarnPackage
 , electron_9, yarn2nix
 }:
@@ -41,6 +41,7 @@ in mkYarnPackage rec {
     
     # executable wrapper
     makeWrapper '${electron}/bin/electron' "$out/bin/${executableName}" \
+      --argv0 "ao" \
       --add-flags "$out/share/ao/electron"
   '';
 
@@ -50,7 +51,7 @@ in mkYarnPackage rec {
     true
   '';
 
-  desktopItem = with stdenv.lib; 
+  desktopItem = with lib; 
     makeDesktopItem {
       name = "ao";
       exec = executableName;
@@ -65,7 +66,7 @@ in mkYarnPackage rec {
       '';
     };
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = ''
       Ao is an unofficial, featureful, open source, 
       community-driven, free Microsoft To-Do app, 
