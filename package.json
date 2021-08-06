@@ -1,20 +1,20 @@
 {
   "name": "ao",
   "productName": "Ao",
-  "version": "6.9.0",
+  "version": "7.0.1,
   "description": "Elegant Microsoft To-Do desktop app",
   "license": "MIT",
-  "repository": "klaussinani/ao",
+  "repository": "pythoninrelay/ao",
   "author": {
-    "name": "Klaus Sinani",
-    "email": "klaussinani@gmail.com",
-    "url": "https://klaussinani.github.io"
+    "name": "pythoninrelay",
+    "email": "null@nil.com",
+    "url": "https://github.com/pythoninrelay"
   },
   "maintainers": [
     {
-      "name": "Mario Sinani",
-      "email": "mariosinani@protonmail.ch",
-      "url": "https://github.com/mariosinani"
+      "name": "pythoninrelay",
+      "email": "null@nil.com",
+      "url": "https://github.com/pythoninrelay"
     }
   ],
   "scripts": {
