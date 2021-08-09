@@ -26,31 +26,3 @@ Please check the original page readme for info about the application.
 I will not be making any real readme changes except to keep track of updates.
 
 _________________________________________________________
-
-## Changes made from original repo
-
-15/12/20:
-
-* NixOS support, thanks to [chekoopa](https://github.com/chekoopa) for adding this
-* Dialogue fixes by [chekoopa](https://github.com/chekoopa)
-
-08/10/20:
-
-* Merged all pending pull requests from 01/2020 to 10/2020 via main branch into this fork
-* Bumped up multiple depenency versions and made a massive update to electron base
-* Removed old releases from January
-* index.html CSS updated thanks to [1703310](https://github.com/1703310)
-* Shortcut key reference fixed thanks to [greymond1](https://github.com/greymond1)
-* dom-ready update thanks to [nfusionz](https://github.com/nfusionz)
-* Deleted incompatible travis.yml config
-
-
-31/01/20:
-
-* Broken UI and themes fixed thanks to [kahless364](https://github.com/kahless364)
-* MacOS quit option fixed thanks to [LXZE](https://github.com/LXZE)
-* i18n support added thanks to [MisLink](https://github.com/MisLink)
-
-## Known issues
-
-* Nothing so far
