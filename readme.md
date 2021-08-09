@@ -27,3 +27,9 @@ Please check the original page readme for info about the application.
 I will not be making any real readme changes except to keep track of updates.
 
 _________________________________________________________
+
+* If you want a feature, request it
+* If you've found a bug, report it
+* If you want something done fast, do it yourself and submit the PR
+* Automatic builds are coming someday
+* Updated only when I have time and am not busy with my own life/work
