@@ -19,6 +19,7 @@ Ao is an unofficial, featureful, open source, community-driven, free Microsoft T
 The original repo is [here](https://github.com/klaussinani/ao), but seems to have been abandoned by the creator. My fork incorporates some of my own changes and pulls from other repos to fix themes and so on. I do not care for credits or otherwise and to abide by the original MIT license, I've left anything alone that needs not be changed.
 
 Releases can be found on my [releases page](https://github.com/pythonInRelay/ao/releases).
+**Do not request new package types**. You can submit the PR yourself to have them built.
 
 _________________________________________________________
 
