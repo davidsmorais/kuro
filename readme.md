@@ -12,6 +12,8 @@
   </a>
 </div>
 
+# >> No longer maintained <<
+
 ## Description
 
 Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries.
