@@ -1,3 +1,6 @@
+html.sepia-mode #root {
+  background: var(--dark-sepia);
+}
 html.sepia-mode ::-webkit-scrollbar-track {
   background-color: var(--sepia) !important;
 }

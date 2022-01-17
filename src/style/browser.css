@@ -30,6 +30,22 @@ body {
   border-radius: 0px !important;
   background: #767678 !important;
 }
+#root #container #O365_NavHeader {
+  background: transparent;
+}
+
+#root #container #O365_NavHeader div {
+  background: transparent;
+}
+#root #container .o365header.is-consumer {
+  background: #00000033 !important;
+}
+#Region_3 {
+  display: none;
+}
+#O365_HeaderRightRegion {
+  display: none;
+}
 .keyboardNavigation .listItem:focus {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
 }

@@ -1,3 +1,6 @@
+html.dark-mode #root {
+  background: var(--black);
+}
 html.dark-mode span, html.dark-mode .todayToolbar-count, html.dark-mode .o365sx-button, html.dark-mode .label-91, 
 html.dark-mode .sidePanel-header, html.dark-mode .ms-DatePicker-monthAndYear, html.dark-mode .ms-DatePicker-weekday, 
 html.dark-mode .ms-ContextualMenu-title, html.dark-mode .baseAdd-input, html.dark-mode .addGroupInputWrapper input.groupAdd, 
