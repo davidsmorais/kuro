@@ -16,7 +16,8 @@ html {
 body {
   -webkit-app-region: drag;
 }
-#O365_MainLink_NavMenu, #O365_AppName {
+#O365_MainLink_NavMenu,
+#O365_AppName {
   visibility: hidden !important;
 }
 ::-webkit-scrollbar {
@@ -39,16 +40,20 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   padding-left: 0px !important;
 }
 @media all and (max-width: 620px) {
-  .leftColumn, #owaToDoButton, #todoWhatsNewBtn {
+  .leftColumn,
+  #owaToDoButton,
+  #todoWhatsNewBtn {
     display: none !important;
   }
   #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
 }
-.listItem, .listItem .listItem-icon {
+.listItem,
+.listItem .listItem-icon,
+.emoji {
   background-color: transparent !important;
 }
-.sidebar-footer { 
-  display: none; 
+.sidebar-footer {
+  display: none;
 }
