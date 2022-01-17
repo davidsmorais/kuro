@@ -46,6 +46,13 @@ body {
 #O365_HeaderRightRegion {
   display: none;
 }
+#main .addTask * {
+  background: transparent;
+}
+#main .add-task input,
+#baseAddInput-addTask {
+  background: transparent !important;
+}
 .keyboardNavigation .listItem:focus {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
 }
