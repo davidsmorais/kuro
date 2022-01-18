@@ -110,3 +110,6 @@ html.sepia-mode .o365header .searchToolbar:hover {
   background-color: var(--sepia) !important;
   box-shadow: 0 0 0 1px var(--dark-sepia) !important;
 }
+html.sepia-mode .details .detailCategories-section .categories-menu {
+  background-color: var(--sepia) !important;
+}

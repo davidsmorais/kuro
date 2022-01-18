@@ -80,3 +80,11 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .sidebar-footer {
   display: none;
 }
+
+
+html.dark-mode, html.black-mode, html.sepia-mode #root #container #app .details .detailCategories-section {
+  background: transparent;
+}
+html.dark-mode, html.black-mode, html.sepia-mode #root #container #app .details .detailCategories-section * {
+  background: transparent;
+}

@@ -121,3 +121,11 @@ html.black-mode .o365header .searchToolbar:hover {
   background-color: var(--black) !important;
   box-shadow: 0 0 0 1px var(--light-black) !important;
 }
+html.black-mode .details .detailCategories-section .categories-menu {
+  background-color: var(--black) !important;
+}
+
+html.black-mode .details .option-label {
+  color: var(--white) !important;
+}
+
