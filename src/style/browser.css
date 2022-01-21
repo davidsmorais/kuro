@@ -5,7 +5,8 @@
   --dark-sepia: rgba(232, 222, 201, 1);
   --dark-grey: rgba(33, 33, 33, 1);
   --dark-grey-transparent: rgba(33, 33, 33, 0.8);
-  --grey: rgba(45, 45, 45, 1);
+  --grey: #2d2d2d;
+  --light-grey: #dddddd;
   --black: rgba(0, 0, 0, 1);
   --black-transparent: rgba(0, 0, 0, 0.8);
   --light-black: rgba(20, 20, 20, 1);
@@ -100,4 +101,10 @@ html.dark-mode,
 html.black-mode,
 html.sepia-mode #root #container #app .details .detailCategories-section * {
   background: transparent;
+}
+
+html.dark-mode,
+html.black-mode,
+html.sepia-mode .backgroundLines {
+  display: none;
 }
