@@ -217,3 +217,9 @@ html.dark-mode .detailCategories-section {
 html.dark-mode .detailCategories-section div {
   background: transparent;
 }
+html.dark-mode .detailHeader-title:hover {
+  background: var(--grey);
+}
+html.dark-mode .detailHeader-title:focus {
+  background: var(--grey);
+}

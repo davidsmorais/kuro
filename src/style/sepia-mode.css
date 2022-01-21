@@ -190,3 +190,9 @@ html.sepia-mode .detailCategories-section {
 html.sepia-mode .detailCategories-section div {
   background: transparent;
 }
+html.sepia-mode .detailHeader-title:hover {
+  background: var(--dark-sepia);
+}
+html.sepia-mode .detailHeader-title:focus {
+  background: var(--dark-sepia);
+}
