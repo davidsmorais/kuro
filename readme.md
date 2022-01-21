@@ -6,11 +6,6 @@
   Elegant Microsoft To-Do desktop app
 </h4>
 
-<div align="center">
-  <a href="https://github.com/klaussinani/ao">
-    <img src="docs/media/list-navigation.gif" alt="Ao" width="93%">
-  </a>
-</div>
 
 ## Description
 

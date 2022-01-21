@@ -1,12 +1,14 @@
-'use strict';
-const {app, remote} = require('electron');
-const AutoLaunch = require('auto-launch');
-const {is} = require('./util');
-const settings = require('./settings');
+"use strict";
+const { app, remote } = require("electron");
+const AutoLaunch = require("auto-launch");
+const { is } = require("./util");
+const settings = require("./settings");
 
 const _settings = {
-  name: 'Ao',
-  path: is.darwin ? (app || remote.app).getPath('exe').replace(/\.app\/Content.*/, '.app') : undefined,
+  name: "Kuro",
+  path: is.darwin
+    ? (app || remote.app).getPath("exe").replace(/\.app\/Content.*/, ".app")
+    : undefined,
   isHidden: true
 };
 
@@ -30,7 +32,7 @@ class Startup {
   }
 
   autoLaunch() {
-    if (settings.get('autoLaunch')) {
+    if (settings.get("autoLaunch")) {
       this._activate();
     } else {
       this._deactivate();

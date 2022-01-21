@@ -2,16 +2,15 @@
 
 module.exports = {
   app: "https://to-do.live.com/tasks/",
-  community: "https://gitter.im/klaussinani/ao",
-  homepage: "https://klaussinani.github.io/ao",
-  issue: "https://github.com/klaussinani/ao/issues/new",
+  community: "https://gitter.im/davidsmorais/kuro",
+  homepage: "https://https://github.com/davidsmorais/kuro",
+  issue: "https://github.com/davidsmorais/kuro/issues/new",
   keyboardShortcutsRef: "https://github.com/klaussinani/ao#keyboard-shortcuts",
-  license: "https://github.com/klaussinani/ao/blob/master/license.md",
-  release: "https://github.com/klaussinani/ao/releases/latest",
-  search: "https://github.com/search?q=+is:issue+repo:klaussinani/ao",
-  searchFeatureRequests:
-    "https://github.com/klaussinani/ao/labels/feature-request",
-  source: "https://github.com/klaussinani/ao",
+  license: "https://github.com/davidsmorais/kuro/blob/master/license.md",
+  release: "https://github.com/davidsmorais/kuro/releases/latest",
+  search: "https://github.com/search?q=+is:issue+repo:davidsmorais/kuro",
+  searchFeatureRequests: "https://github.com/davidsmorais/kuro/feature-request",
+  source: "https://github.com/davidsmorais/kuro",
   update:
-    "https://raw.githubusercontent.com/klaussinani/ao/master/docs/update.json"
+    "https://raw.githubusercontent.com/davidsmorais/kuro/master/docs/update.json"
 };
