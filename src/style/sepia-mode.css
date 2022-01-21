@@ -183,3 +183,10 @@ html.sepia-mode .step .step-body,
 .step .step-cell {
   box-shadow: none !important;
 }
+html.sepia-mode .detailCategories-section {
+  background-color: var(--sepia);
+  border: 1px solid var(--dark-sepia) !important;
+}
+html.sepia-mode .detailCategories-section div {
+  background: transparent;
+}

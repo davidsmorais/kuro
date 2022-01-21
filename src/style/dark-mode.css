@@ -210,3 +210,10 @@ html.dark-mode .step .step-body,
 .step .step-cell {
   box-shadow: none !important;
 }
+html.dark-mode .detailCategories-section {
+  background: var(--dark-grey);
+  border: 1px solid var(--dark-grey) !important;
+}
+html.dark-mode .detailCategories-section div {
+  background: transparent;
+}

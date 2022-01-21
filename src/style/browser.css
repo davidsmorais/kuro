@@ -92,16 +92,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   outline: none;
   box-shadow: 0 0 0 1px #ddddddbb !important;
 }
-html.dark-mode,
-html.black-mode,
-html.sepia-mode #root #container #app .details .detailCategories-section {
-  background: transparent;
-}
-html.dark-mode,
-html.black-mode,
-html.sepia-mode #root #container #app .details .detailCategories-section * {
-  background: transparent;
-}
+
 .backgroundLines {
   display: none;
 }
