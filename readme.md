@@ -9,6 +9,8 @@
 
 ## Description
 
+[![Join the chat at https://gitter.im/davidsmorais/kuro](https://badges.gitter.im/davidsmorais/kuro.svg)](https://gitter.im/davidsmorais/kuro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries.
 
 Ao, the original project is [here](https://github.com/klaussinani/ao), and the last working release is can be found on [pythonInRelay's repo  releases page](https://github.com/pythonInRelay/ao/releases).
