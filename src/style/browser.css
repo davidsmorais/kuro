@@ -85,7 +85,12 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .listItem-container.active .emoji.medium {
   background-color: transparent !important;
 }
-
+.sidebarNavButton button:hover {
+  background: transparent !important;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 1px #ddddddbb !important;
+}
 html.dark-mode,
 html.black-mode,
 html.sepia-mode #root #container #app .details .detailCategories-section {
