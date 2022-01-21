@@ -174,3 +174,12 @@ html.sepia-mode .details .detailCategories-section .categories-menu {
 html.sepia-mode .baseAddParent.addTask {
   border: 1px solid var(--dark-sepia) !important;
 }
+
+html.sepia-mode #app .details textarea {
+  background: transparent;
+}
+
+html.sepia-mode .step .step-body,
+.step .step-cell {
+  box-shadow: none !important;
+}

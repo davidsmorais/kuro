@@ -15,8 +15,9 @@ html.dark-mode .o365sx-neutral-dark-font,
 html.dark-mode .label-47,
 html.dark-mode .searchToolbar input.searchToolbar-input[type="text"],
 html.dark-mode .themePicker-headline,
+html.dark-mode .themePicker-headline,
 html.dark-mode .label-83 {
-  color: var(--white) !important;
+  color: var(--light-grey) !important;
 }
 html.dark-mode ::-webkit-scrollbar-track {
   background-color: var(--dark-grey) !important;
@@ -168,7 +169,7 @@ html.dark-mode .popover-headerLeft,
 html.dark-mode .popover-footerRight,
 html.dark-mode .modal-sharing .modal-header {
   border-bottom: 1px solid var(--dark-grey) !important;
-  color: var(--white) !important;
+  color: var(--light-grey) !important;
 }
 html.dark-mode .sidebar-addList-fixed {
   box-shadow: 0 -1px 0 var(--grey) !important;
@@ -194,8 +195,18 @@ html.dark-mode .details .detailCategories-section .categories-menu {
   background-color: var(--dark-grey) !important;
 }
 html.dark-mode .details .option-label {
-  color: var(--white) !important;
+  color: var(--light-grey) !important;
 }
 html.dark-mode .baseAddParent.addTask {
   border: 1px solid var(--grey) !important;
+}
+
+html.dark-mode #app .details textarea {
+  background: transparent;
+  color: var(--light-grey);
+}
+
+html.dark-mode .step .step-body,
+.step .step-cell {
+  box-shadow: none !important;
 }

@@ -37,7 +37,8 @@ Please check the original page readme for info about the application.
 _________________________________________________________
 
 ## To-Do List
-- [ ] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page.
-- [ ] Full rebranding of Ao into Kuro.
+- [ ] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page
+- [ ] Full rebranding of Ao into Kuro
+- [ ] Implementing CI/CD for Linux packages
 - [ ] Revision of documentation
-- [ ] New feature discovery.
+- [ ] New feature discovery

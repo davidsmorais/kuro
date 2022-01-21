@@ -200,3 +200,13 @@ html.black-mode .details .option-label {
 html.black-mode .baseAddParent.addTask {
   border: 1px solid var(--light-black) !important;
 }
+
+html.black-mode #app .details textarea {
+  background: transparent;
+  color: var(--light-grey);
+}
+
+html.black-mode .step .step-body,
+.step .step-cell {
+  box-shadow: none !important;
+}
