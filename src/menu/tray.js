@@ -1,100 +1,116 @@
-'use strict';
-const {shell} = require('electron');
-const dialog = require('./../dialog');
-const settings = require('./../settings');
-const url = require('./../url');
-const win = require('./../win');
+"use strict";
+const { shell } = require("electron");
+const dialog = require("./../dialog");
+const settings = require("./../settings");
+const url = require("./../url");
+const win = require("./../win");
 
 module.exports = [
   {
-    label: 'Open Ao',
+    label: "Open Kuro",
     click() {
       win.toggle();
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Search',
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "Search",
     click() {
       win.appear();
-      win.activate('search');
+      win.activate("search");
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Create',
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "Create",
     submenu: [
       {
-        label: 'New List',
+        label: "New List",
         click() {
           win.appear();
-          win.activate('new-list');
+          win.activate("new-list");
         }
-      }, {
-        label: 'New Todo',
+      },
+      {
+        label: "New Todo",
         click() {
           win.appear();
-          win.activate('new-todo');
+          win.activate("new-todo");
         }
       }
     ]
-  }, {
-    label: 'My Day',
+  },
+  {
+    label: "My Day",
     click() {
       win.appear();
-      win.activate('my-day');
+      win.activate("my-day");
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Toggle Theme',
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "Toggle Theme",
     submenu: [
       {
-        label: 'Sepia Theme',
+        label: "Sepia Theme",
         click() {
           win.appear();
-          win.activate('toggle-sepia-mode');
+          win.activate("toggle-sepia-mode");
         }
-      }, {
-        label: 'Black Theme',
+      },
+      {
+        label: "Black Theme",
         click() {
           win.appear();
-          win.activate('toggle-black-mode');
+          win.activate("toggle-black-mode");
         }
-      }, {
-        label: 'Dark Theme',
+      },
+      {
+        label: "Dark Theme",
         click() {
           win.appear();
-          win.activate('toggle-dark-mode');
+          win.activate("toggle-dark-mode");
         }
       }
     ]
-  }, {
-    label: 'Auto Night Mode',
-    type: 'checkbox',
-    checked: settings.get('autoNightMode'),
+  },
+  {
+    label: "Auto Night Mode",
+    type: "checkbox",
+    checked: settings.get("autoNightMode"),
     click(item) {
       win.appear();
-      settings.set('autoNightMode', item.checked);
-      win.activate('auto-night-mode');
+      settings.set("autoNightMode", item.checked);
+      win.activate("auto-night-mode");
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'To-Do Settings',
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "To-Do Settings",
     click() {
       win.appear();
-      win.activate('settings');
+      win.activate("settings");
     }
-  }, {
-    label: 'Report Issue',
+  },
+  {
+    label: "Report Issue",
     click() {
       shell.openExternal(url.issue);
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Exit',
+  },
+  {
+    type: "separator"
+  },
+  {
+    label: "Exit",
     click() {
       dialog.confirmExit();
     }

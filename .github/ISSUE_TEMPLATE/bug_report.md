@@ -18,7 +18,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Technical Info (please complete the following information)**
  - OS:
- - Ao Version:
+ - Kuro Version:
 
 **Additional context**
 Add any other context about the problem here.
