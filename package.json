@@ -19,8 +19,9 @@
   ],
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
+    "icons": "electron-icon-maker --input=./static/Icon.png --output=./dist/icons",
     "test": "xo && stylelint 'src/style/*.css'",
-    "release": "rm -rf dist && build --publish always",
+    "release": "rm -rf dist && yarn icons && build --publish always",
     "start": "electron ."
   },
   "dependencies": {
@@ -33,6 +34,7 @@
   "devDependencies": {
     "electron": "11.5.0",
     "electron-builder": "20.40.2",
+    "electron-icon-maker": "^0.0.5",
     "stylelint": "^9.9.0",
     "xo": "*"
   },
@@ -72,6 +74,7 @@
     ],
     "linux": {
       "category": "Office",
+      "icon": "./dist/icons/png",
       "description": "Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries. (Ao fork)",
       "synopsis": "Elegant Microsoft To-Do desktop app (Ao fork)",
       "target": [
@@ -111,30 +114,9 @@
         }
       ]
     },
-    "nsis": {
-      "license": "license.md"
-    },
     "snap": {
       "grade": "stable",
       "confinement": "strict"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        }
-      ]
     }
   }
 }
