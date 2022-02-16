@@ -1,14 +1,14 @@
-'use strict';
-const electron = require('electron');
-const {is} = require('./util');
-const file = require('./file');
-const settings = require('./settings');
+"use strict";
+const electron = require("electron");
+const { is } = require("./util");
+const file = require("./file");
+const settings = require("./settings");
 
-const {app, BrowserWindow} = electron;
+const { app, BrowserWindow } = electron;
 
 class Win {
   get _screenDimensions() {
-    const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+    const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
     return [width, height];
   }
 
@@ -17,7 +17,7 @@ class Win {
   }
 
   get _lastState() {
-    const {x, y, width, height} = settings.get('lastWindowState');
+    const { x, y, width, height } = settings.get("lastWindowState");
     const [defaultWidth, defaultHeight] = this._defaultDimensions;
 
     return {
@@ -29,21 +29,24 @@ class Win {
   }
 
   get _minDimensions() {
-    const [minWidth, minHeight] = this._screenDimensions.map(x => Math.round(x * 0.3));
-    return {minWidth, minHeight};
+    const [minWidth, minHeight] = this._screenDimensions.map(x =>
+      Math.round(x * 0.3)
+    );
+    return { minWidth, minHeight };
   }
 
   get defaultOpts() {
     return Object.assign({}, this._minDimensions, this._lastState, {
-      alwaysOnTop: settings.get('alwaysOnTop'),
-      autoHideMenuBar: settings.get('menuBarHidden'),
-      darkTheme: settings.get('mode.dark') || settings.get('mode.black'),
+      alwaysOnTop: settings.get("alwaysOnTop"),
+      autoHideMenuBar: settings.get("menuBarHidden"),
+      darkTheme: settings.get("mode.dark") || settings.get("mode.black"),
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),
-      titleBarStyle: 'hiddenInset',
+      titleBarStyle: "hiddenInset",
       webPreferences: {
         nodeIntegration: false,
+        enableRemoteModule: true,
         plugins: true,
         preload: file.preload
       }
