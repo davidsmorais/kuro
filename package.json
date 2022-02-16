@@ -7,21 +7,21 @@
   "repository": "davidsmorais/kuro",
   "author": {
     "name": "davidsmorais",
-    "email": "null@nil.com",
+    "email": "david@dsmorais.com",
     "url": "https://github.com/davidsmorais"
   },
   "maintainers": [
     {
       "name": "davidsmorais",
-      "email": "null@nil.com",
+      "email": "david@dsmorais.com",
       "url": "https://github.com/davidsmorais"
     }
   ],
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "icons": "electron-icon-maker --input=./static/Icon.png --output=./dist/icons",
+    "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
-    "release": "rm -rf dist && yarn icons && build --publish always",
+    "release": "rm -rf dist build && yarn icons && build --publish always",
     "start": "electron ."
   },
   "dependencies": {
@@ -74,9 +74,13 @@
     ],
     "linux": {
       "category": "Office",
-      "icon": "./dist/icons/png",
+      "icon": "icons/png",
       "description": "Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries. (Ao fork)",
       "synopsis": "Elegant Microsoft To-Do desktop app (Ao fork)",
+      "publish": {
+        "provider": "github",
+        "releaseType": "release"
+      },
       "target": [
         {
           "target": "AppImage",

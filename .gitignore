@@ -15,6 +15,7 @@ node_modules
 
 # compiled
 dist
+build
 
 # Nix compiled
 result
