@@ -196,3 +196,10 @@ html.sepia-mode .detailHeader-title:hover {
 html.sepia-mode .detailHeader-title:focus {
   background: var(--dark-sepia);
 }
+
+html.black-mode #app .detailNote .richTextEditor .ql-editor {
+  color: var(--dark-sepia);
+}
+html.black-mode #app .detailNote .richTextEditor .ql-editor:before {
+  color: var(--dark-sepia);
+}

@@ -223,3 +223,10 @@ html.dark-mode .detailHeader-title:hover {
 html.dark-mode .detailHeader-title:focus {
   background: var(--grey);
 }
+
+html.dark-mode #app .detailNote .richTextEditor .ql-editor {
+  color: var(--light-grey);
+}
+html.dark-mode #app .detailNote .richTextEditor .ql-editor:before {
+  color: var(--light-grey);
+}
