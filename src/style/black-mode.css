@@ -230,3 +230,8 @@ html.black-mode #app .detailNote .richTextEditor .ql-editor {
 html.black-mode #app .detailNote .richTextEditor .ql-editor:before {
   color: var(--white);
 }
+
+html.black-mode .ms-Tooltip * {
+  background: var(--light-black);
+  color: var(--white);
+}
