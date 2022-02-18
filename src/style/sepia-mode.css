@@ -200,3 +200,24 @@ html.sepia-mode .detailHeader-title:focus {
 html.sepia-mode .ms-Tooltip * {
   background: var(--sepia);
 }
+
+html.sepia-mode .ms-ContextualMenu-link:hover {
+  background: var(--dark-sepia);
+}
+html.sepia-mode .ms-ContextualMenu-item {
+  background: var(--light-sepia);
+  color: var(--white);
+}
+
+html.sepia-mode .ms-ContextualMenu-link {
+  background: var(--light-sepia);
+  color: var(--white);
+}
+
+html.sepia-mode .ms-ContextualMenu-list .ms-ContextualMenu-divider {
+  background: var(--dark-sepia);
+}
+
+html.sepia-mode .ms-ContextualMenu-title {
+  border-bottom-color: var(--dark-sepia);
+}

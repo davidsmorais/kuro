@@ -235,3 +235,21 @@ html.dark-mode .ms-Tooltip * {
   background: var(--grey);
   color: var(--light-grey);
 }
+
+html.dark-mode .ms-ContextualMenu-item {
+  background: var(--dark-grey);
+  color: var(--white);
+}
+
+html.dark-mode .ms-ContextualMenu-link {
+  background: var(--dark-grey);
+  color: var(--white);
+}
+html.dark-mode .ms-ContextualMenu-link:hover {
+  background: var(--grey);
+}
+
+html.dark-mode .ms-ContextualMenu-Callout {
+  border: 1px solid var(--grey);
+  background: var(--dark-grey-transparent);
+}
