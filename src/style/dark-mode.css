@@ -255,6 +255,11 @@ html.dark-mode .ms-ContextualMenu-Callout {
   background: var(--dark-grey-transparent);
 }
 
+html.dark-mode
+  .ms-DatePicker-table
+  td.ms-DatePicker-day--highlighted.ms-DatePicker-day--infocus
+  button
+  span,
 html.dark-mode .ms-DatePicker-table td:hover span {
   color: var(--dark-grey) !important;
 }

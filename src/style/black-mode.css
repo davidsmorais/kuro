@@ -254,7 +254,11 @@ html.black-mode .ms-ContextualMenu-Callout {
   border: 1px solid var(--light-black);
   background: var(--dark-grey-transparent);
 }
-
+html.black-mode
+  .ms-DatePicker-table
+  td.ms-DatePicker-day--highlighted.ms-DatePicker-day--infocus
+  button
+  span,
 html.black-mode .ms-DatePicker-table td:hover span {
   color: var(--black) !important;
 }

@@ -222,6 +222,10 @@ html.sepia-mode .ms-ContextualMenu-title {
   border-bottom-color: var(--dark-sepia);
 }
 
+html.sepia-mode
+  .ms-DatePicker-table
+  td.ms-DatePicker-day--highlighted.ms-DatePicker-day--infocus
+  button,
 html.sepia-mode .ms-DatePicker-table td:hover {
   background: var(--dark-sepia) !important;
 }
