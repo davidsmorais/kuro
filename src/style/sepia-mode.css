@@ -244,19 +244,13 @@ html.sepia-mode input {
 html.sepia-mode select,
 html.sepia-mode select option {
   border: none !important;
-  background: var(--dark-sepia);
   color: var(--dark-grey);
+  background: var(--dark-sepia) !important;
 }
 
 html.sepia-mode .recurringButton-container {
   background: transparent;
 }
-html.sepia-mode .baseAdd.addTask .taskCreation-labelcontainer:hover {
+html.sepia-mode .baseAdd.addTask .taskCreation-labelcontainer.set {
   background: var(--light-sepia) !important;
-  border: none;
-}
-html.sepia-mode button .taskCreation-labelcontainer:hover * {
-  border-color: var(--dark-sepia);
-  background: var(--light-sepia) !important;
-  border: none;
 }

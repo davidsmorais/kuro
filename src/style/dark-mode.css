@@ -287,14 +287,16 @@ html.dark-mode button.button.gray {
   border: none;
   box-shadow: none;
 }
+
+html.dark-mode .taskCreation-labelcontainer span,
 html.dark-mode button.button.gray span {
   color: var(--dark-grey) !important;
 }
 html.dark-mode button.button.gray:hover span {
   color: var(--light-grey) !important;
 }
-
-html.dark-mode .baseAdd.addTask .taskCreation-labelcontainer:hover:hover {
-  background: var(--light-grey) !important;
-  border: none;
+html.dark-mode button.recurringButton .taskCreation-labelcontainer.set,
+html.dark-mode button.recurringButton .taskCreation-labelcontainer.set span {
+  background: var(--grey) !important;
+  color: var(--light-grey) !important;
 }
