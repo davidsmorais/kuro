@@ -270,9 +270,31 @@ html.black-mode
   color: var(--light-grey);
 }
 
-html.black-mode input,
-select {
+html.black-mode input {
   border: 1px solid;
-  background: var(--light-black);
+  background-color: var(--dark-grey);
   color: var(--white);
+  border: none;
+}
+html.black-mode select,
+html.black-mode select option {
+  border: none !important;
+  background: var(--dark-grey);
+  color: var(--white);
+}
+html.black-mode button.button.gray {
+  background: var(--light-black);
+  border: none;
+  box-shadow: none;
+}
+html.black-mode button.button.gray span {
+  color: var(--black) !important;
+}
+html.black-mode button.button.gray:hover span {
+  color: var(--light-black) !important;
+}
+
+html.black-mode .taskCreation-labelContainer:hover {
+  background: var(--light-black) !important;
+  border: none;
 }

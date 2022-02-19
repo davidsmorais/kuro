@@ -229,8 +229,34 @@ html.sepia-mode .ms-DatePicker-table .ms-DatePicker-day-button:hover {
   background: var(--dark-sepia) !important;
 }
 
-html.sepia-mode input,
-select {
+html.sepia-mode input {
+  border: 1px solid;
+  color: var(--dark-grey) !important;
+  background: var(--light-sepia);
+}
+
+html.sepia-mode input {
   border: 1px solid;
   background: var(--light-sepia);
+  color: var(--dark-sepia);
+  border: none;
+}
+html.sepia-mode select,
+html.sepia-mode select option {
+  border: none !important;
+  background: var(--dark-sepia);
+  color: var(--dark-grey);
+}
+
+html.sepia-mode .recurringButton-container {
+  background: transparent;
+}
+html.sepia-mode .baseAdd.addTask .taskCreation-labelcontainer:hover {
+  background: var(--light-sepia) !important;
+  border: none;
+}
+html.sepia-mode button .taskCreation-labelcontainer:hover * {
+  border-color: var(--dark-sepia);
+  background: var(--light-sepia) !important;
+  border: none;
 }
