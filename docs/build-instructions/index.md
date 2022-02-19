@@ -14,3 +14,6 @@ You need the following packages to build the `.rpm` packagetarget
 
 ### `.pacman`
 You need the following packages to build `.pacman` target.
+
+## Building the packages
+Simply run `yarn release`

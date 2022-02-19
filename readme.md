@@ -6,6 +6,8 @@
   Elegant Microsoft To-Do desktop app
 </h4>
 
+![image](https://user-images.githubusercontent.com/22729436/154808940-988b29f1-aaf2-41c4-b634-36e03428d383.png)
+![image](https://user-images.githubusercontent.com/22729436/154809020-f6ea3349-2355-47e6-944b-532cfc1e400c.png)
 ****
 ## Description
 
@@ -36,8 +38,9 @@ Please check the original page readme for info about the application.
 [Kuro's Build Instructions](./docs/build-instructions/index.md)
 
 ## To-Do List
-- [X] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page
-- [ ] Full rebranding of Ao into Kuro
-- [ ] Implementing CI/CD for Linux packages
-- [ ] Revision of documentation
-- [ ] New feature discovery
+- [ ] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
+- [ ] Full rebranding of Ao into Kuro 🚀
+- [ ] Implementing CI/CD for Linux packages 🚀
+- [ ] Revision of documentation 🛑
+- [ ] New feature discovery 🛑
+  - [ ] Multi account support
