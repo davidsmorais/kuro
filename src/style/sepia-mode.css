@@ -221,3 +221,10 @@ html.sepia-mode .ms-ContextualMenu-list .ms-ContextualMenu-divider {
 html.sepia-mode .ms-ContextualMenu-title {
   border-bottom-color: var(--dark-sepia);
 }
+
+html.sepia-mode .ms-DatePicker-table td:hover {
+  background: var(--dark-sepia) !important;
+}
+html.sepia-mode .ms-DatePicker-table .ms-DatePicker-day-button:hover {
+  background: var(--dark-sepia) !important;
+}

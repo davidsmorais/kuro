@@ -253,3 +253,18 @@ html.black-mode .ms-ContextualMenu-Callout {
   border: 1px solid var(--light-black);
   background: var(--dark-grey-transparent);
 }
+
+html.black-mode .ms-DatePicker-table td:hover span {
+  color: var(--black) !important;
+}
+html.black-mode .ms-DatePicker-table .ms-DatePicker-day-button:hover span {
+  color: var(--black) !important;
+}
+
+html.black-mode
+  .section
+  .section-item:not(.isSet):hover
+  .section-icon
+  .fontIcon {
+  color: var(--light-grey);
+}
