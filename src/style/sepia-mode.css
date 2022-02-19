@@ -228,3 +228,9 @@ html.sepia-mode .ms-DatePicker-table td:hover {
 html.sepia-mode .ms-DatePicker-table .ms-DatePicker-day-button:hover {
   background: var(--dark-sepia) !important;
 }
+
+html.sepia-mode input,
+select {
+  border: 1px solid;
+  background: var(--light-sepia);
+}

@@ -15,6 +15,7 @@ html.black-mode .o365sx-neutral-dark-font,
 html.black-mode .label-47,
 html.black-mode .searchToolbar input.searchToolbar-input[type="text"],
 html.black-mode .themePicker-headline,
+html.black-mode .recurringOptions-day,
 html.black-mode .label-83 {
   color: var(--light-grey) !important;
 }
@@ -267,4 +268,11 @@ html.black-mode
   .section-icon
   .fontIcon {
   color: var(--light-grey);
+}
+
+html.black-mode input,
+select {
+  border: 1px solid;
+  background: var(--light-black);
+  color: var(--white);
 }

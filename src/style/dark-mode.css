@@ -16,6 +16,7 @@ html.dark-mode .label-47,
 html.dark-mode .searchToolbar input.searchToolbar-input[type="text"],
 html.dark-mode .themePicker-headline,
 html.dark-mode .themePicker-headline,
+html.dark-mode .recurringOptions-day,
 html.dark-mode .label-83 {
   color: var(--light-grey) !important;
 }
@@ -265,5 +266,12 @@ html.dark-mode
   .section-item:not(.isSet):hover
   .section-icon
   .fontIcon {
+  color: var(--light-grey);
+}
+
+html.dark-mode input,
+select {
+  border: 1px solid;
+  background: var(--dark-grey);
   color: var(--light-grey);
 }
