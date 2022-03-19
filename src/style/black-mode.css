@@ -201,8 +201,9 @@ html.black-mode .details .detailCategories-section .categories-menu {
 html.black-mode .details .option-label {
   color: var(--light-grey) !important;
 }
-html.black-mode .baseAddParent.addTask {
-  border: 1px solid var(--light-black) !important;
+html.black-mode .baseAddParent.addTask,
+html.black-mode .baseAddParent.addTask .icon svg path {
+  border: 1px solid var(--grey) !important;
 }
 
 html.black-mode #app .details textarea {

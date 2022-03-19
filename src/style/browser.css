@@ -7,10 +7,51 @@
   --dark-grey: rgba(33, 33, 33, 1);
   --dark-grey-transparent: rgba(33, 33, 33, 0.8);
   --grey: #2d2d2d;
-  --light-grey: #dddddd;
+  --med-grey: #666666;
+  --light-grey: #cccccc;
   --black: rgba(0, 0, 0, 1);
   --black-transparent: rgba(0, 0, 0, 0.8);
   --light-black: rgba(20, 20, 20, 1);
+  --red: #f35863;
+  --blue: #4a61fd;
+  --skyblue: #3cb9e9;
+  --purple: #9900d0;
+  --green: #5bd244;
+}
+html body .color-red span,
+html body .color-red span span,
+html body .color-red span i,
+html body .color-red .icon svg {
+  color: var(--red) !important;
+  fill: var(--red) !important;
+}
+html body .color-blue span,
+html body .color-blue span span,
+html body .color-blue span i,
+html body .color-blue .icon svg {
+  color: var(--blue) !important;
+  fill: var(--blue) !important;
+}
+html body .color-green span,
+html body .color-green span span,
+html body .color-green span i,
+html body .color-green .icon svg {
+  color: var(--green) !important;
+  fill: var(--green) !important;
+}
+html body .color-purple span,
+html body .color-purple span span,
+html body .color-purple span i,
+html body .color-purple .icon svg {
+  color: var(--purple) !important;
+  fill: var(--purple) !important;
+}
+html body .color-skyblue span,
+html body .color-skyblue span span,
+html body .color-skyblue span i,
+html body .color-skyblue .icon svg {
+  color: var(--skyblue) !important;
+  fill: var(--skyblue) !important;
 }
 html {
   overflow: hidden;

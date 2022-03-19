@@ -176,7 +176,8 @@ html.sepia-mode .o365header .searchToolbar:hover {
 html.sepia-mode .details .detailCategories-section .categories-menu {
   background-color: var(--sepia) !important;
 }
-html.sepia-mode .baseAddParent.addTask {
+html.sepia-mode .baseAddParent.addTask,
+html.sepia-mode .baseAddParent.addTask .icon svg path {
   border: 1px solid var(--dark-sepia) !important;
 }
 
