@@ -81,6 +81,16 @@ module.exports = [
     ]
   },
   {
+    label: "Toggle List Colors",
+    type: "checkbox",
+    checked: settings.get("listColors"),
+    click(item) {
+      win.appear();
+      settings.set("listColors", item.checked);
+      win.activate("toggle-list-colors");
+    }
+  },
+  {
     label: "Auto Night Mode",
     type: "checkbox",
     checked: settings.get("autoNightMode"),
