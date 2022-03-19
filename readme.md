@@ -7,8 +7,12 @@
   Elegant Microsoft To-Do desktop app
 </h4>
 
+![image](https://user-images.githubusercontent.com/22729436/159135778-2fa419d6-a264-4d57-9a5a-1bb585dddea0.png)
+
 ![image](https://user-images.githubusercontent.com/22729436/154808940-988b29f1-aaf2-41c4-b634-36e03428d383.png)
+
 ![image](https://user-images.githubusercontent.com/22729436/154809020-f6ea3349-2355-47e6-944b-532cfc1e400c.png)
+
 ****
 ## Description
 
