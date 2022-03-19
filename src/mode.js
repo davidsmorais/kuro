@@ -33,11 +33,9 @@ class Mode {
   }
 
   listColors() {
-    settings.set("listColors", !settings.get("listColors"));
-    document.documentElement.classList.toggle(
-      `list-colors`,
-      settings.get(`listColors`)
-    );
+    const newColors = !settings.get("listColors");
+    document.documentElement.classList.toggle(`list-colors`, newColors);
+    settings.set("listColors", newColors);
   }
 
   autoNight() {
@@ -62,6 +60,11 @@ class Mode {
         document.documentElement.classList.toggle(`${x}-mode`, modes[x]);
       }
     });
+
+    document.documentElement.classList.toggle(
+      `list-colors`,
+      settings.get("listColors")
+    );
   }
 
   sepia() {
