@@ -82,8 +82,11 @@ ipc.on("settings", () => {
 });
 
 ipc.on("sign-out", () => {
-  nav.click("#O365_MainLink_MePhoto");
-  nav.click("#meControlSignoutLink");
+  nav.click("#O365_MainLink_Me");
+
+  setTimeout(() => {
+    nav.click("#mectrl_body_signOut");
+  }, 200);
 });
 
 ipc.on("toggle-sidebar", () => {
