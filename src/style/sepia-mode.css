@@ -38,8 +38,13 @@ html.sepia-mode .taskCard {
   border: 1px solid var(--sepia) !important;
   background-color: var(--sepia) !important;
 }
-html.sepia-mode .button:hover {
+
+html.sepia-mode .ms-ContextualMenu-link:hover,
+html.sepia-mode button.ms-ContextualMenu-link:focus {
   background: var(--sepia) !important;
+}
+html.sepia-mode .button:hover {
+  background: var(--dark-sepia) !important;
 }
 html.sepia-mode .backgroundLines,
 html.sepia-mode #main .main-background,

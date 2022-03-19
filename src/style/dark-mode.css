@@ -57,8 +57,10 @@ html.dark-mode .taskCard {
   border: 1px solid var(--dark-grey) !important;
   background-color: var(--dark-grey) !important;
 }
+html.dark-mode .ms-ContextualMenu-link:hover,
+html.dark-mode button.ms-ContextualMenu-link:focus,
 html.dark-mode .button:hover {
-  background: var(--dark-grey) !important;
+  background-color: var(--light-black) !important;
 }
 html.dark-mode .backgroundLines,
 html.dark-mode #main .main-background,
