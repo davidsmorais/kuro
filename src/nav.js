@@ -1,16 +1,16 @@
-'use strict';
-const {webFrame} = require('electron');
-const {is} = require('./util');
-const settings = require('./settings');
+"use strict";
+const { webFrame } = require("electron");
+const { is } = require("./util");
+const settings = require("./settings");
 
 class Nav {
   constructor() {
     this._defaultZoomFactor = 1.0;
-    this._listItem = '.listItem-container';
-    this._lists = '.lists';
+    this._listItem = ".listItem-container";
+    this._lists = ".lists";
     this._lowerZoomLimit = 0.7;
-    this._myDayList = '.todayToolbar-item';
-    this._selectedListClass = 'active';
+    this._myDayList = ".todayToolbar-item";
+    this._selectedListClass = "active";
     this._upperZoomLimit = 1.3;
     this._zoomStep = 0.05;
   }
@@ -35,16 +35,20 @@ class Nav {
         return i;
       }
     }
-    
+
     return 0;
   }
 
   _getLists() {
     const myDayList = this.select(this._myDayList);
-    return [myDayList, ...document.querySelector(this._lists).querySelectorAll(this._listItem)];
+    return [
+      myDayList,
+      ...document.querySelector(this._lists).querySelectorAll(this._listItem)
+    ];
   }
 
   click(x) {
+    console.log("🚀 ~ file: nav.js ~ line 48 ~ Nav ~ click ~ x", x);
     document.querySelector(x).click();
   }
 
@@ -63,7 +67,10 @@ class Nav {
   }
 
   sideBar() {
-    document.documentElement.classList.toggle('side-bar-hidden', settings.get('sideBarHidden'));
+    document.documentElement.classList.toggle(
+      "side-bar-hidden",
+      settings.get("sideBarHidden")
+    );
   }
 
   nextList() {
@@ -85,7 +92,7 @@ class Nav {
   selectList(idx, lists) {
     if (idx >= 0 && idx <= this._lastIdx) {
       if (lists == null) lists = this._getLists();
-      const {id, className} = lists[idx].children[0];
+      const { id, className } = lists[idx].children[0];
       return id ? this._clickId(id) : this._clickClass(className);
     }
   }
@@ -95,17 +102,17 @@ class Nav {
 
     if (zoomFactor < this._upperZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.set('zoomFactor', zoomFactor);
+      settings.set("zoomFactor", zoomFactor);
     }
   }
 
   zoomReset() {
     webFrame.setZoomFactor(this._defaultZoomFactor);
-    settings.set('zoomFactor', this._defaultZoomFactor);
+    settings.set("zoomFactor", this._defaultZoomFactor);
   }
 
   zoomRestore() {
-    webFrame.setZoomFactor(settings.get('zoomFactor'));
+    webFrame.setZoomFactor(settings.get("zoomFactor"));
   }
 
   zoomOut() {
@@ -113,7 +120,7 @@ class Nav {
 
     if (zoomFactor > this._lowerZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.set('zoomFactor', zoomFactor);
+      settings.set("zoomFactor", zoomFactor);
     }
   }
 }
