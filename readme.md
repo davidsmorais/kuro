@@ -18,9 +18,9 @@
 
 [![Join the chat at https://gitter.im/davidsmorais/kuro](https://badges.gitter.im/davidsmorais/kuro.svg)](https://gitter.im/davidsmorais/kuro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux
+Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://dsmorais.com)
 
-Kuro is a fork of [Ao](https://github.com/klaussinani/ao) developed by [David Morais](https://dsmorais.com)
+Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer actively maintained
 
 ### Installation
 Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) page and download your distribution's package.
