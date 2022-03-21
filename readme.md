@@ -30,9 +30,12 @@ Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) 
 ### Bug or Feature Request ?
 Submit an [issue](https://github.com/davidsmorais/kuro/issues) or a PR
 
-## Devlog
-### Latest Update 26/01/2022
-Released the first working version of Kuro (8.0.0). This was tested on Ubuntu 21.04 and seems to be working as expected.
+## [Devlog](./docs/devlog.md)
+### Latest Update 21/03/2022
+I think most theme issues are closed and have just released a version which also fixes the auto updater. Please download 8.0.4a.
+
+I'm thinking about adding new themes to make Kuro even more customizable.
+I'm thinking about removing the "Sepia" theme, but would like to have some insights on its usage before doing so.
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 
 _________________________________________________________

@@ -14,6 +14,12 @@ You need the following packages to build the `.rpm` packagetarget
 
 ### `.pacman`
 You need the following packages to build `.pacman` target.
+```
+sudo apt install libarchive-tools
+```
+
+
+
 
 ## Building the packages
 Simply run `yarn release`
