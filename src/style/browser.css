@@ -1,11 +1,4 @@
 :root {
-  --white: rgba(255, 255, 255, 1);
-  --light-sepia: rgb(251, 240, 217);
-  --sepia: rgb(241, 228, 199);
-  --sepia-transparent: rgba(251, 240, 217, 0.8);
-  --dark-sepia: rgb(216, 202, 173);
-  --dark-grey: rgba(33, 33, 33, 1);
-  --dark-grey-transparent: rgba(33, 33, 33, 0.8);
   --grey: #2d2d2d;
   --med-grey: #666666;
   --light-grey: #cccccc;
@@ -14,6 +7,11 @@
   --skyblue: #3cb9e9;
   --purple: #9900d0;
   --green: #5bd244;
+  --bg-brand: #007262 !important;
+  --bg-brand-hover: #1e9484 !important;
+  --bg-brand-hover-secondary: #004c52 !important;
+  --bg-brand-secondary: #004c52 !important;
+  --bg-brand-disable: #303f40 !important;
 }
 #O365ShellHeader {
   display: none !important;

@@ -1,6 +1,6 @@
-:root {
-  --bg-primary: rgba(10, 10, 10, 1) !important;
-  --bg-secondary: rgba(0, 0, 0, 1) !important;
+html.black-mode {
+  --bg-primary: rgba(0, 0, 0, 1) !important;
+  --bg-secondary: rgba(10, 10, 10, 1) !important;
   --bg-tertiary: #222 !important;
   --bg-hover: #121212 !important;
   --bg-hover-secondary: #131313 !important;
@@ -8,14 +8,9 @@
   --bg-active: #232323 !important;
   --bg-active-secondary: #121212 !important;
   --bg-active-tertiary: #343434 !important;
-  --bg-separator: #1212122 !important;
-  --bg-border: #454545 !important;
-  --bg-scrollbar: #a19f9d !important;
-  --bg-brand: #007262 !important;
-  --bg-brand-hover: #007262 !important;
-  --bg-brand-hover-secondary: #004c52 !important;
-  --bg-brand-secondary: #ecf6fd !important;
-  --bg-brand-disable: #edebe9 !important;
+  --bg-separator: #222 !important;
+  --bg-border: #121212 !important;
+  --bg-scrollbar: #333 !important;
   --font-color-primary: #ccc !important;
   --font-color-secondary: #ddd !important;
   --font-color-tertiary: #797775 !important;

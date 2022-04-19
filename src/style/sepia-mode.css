@@ -1,4 +1,4 @@
-:root {
+html.sepia-mode {
   --bg-primary: #e5d79b !important;
   --bg-secondary: #f0e8c5 !important;
   --bg-tertiary: #d7ceab !important;
@@ -8,13 +8,9 @@
   --bg-active: #ecda92 !important;
   --bg-active-secondary: #d9c67a !important;
   --bg-active-tertiary: #dcd09b !important;
-  --bg-separator: #1212122 !important;
-  --bg-border: #454545 !important;
+  --bg-separator: #b9b08f !important;
+  --bg-border: #e6ddc0 !important;
   --bg-scrollbar: #a19f9d !important;
-  --bg-brand: #007262 !important;
-  --bg-brand-hover: #007262 !important;
-  --bg-brand-hover-secondary: #004c52 !important;
-  --bg-brand-secondary: #ecf6fd !important;
   --bg-brand-disable: #edebe9 !important;
   --font-color-primary: #333 !important;
   --font-color-secondary: #000 !important;

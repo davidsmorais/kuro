@@ -1,4 +1,4 @@
-:root {
+html.dark-mode {
   --bg-primary: #121212 !important;
   --bg-secondary: #1f1f1f !important;
   --bg-tertiary: #333333 !important;
@@ -11,11 +11,6 @@
   --bg-separator: #333 !important;
   --bg-border: #222 !important;
   --bg-scrollbar: #fff !important;
-  --bg-brand: #007262 !important;
-  --bg-brand-hover: #007262 !important;
-  --bg-brand-hover-secondary: #004c52 !important;
-  --bg-brand-secondary: #ecf6fd !important;
-  --bg-brand-disable: #edebe9 !important;
   --font-color-primary: #ccc !important;
   --font-color-secondary: #ddd !important;
   --font-color-tertiary: #797775 !important;
