@@ -61,8 +61,9 @@ module.exports = {
         },
         {
           label: "Dracula Theme",
+          accelerator: setAcc("toggle-dracula-mode", "CmdOrCtrl+Shift+G"),
           click() {
-            activate("toggle-dracula-mode", "CmdOrCtrl+Shift+G");
+            activate("toggle-dracula-mode");
           }
         },
         {

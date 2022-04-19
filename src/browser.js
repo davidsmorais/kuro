@@ -10,12 +10,12 @@ ipc.on("search", () => {
 });
 
 ipc.on("new-list", () => {
-  nav.click(".baseAdd-icon");
+  nav.click(".baseAdd-icon.addList");
 });
 
 ipc.on("delete-list", () => {
   nav.click(".toolbarButton.more");
-  nav.click(".popoverMenuItem-destructive");
+  nav.click(".ms-ContextualMenu-item-destructive > button");
 });
 
 ipc.on("rename-list", () => {
@@ -23,12 +23,14 @@ ipc.on("rename-list", () => {
 });
 
 ipc.on("hide-todo", () => {
-  nav.click(".toolbarButton.more");
-  nav.click(".checkbox-completed-18");
+  nav.click(
+    '.taskCard-headerActions [aria-labelledby="completed_tasks-label completed_tasks-hint"]'
+  );
 });
 
 ipc.on("new-todo", () => {
-  nav.click("#main > .baseAdd-input");
+  nav.click("#main .baseAdd.addTask");
+  nav.click("#main .baseAdd-icon.addTask");
 });
 
 ipc.on("rename-todo", () => {
@@ -69,7 +71,7 @@ ipc.on("tasks", () => {
 
 ipc.on("set-reminder", () => {
   nav.click(".taskItem.selected.active");
-  nav.click(".ms-Icon--AlarmClock");
+  nav.click(".ms-Icon--Ringer");
 });
 
 ipc.on("add-due-date", () => {

@@ -5,7 +5,8 @@ module.exports = {
   community: "https://gitter.im/davidsmorais/kuro",
   homepage: "https://https://github.com/davidsmorais/kuro",
   issue: "https://github.com/davidsmorais/kuro/issues/new",
-  keyboardShortcutsRef: "https://github.com/klaussinani/ao#keyboard-shortcuts",
+  keyboardShortcutsRef:
+    "https://github.com/davidsmorais/kuro#keyboard-shortcuts",
   license: "https://github.com/davidsmorais/kuro/blob/master/license.md",
   release: "https://github.com/davidsmorais/kuro/releases/latest",
   search: "https://github.com/search?q=+is:issue+repo:davidsmorais/kuro",
