@@ -133,3 +133,14 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .backgroundLines {
   display: none;
 }
+
+.o365cs-base .o365sx-neutral-lighterAlt-background {
+  background: var(--bg-primary) !important;
+}
+.o365sx-neutral-dark-font {
+  color: var(--font-color-primary) !important;
+}
+
+body {
+  background-color: var(--bg-primary) !important;
+}
