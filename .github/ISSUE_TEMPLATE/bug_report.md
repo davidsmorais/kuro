@@ -1,16 +1,18 @@
 ---
-name: Bug report
+name: Bug Report 🐞
 about: Create a report to help us improve
-
+labels: ["bug"]
+title: "[Bug 🐞]: "
 ---
+# Bug Title 🐞
 
 **Describe the bug**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+**Reproduction Steps**
 Steps to reproduce the behavior.
 
-**Expected behavior**
+**Expected Behavior**
 A clear and concise description of what you expected to happen.
 
 **Screenshots**
@@ -22,3 +24,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
+
+---
+cc:
+@davidsmorais

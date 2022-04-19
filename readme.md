@@ -29,14 +29,17 @@ Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer act
 - Complete UI overhaul with 4 extra themes (**Dark, Black, Dracula and Sepia**).
   - More themes/customization to come in the future
 - List colors according to your list theme
-- Global shortcute
+- Global shortcuts
+- The perfect replacement for a Microsoft To-Do desktop client
+- More to come 🔜
 ### Installation
 Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) page and download your distribution's package.
 
-* **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues) to have them built.
+* **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
 
-### Bug or Feature Request ?
-Submit an [issue](https://github.com/davidsmorais/kuro/issues) or a PR
+### Bug 🐞, Questions ❓ or  Feature Request 🚀 ?
+Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.
+
 
 ## Keyboard Shortcuts
 - **Add To-Do to Current List** -  <kbd>Ctrl</kbd> + <kbd>N</kbd>
