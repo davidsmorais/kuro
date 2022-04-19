@@ -48,7 +48,6 @@ class Nav {
   }
 
   click(x) {
-    console.log("🚀 ~ file: nav.js ~ line 48 ~ Nav ~ click ~ x", x);
     document.querySelector(x).click();
   }
 

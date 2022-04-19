@@ -135,7 +135,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   color: var(--font-color-primary) !important;
 }
 
-.ms-Callout-container .ms-Callout-main * {
+.ms-Callout-container .ms-Tooltip * {
   background: var(--bg-secondary);
   color: var(--font-color-primary);
 }
