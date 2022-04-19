@@ -144,3 +144,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 body {
   background-color: var(--bg-primary) !important;
 }
+
+.sortable-lists li input {
+  color: var(--font-color-secondary) !important;
+}
