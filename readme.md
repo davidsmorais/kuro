@@ -6,13 +6,13 @@
 <h4 align="center">
   Elegant Microsoft To-Do desktop app
 </h4>
+
 ![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
 
-![image](https://user-images.githubusercontent.com/22729436/159135778-2fa419d6-a264-4d57-9a5a-1bb585dddea0.png)
-
-![image](https://user-images.githubusercontent.com/22729436/154808940-988b29f1-aaf2-41c4-b634-36e03428d383.png)
-
-![image](https://user-images.githubusercontent.com/22729436/154809020-f6ea3349-2355-47e6-944b-532cfc1e400c.png)
+![image](https://user-images.githubusercontent.com/22729436/164060311-52b07a02-dcfa-4e60-a4fc-7c24447b4655.png)
+![image](https://user-images.githubusercontent.com/22729436/164060377-26ccc363-e8f6-4ef8-8166-07d1749963c9.png)
+🆕 Dracula Theme
+![image](https://user-images.githubusercontent.com/22729436/164060540-e9313535-3bf2-4083-a11a-31d2e8e6a0cd.png)
 
 ****
 ## Description
@@ -53,4 +53,4 @@ Please check the original page readme for info about the application.
 - [ ] Implementing CI/CD for Linux packages 🚀
 - [ ] Revision of documentation 🛑
 - [ ] New feature discovery 🛑
-  - [ ] Multi account support
+- [ ] Multi account support
