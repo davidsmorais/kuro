@@ -3,7 +3,7 @@
 module.exports = {
   app: "https://to-do.live.com/tasks/",
   community: "https://gitter.im/davidsmorais/kuro",
-  homepage: "https://https://github.com/davidsmorais/kuro",
+  homepage: "https://github.com/davidsmorais/kuro",
   issue: "https://github.com/davidsmorais/kuro/issues/new",
   keyboardShortcutsRef:
     "https://github.com/davidsmorais/kuro#keyboard-shortcuts",
