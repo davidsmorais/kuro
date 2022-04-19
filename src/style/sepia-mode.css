@@ -1,266 +1,31 @@
-html.sepia-mode #root {
-  background: var(--dark-sepia);
-}
-html.sepia-mode ::-webkit-scrollbar-track {
-  background-color: var(--sepia) !important;
-}
-html.sepia-mode .sidebar,
-html.sepia-mode #main,
-html.sepia-mode .steps,
-html.sepia-mode .detailFooter,
-html.sepia-mode .suggestionsBucket,
-html.sepia-mode .sidePanel .ms-Panel-main,
-html.sepia-mode .ms-ContextualMenu-Callout .ms-Callout-main,
-html.sepia-mode .root-41,
-html.sepia-mode .ms-ContextualMenu-title,
-html.sepia-mode .root-51,
-html.sepia-mode .o365cs-base .o365sx-neutral-lighterAlt-background,
-html.sepia-mode .item-79,
-html.sepia-mode .root-74,
-html.sepia-mode .root-84,
-html.sepia-mode .ms-ContextualMenu-list {
-  background-color: var(--sepia) !important;
-}
-html.sepia-mode .steps {
-  border: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .step .step-body {
-  box-shadow: 0 1px 0 0 var(--dark-sepia) !important;
-}
-html.sepia-mode .details .details-separator {
-  background: var(--sepia) !important;
-  border: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .details .section,
-html.sepia-mode .details .section-item.detailNote,
-html.sepia-mode .detailHeader,
-html.sepia-mode .taskCard {
-  border: 1px solid var(--sepia) !important;
-  background-color: var(--sepia) !important;
-}
-
-html.sepia-mode .ms-ContextualMenu-link:hover,
-html.sepia-mode button.ms-ContextualMenu-link:focus {
-  background: var(--sepia) !important;
-}
-html.sepia-mode .button:hover {
-  background: var(--dark-sepia) !important;
-}
-html.sepia-mode .backgroundLines,
-html.sepia-mode #main .main-background,
-html.sepia-mode .rightColumn,
-html.sepia-mode .placeholder,
-html.sepia-mode .emptyList,
-html.sepia-mode .listReplicationIndicator,
-html.sepia-mode .groupItem:hover:hover .listItem:hover,
-html.sepia-mode .o365cs-base .o365sx-neutral-foreground-background {
-  background-color: var(--sepia) !important;
-  background: var(--sepia) !important;
-}
-html.sepia-mode .active,
-html.sepia-mode .details,
-html.sepia-mode .details .section-item:hover,
-html.sepia-mode .modal,
-html.sepia-mode .popover,
-html.sepia-mode .popoverMenuItem:hover,
-html.sepia-mode .isOpen,
-html.sepia-mode .notificationToast,
-html.sepia-mode .datePicker-header,
-html.sepia-mode .popover-footerRight,
-html.sepia-mode .timePicker-input {
-  background: var(--dark-sepia) !important;
-}
-html.sepia-mode .detailNote .editableContent .editableContent-edit,
-html.sepia-mode .o365cs-base .o365sx-activeButton,
-html.sepia-mode .sidePanel .ms-Panel-closeButton:hover,
-html.sepia-mode .button.grey {
-  background-color: var(--dark-sepia) !important;
-  background: var(--dark-sepia) !important;
-}
-html.sepia-mode .listItem:hover,
-html.sepia-mode .todayToolbar-item:hover,
-html.sepia-mode .baseAdd.addList:hover,
-html.sepia-mode .root-48:hover,
-html.sepia-mode .baseAdd.addList:active:hover,
-html.sepia-mode .baseAdd.addList:hover:hover,
-html.sepia-mode .hamburgerMenu button:hover,
-html.sepia-mode .step:hover,
-html.sepia-mode .step.selected,
-html.sepia-mode .step.selected:hover,
-html.sepia-mode .searchStep:hover .searchStep-body,
-html.sepia-mode .searchStep.selected .searchStep-body,
-html.sepia-mode .searchStep.selected:hover .searchStep-body,
-html.sepia-mode .modal-close:hover,
-html.sepia-mode .modal-return:hover,
-html.sepia-mode .moreEntriesButton:hover,
-html.sepia-mode .groupItem:hover,
-html.sepia-mode .root-83,
-html.sepia-mode .groupItem .groupItem-inner:hover,
-html.sepia-mode .addGroupButtonWrapper:hover,
-html.sepia-mode .root-73,
-html.sepia-mode .o365cs-base .o365sx-neutral-light-hover-background:hover,
-html.sepia-mode .root-81:hover,
-html.sepia-mode .detailFooter .detailFooter-close:hover,
-html.sepia-mode .detailFooter .detailFooter-trash:hover,
-html.sepia-mode .o365header .searchToolbar .searchToolbar-icon.stop:hover,
-html.sepia-mode .root-106,
-html.sepia-mode .ms-ContextualMenu-link .is-expanded {
-  background-color: var(--dark-sepia) !important;
-}
-html.sepia-mode .hamburgerMenu button:hover,
-html.sepia-mode .addGroupButtonWrapper button:hover {
-  background-color: var(--dark-sepia) !important;
-  box-shadow: 0 0 0 1px var(--dark-sepia) !important;
-}
-html.sepia-mode .taskItem.selected .taskItem-body,
-html.sepia-mode .taskItem:hover .taskItem-body {
-  background: var(--dark-sepia) !important;
-  box-shadow: inset 0 0 0 0px var(--dark-sepia) !important;
-}
-html.sepia-mode #app > div.leftColumn.leftColumn-entered,
-html.sepia-mode #app > div.leftColumn.leftColumn-exited {
-  border-right: 1px solid var(--dark-sepia) !important;
-}
-html.sepia-mode #app > div.rightColumn.rightColumn-entered > div,
-html.sepia-mode #app > div.rightColumn.rightColumn-exited > div {
-  border-left: 1px solid var(--dark-sepia) !important;
-}
-html.sepia-mode .sidebar-footer,
-html.sepia-mode .backgroundLines,
-html.sepia-mode .detailFooter {
-  border-top: 1px solid var(--dark-sepia) !important;
-}
-html.sepia-mode .listReplicationIndicator {
-  border-bottom: 1px solid var(--dark-sepia) !important;
-}
-html.sepia-mode .taskItem-body,
-html.sepia-mode .collapsible-taskCard .taskCard {
-  box-shadow: 0 17px 0 -16px var(--dark-sepia) !important;
-}
-html.sepia-mode .baseAdd.addTask,
-html.sepia-mode .searchStep .searchStep-body {
-  box-shadow: 0 -17px 0 -16px var(--dark-sepia) !important;
-}
-html.sepia-mode .notificationToast-postponeButton {
-  border-bottom: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .notificationToast-buttons button {
-  border-left: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .modal-sharing .shared .modal-footer {
-  border-top: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .popover-header,
-html.sepia-mode .popover-footer,
-html.sepia-mode .popover-headerLeft,
-html.sepia-mode .popover-footerRight,
-html.sepia-mode .modal-sharing .modal-header {
-  border-bottom: 1px solid var(--sepia) !important;
-}
-html.sepia-mode .sidebar-addList-fixed {
-  box-shadow: 0 -1px 0 var(--dark-sepia) !important;
-}
-html.sepia-mode .o365cs-base .o365sx-neutral-lightAlt-border {
-  border-color: var(--dark-sepia);
-}
-html.sepia-mode .o365cs-base .o365sx-button:focus {
-  outline: var(--sepia) !important;
-}
-html.sepia-mode .o365header .searchToolbar {
-  background: var(--sepia-transparent) !important;
-}
-html.sepia-mode .o365header .searchToolbar:hover {
-  background-color: var(--sepia) !important;
-  box-shadow: 0 0 0 1px var(--dark-sepia) !important;
-}
-html.sepia-mode .details .detailCategories-section .categories-menu {
-  background-color: var(--sepia) !important;
-}
-html.sepia-mode .baseAddParent.addTask,
-html.sepia-mode .baseAddParent.addTask .icon svg path {
-  border: 1px solid var(--dark-sepia) !important;
-}
-
-html.sepia-mode #app .details textarea {
-  background: transparent;
-}
-
-html.sepia-mode .step .step-body,
-.step .step-cell {
-  box-shadow: none !important;
-}
-html.sepia-mode .detailCategories-section {
-  background-color: var(--sepia);
-  border: 1px solid var(--dark-sepia) !important;
-}
-html.sepia-mode .detailCategories-section div {
-  background: transparent;
-}
-html.sepia-mode .detailHeader-title:hover {
-  background: var(--dark-sepia);
-}
-html.sepia-mode .detailHeader-title:focus {
-  background: var(--dark-sepia);
-}
-
-html.sepia-mode .ms-Tooltip * {
-  background: var(--sepia);
-}
-
-html.sepia-mode .ms-ContextualMenu-link:hover {
-  background: var(--dark-sepia);
-}
-html.sepia-mode .ms-ContextualMenu-item {
-  background: var(--light-sepia);
-  color: var(--white);
-}
-
-html.sepia-mode .ms-ContextualMenu-link {
-  background: var(--light-sepia);
-  color: var(--white);
-}
-
-html.sepia-mode .ms-ContextualMenu-list .ms-ContextualMenu-divider {
-  background: var(--dark-sepia);
-}
-
-html.sepia-mode .ms-ContextualMenu-title {
-  border-bottom-color: var(--dark-sepia);
-}
-
-html.sepia-mode
-  .ms-DatePicker-table
-  td.ms-DatePicker-day--highlighted.ms-DatePicker-day--infocus
-  button,
-html.sepia-mode .ms-DatePicker-table td:hover {
-  background: var(--dark-sepia) !important;
-}
-html.sepia-mode .ms-DatePicker-table .ms-DatePicker-day-button:hover {
-  background: var(--dark-sepia) !important;
-}
-
-html.sepia-mode input {
-  border: 1px solid;
-  color: var(--dark-grey) !important;
-  background: var(--light-sepia);
-}
-
-html.sepia-mode input {
-  border: 1px solid;
-  background: var(--light-sepia);
-  color: var(--dark-sepia);
-  border: none;
-}
-html.sepia-mode select,
-html.sepia-mode select option {
-  border: none !important;
-  color: var(--dark-grey);
-  background: var(--dark-sepia) !important;
-}
-
-html.sepia-mode .recurringButton-container {
-  background: transparent;
-}
-html.sepia-mode .baseAdd.addTask .taskCreation-labelcontainer.set {
-  background: var(--light-sepia) !important;
+:root {
+  --bg-primary: #e5d79b !important;
+  --bg-secondary: #f0e8c5 !important;
+  --bg-tertiary: #d7ceab !important;
+  --bg-hover: #e9deb0 !important;
+  --bg-hover-secondary: #e7dfb7 !important;
+  --bg-hover-tertiary: #ecda92 !important;
+  --bg-active: #ecda92 !important;
+  --bg-active-secondary: #d9c67a !important;
+  --bg-active-tertiary: #dcd09b !important;
+  --bg-separator: #1212122 !important;
+  --bg-border: #454545 !important;
+  --bg-scrollbar: #a19f9d !important;
+  --bg-brand: #007262 !important;
+  --bg-brand-hover: #007262 !important;
+  --bg-brand-hover-secondary: #004c52 !important;
+  --bg-brand-secondary: #ecf6fd !important;
+  --bg-brand-disable: #edebe9 !important;
+  --font-color-primary: #333 !important;
+  --font-color-secondary: #000 !important;
+  --font-color-tertiary: #797775 !important;
+  --font-color-warning: #a80000 !important;
+  --font-color-brand: #007262 !important;
+  --font-color-disable: #a19f9d !important;
+  --bg-ms-planner: #31752f !important;
+  --bg-ms-one-note: #7719aa !important;
+  --bg-ms-excel: #107c41 !important;
+  --bg-ms-word: #185abd !important;
+  --bg-ms-power-point: #c43e1c !important;
+  --bg-ms-teams: #6355a8 !important;
 }

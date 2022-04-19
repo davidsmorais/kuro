@@ -9,14 +9,14 @@
   --grey: #2d2d2d;
   --med-grey: #666666;
   --light-grey: #cccccc;
-  --black: rgba(0, 0, 0, 1);
-  --black-transparent: rgba(0, 0, 0, 0.8);
-  --light-black: rgba(20, 20, 20, 1);
   --red: #f35863;
   --blue: #4a61fd;
   --skyblue: #3cb9e9;
   --purple: #9900d0;
   --green: #5bd244;
+}
+#O365ShellHeader {
+  display: none !important;
 }
 html.list-colors body .color-red span,
 html.list-colors body .color-red span span,
@@ -130,12 +130,6 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .listItem,
 .listItem-container.active .emoji.medium {
   background-color: transparent !important;
-}
-.sidebarNavButton button:hover {
-  background: transparent !important;
-  border: none;
-  outline: none;
-  box-shadow: 0 0 0 1px #ddddddbb !important;
 }
 
 .backgroundLines {
