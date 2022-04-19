@@ -84,15 +84,14 @@ Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/iss
 _________________________________________________________
 
 ## Documentation
-Please check the original page readme for info about the application.
-> Temporary
-[Kuro's Build Instructions](./docs/build-instructions/index.md)
+- [Kuro's Build Instructions](./docs/build-instructions/index.md)
+- [Keyboard](#keyboard-shortcuts)
 
 ## To-Do List
 - [X] Full rebranding of Ao into Kuro
 - [ ] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 - [ ] Implementing CI/CD for Linux packages 🚀
-- [ ] Revision of documentation 🚀
+- [X] Revision of documentation
   - [ ] Landing Page with Documentation
 - [ ] Multi account support
   - I'm seeing multiple To-Do tabs, but am open to feedback
