@@ -134,6 +134,21 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--font-color-warning) !important;
   color: var(--font-color-primary) !important;
 }
+
+.ms-Callout-container .ms-Callout-main * {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+}
+.ms-Callout-container .ms-Callout:after {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+  inset: -5px;
+}
+.ms-Callout-container .ms-Callout-beak,
+.ms-Callout-beakCurtain {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+}
 /* Settings Panel */
 .sortable-lists li input {
   color: var(--font-color-secondary) !important;
@@ -157,6 +172,9 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 }
 #root #container #O365_NavHeader .searchToolbar i {
   color: var(--bg-brand-hover) !important;
+}
+#root #container #O365_NavHeader .searchToolbar-icon:hover {
+  background: var(--bg-tertiary) !important;
 }
 #root #container #O365_NavHeader .searchToolbar-input[type="text"] {
   color: var(--font-color-primary);
