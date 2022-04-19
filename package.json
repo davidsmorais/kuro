@@ -1,7 +1,7 @@
 {
   "name": "kuro",
   "productName": "Kuro",
-  "version": "8.0.4a",
+  "version": "8.1.0",
   "description": "Elegant Microsoft To-Do desktop app (Ao fork)",
   "license": "MIT",
   "repository": "davidsmorais/kuro",
@@ -21,7 +21,7 @@
     "postinstall": "electron-builder install-app-deps",
     "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
-    "release": "rm -rf dist build && yarn icons && build --publish always",
+    "release": "yarn version && rm -rf dist build && yarn icons && build --publish always",
     "start": "electron ."
   },
   "dependencies": {
