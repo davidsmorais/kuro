@@ -9,11 +9,13 @@
 
 ![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
 
-![image](https://user-images.githubusercontent.com/22729436/164060311-52b07a02-dcfa-4e60-a4fc-7c24447b4655.png)
-![image](https://user-images.githubusercontent.com/22729436/164060377-26ccc363-e8f6-4ef8-8166-07d1749963c9.png)
+
+![image](https://user-images.githubusercontent.com/22729436/164089586-63a1db82-a241-459a-83ee-d20fc0f9dacf.png)
+![image](https://user-images.githubusercontent.com/22729436/164090755-034ad40d-d2ce-4769-885f-dbbae3379b12.png)
 
 🆕 **Dracula Theme** 🧛
-![image](https://user-images.githubusercontent.com/22729436/164060540-e9313535-3bf2-4083-a11a-31d2e8e6a0cd.png)
+![image](https://user-images.githubusercontent.com/22729436/164089242-84b1aa28-ce4c-4750-9645-529039f896bd.png)
+
 
 ****
 ## Description
