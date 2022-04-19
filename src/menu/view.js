@@ -62,7 +62,7 @@ module.exports = {
         {
           label: "Dracula Theme",
           click() {
-            activate("toggle-dracula-mode");
+            activate("toggle-dracula-mode", "CmdOrCtrl+Shift+G");
           }
         },
         {

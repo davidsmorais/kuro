@@ -26,6 +26,7 @@ module.exports = {
     "toggle-black-mode": "Ctrl+B",
     "toggle-dark-mode": "Ctrl+H",
     "toggle-sepia-mode": "Ctrl+G",
+    "toggle-dracula-mode": "Ctrl+Shift+G",
     "toggle-list-colors": "Ctrl+S",
     "toggle-sidebar": "Ctrl+O",
     exit: "Ctrl+Q"
