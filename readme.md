@@ -11,7 +11,8 @@
 
 ![image](https://user-images.githubusercontent.com/22729436/164060311-52b07a02-dcfa-4e60-a4fc-7c24447b4655.png)
 ![image](https://user-images.githubusercontent.com/22729436/164060377-26ccc363-e8f6-4ef8-8166-07d1749963c9.png)
-🆕 Dracula Theme
+ 
+🆕 **Dracula Theme** 🧛
 ![image](https://user-images.githubusercontent.com/22729436/164060540-e9313535-3bf2-4083-a11a-31d2e8e6a0cd.png)
 
 ****
@@ -36,7 +37,7 @@ Submit an [issue](https://github.com/davidsmorais/kuro/issues) or a PR
 ### Latest Update 21/03/2022
 I think most theme issues are closed and have just released a version which also fixes the auto updater. Please download 8.0.4a.
 
-I'm thinking about adding new themes to make Kuro even more customizable.
+I'm thinking  about adding new themes to make Kuro even more customizable.
 I'm thinking about removing the "Sepia" theme, but would like to have some insights on its usage before doing so.
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 
