@@ -6,6 +6,7 @@
 <h4 align="center">
   Elegant Microsoft To-Do desktop app
 </h4>
+![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
 
 ![image](https://user-images.githubusercontent.com/22729436/159135778-2fa419d6-a264-4d57-9a5a-1bb585dddea0.png)
 
@@ -17,6 +18,7 @@
 ## Description
 
 [![Join the chat at https://gitter.im/davidsmorais/kuro](https://badges.gitter.im/davidsmorais/kuro.svg)](https://gitter.im/davidsmorais/kuro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://dsmorais.com)
 
