@@ -13,9 +13,6 @@
   --bg-brand-secondary: #004c52 !important;
   --bg-brand-disable: #303f40 !important;
 }
-#O365ShellHeader {
-  display: none !important;
-}
 html.list-colors body .color-red span,
 html.list-colors body .color-red span span,
 html.list-colors body .color-red span i,
@@ -51,16 +48,18 @@ html.list-colors body .color-skyblue .icon svg {
   color: var(--skyblue) !important;
   fill: var(--skyblue) !important;
 }
+
+/* Body  */
+body {
+  background-color: var(--bg-primary) !important;
+}
 html {
   overflow: hidden;
 }
 body {
   -webkit-app-region: drag;
 }
-#O365_MainLink_NavMenu,
-#O365_AppName {
-  visibility: hidden !important;
-}
+
 ::-webkit-scrollbar {
   width: 6px !important;
 }
@@ -69,34 +68,9 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0px !important;
-  background: #767678 !important;
-}
-#root #container #O365_NavHeader {
-  background: transparent;
-}
-#root #container #O365_NavHeader .searchToolbar {
-  background: white;
+  background: var(--bg-scrollbar) !important;
 }
 
-#root #container #O365_NavHeader div {
-  background: transparent;
-}
-#root #container .o365header.is-consumer {
-  background: #00000033 !important;
-}
-#Region_3 {
-  display: none;
-}
-#O365_HeaderRightRegion {
-  display: none;
-}
-#main .addTask * {
-  background-color: transparent !important;
-}
-#main .add-task input,
-#baseAddInput-addTask {
-  background-color: transparent !important;
-}
 .keyboardNavigation .listItem:focus {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
 }
@@ -116,6 +90,12 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
 }
+/* Sidebar */
+
+.listItem,
+.listItem-container.active .emoji.medium {
+  background-color: transparent !important;
+}
 .listItem,
 .listItem .listItem-icon,
 .emoji {
@@ -125,15 +105,22 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   display: none;
 }
 
-.listItem,
-.listItem-container.active .emoji.medium {
-  background-color: transparent !important;
-}
-
+/* Main Container */
 .backgroundLines {
   display: none;
 }
+#main .addTask * {
+  background-color: transparent !important;
+}
+#main .add-task input,
+#baseAddInput-addTask {
+  background-color: transparent !important;
+}
 
+/* Settings Panel */
+.sortable-lists li input {
+  color: var(--font-color-secondary) !important;
+}
 .o365cs-base .o365sx-neutral-lighterAlt-background {
   background: var(--bg-primary) !important;
 }
@@ -141,10 +128,35 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   color: var(--font-color-primary) !important;
 }
 
-body {
-  background-color: var(--bg-primary) !important;
+/* Navbar & Search */
+#Region_3 {
+  display: none;
 }
-
-.sortable-lists li input {
-  color: var(--font-color-secondary) !important;
+#root #container #O365_NavHeader {
+  background: transparent;
+}
+#root #container #O365_NavHeader .searchToolbar {
+  background: var(--bg-secondary);
+}
+#root #container #O365_NavHeader .searchToolbar i {
+  color: var(--bg-brand-hover) !important;
+}
+#root #container #O365_NavHeader .searchToolbar-input[type="text"] {
+  color: var(--font-color-primary);
+}
+#root #container #O365_NavHeader div {
+  background: transparent;
+}
+#root #container .o365header.is-consumer {
+  background: #00000033 !important;
+}
+#O365_HeaderLeftRegion,
+#O365_HeaderRightRegion {
+  display: none;
+}
+#CenterRegion #owaBranding_container {
+  display: none;
+}
+#CenterRegion {
+  background-color: var(--bg-primary) !important;
 }

@@ -28,7 +28,7 @@ ipc.on("hide-todo", () => {
 });
 
 ipc.on("new-todo", () => {
-  nav.click("#main > div.main-background > div.baseAdd.addTask > button");
+  nav.click("#main > .baseAdd-input");
 });
 
 ipc.on("rename-todo", () => {
