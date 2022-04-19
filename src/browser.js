@@ -104,6 +104,8 @@ ipc.on("toggle-dark-mode", () => mode.dark());
 
 ipc.on("toggle-sepia-mode", () => mode.sepia());
 
+ipc.on("toggle-dracula-mode", () => mode.dracula());
+
 ipc.on("toggle-list-colors", () => mode.listColors());
 
 ipc.on("auto-night-mode", () => mode.autoNight());

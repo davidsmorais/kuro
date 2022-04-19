@@ -33,6 +33,7 @@ class Dialog {
       `Toggle black mode: Cmd+B`,
       `Toggle dark mode: Cmd+H`,
       `Toggle sepia mode: Cmd+G`,
+      `Toggle dracula mode`,
       `Toggle sidebar: Cmd+O`
     ].join("\n");
   }

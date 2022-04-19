@@ -65,6 +65,13 @@ module.exports = [
         }
       },
       {
+        label: "Dracula Theme",
+        click() {
+          win.appear();
+          win.activate("toggle-dracula-mode");
+        }
+      },
+      {
         label: "Black Theme",
         click() {
           win.appear();

@@ -70,6 +70,9 @@ class Mode {
   sepia() {
     this._toggle("sepia");
   }
+  dracula() {
+    this._toggle("dracula");
+  }
 }
 
 module.exports = new Mode();

@@ -1,0 +1,31 @@
+html.dracula-mode {
+  --bg-primary: #282a36 !important;
+  --bg-secondary: #333648 !important;
+  --bg-tertiary: #20274d !important;
+  --bg-hover: #3b3e51 !important;
+  --bg-hover-secondary: #474c68 !important;
+  --bg-hover-tertiary: #222d6e !important;
+  --bg-active: #333855 !important;
+  --bg-active-secondary: #3f456b !important;
+  --bg-active-tertiary: #2d366c !important;
+  --bg-separator: #44475a33 !important;
+  --bg-border: #44475a33 !important;
+  --bg-scrollbar: #44475a33 !important;
+  --font-color-primary: #ccc !important;
+  --font-color-secondary: #f8f8f2 !important;
+  --font-color-tertiary: #fff !important;
+  --font-color-warning: #ff5555 !important;
+  --font-color-brand: #007262 !important;
+  --font-color-disable: #a19f9d !important;
+  --bg-ms-planner: #50fa7b !important;
+  --bg-ms-one-note: #bd93f9 !important;
+  --bg-ms-excel: #50fa7b !important;
+  --bg-ms-word: #6272a4 !important;
+  --bg-ms-power-point: #ff5555 !important;
+  --bg-ms-teams: #bd93f9 !important;
+  --red: #ff5555;
+  --blue: #288be1;
+  --skyblue: #8be9fd;
+  --purple: #bd93f9;
+  --green: #50fa7b;
+}

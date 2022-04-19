@@ -21,7 +21,8 @@ settings.setAll({
   mode: {
     black: settings.get("mode.black", false),
     dark: settings.get("mode.dark", false),
-    sepia: settings.get("mode.sepia", false)
+    sepia: settings.get("mode.sepia", false),
+    dracula: settings.get("mode.dracula", false)
   },
   listColors: settings.get("listColors", true),
   requestExitConfirmation: settings.get("requestExitConfirmation", true),

@@ -60,6 +60,12 @@ module.exports = {
           }
         },
         {
+          label: "Dracula Theme",
+          click() {
+            activate("toggle-dracula-mode");
+          }
+        },
+        {
           label: "Black Theme",
           accelerator: setAcc("toggle-black-mode", "CmdOrCtrl+B"),
           click() {
