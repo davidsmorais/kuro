@@ -117,6 +117,19 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background-color: transparent !important;
 }
 
+/* Modals */
+.modal .modal-content {
+  color: var(--font-color-primary) !important;
+}
+.button.gray {
+  background: var(--bg-tertiary) !important;
+  color: var(--font-color-secondary) !important;
+}
+
+.button.red {
+  background: var(--font-color-warning) !important;
+  color: var(--font-color-primary) !important;
+}
 /* Settings Panel */
 .sortable-lists li input {
   color: var(--font-color-secondary) !important;
