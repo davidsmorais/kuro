@@ -1,11 +1,5 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
-<h1 align="center">
-  <img src="static/Icon.png" width="20%"><br/>Kuro
-</h1>
-
-<h4 align="center">
-  Elegant Microsoft To-Do desktop app
-</h4>
+![banner](./static/banner.png)
 
 ![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
 
