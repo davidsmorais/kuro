@@ -1,14 +1,6 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 ![banner](./static/banner.png)
 
-![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
-
-
-![image](https://user-images.githubusercontent.com/22729436/164089586-63a1db82-a241-459a-83ee-d20fc0f9dacf.png)
-![image](https://user-images.githubusercontent.com/22729436/164090755-034ad40d-d2ce-4769-885f-dbbae3379b12.png)
-
-🆕 **Dracula Theme** 🧛
-![image](https://user-images.githubusercontent.com/22729436/164089242-84b1aa28-ce4c-4750-9645-529039f896bd.png)
 
 
 ****
@@ -28,13 +20,28 @@ Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer act
 - Global shortcuts
 - The perfect replacement for a Microsoft To-Do desktop client
 - More to come 🔜
+
+
+
+![image](https://user-images.githubusercontent.com/22729436/164089586-63a1db82-a241-459a-83ee-d20fc0f9dacf.png)
+![image](https://user-images.githubusercontent.com/22729436/164090755-034ad40d-d2ce-4769-885f-dbbae3379b12.png)
+
+🆕 **Dracula Theme** 🧛
+![image](https://user-images.githubusercontent.com/22729436/164089242-84b1aa28-ce4c-4750-9645-529039f896bd.png)
+
 ### Installation
+![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/kuro-desktop)
+
 Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) page and download your distribution's package.
 
 * **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
 
+
 ### Bug 🐞, Questions ❓ or  Feature Request 🚀 ?
 Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.
+
 
 
 ## Keyboard Shortcuts
