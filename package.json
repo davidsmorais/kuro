@@ -30,7 +30,7 @@
     "electron-context-menu": "^3.2.0",
     "electron-debug": "^1.4.0",
     "electron-dl": "^1.10.0",
-    "electron-settings": "^4.0.2"
+    "electron-store": "^8.0.2"
   },
   "devDependencies": {
     "electron": "^19.0.4",
@@ -45,6 +45,9 @@
       "node"
     ],
     "rules": {
+      "n/prefer-global/process": 0,
+      "unicorn/prefer-module": 0,
+      "import/extensions": 0,
       "object-curly-spacing": 0,
       "quote-props": 0,
       "unicorn/prefer-query-selector": 0,

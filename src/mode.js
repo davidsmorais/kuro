@@ -1,15 +1,15 @@
 "use strict";
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 const time = require("./time");
 
 class Mode {
   _toggle(mode) {
-    const modes = settings.getSync("mode");
+    const modes = settings.get("mode");
     Object.keys(modes).forEach(x => {
-      settings.setSync(`mode.${x}`, x === mode ? !modes[x] : false);
+      settings.setget(`mode.${x}`, x === mode ? !modes[x] : false);
       document.documentElement.classList.toggle(
         `${x}-mode`,
-        settings.getSync(`mode.${x}`)
+        settings.get(`mode.${x}`)
       );
     });
   }
@@ -17,12 +17,12 @@ class Mode {
   _enableAutoNight() {
     if (time.isDaytime()) {
       this._toggle(null);
-    } else if (!settings.getSync("mode.dark")) {
+    } else if (!settings.get("mode.dark")) {
       this._toggle("dark");
     }
 
     setTimeout(() => {
-      if (settings.getSync("autoNightMode")) {
+      if (settings.get("autoNightMode")) {
         return this._enableAutoNight();
       }
     }, time.ms(time.transitionSpan()));
@@ -33,13 +33,13 @@ class Mode {
   }
 
   listColors() {
-    const newColors = !settings.getSync("listColors");
+    const newColors = !settings.get("listColors");
     document.documentElement.classList.toggle(`list-colors`, newColors);
-    settings.setSync("listColors", newColors);
+    settings.setget("listColors", newColors);
   }
 
   autoNight() {
-    return settings.getSync("autoNightMode")
+    return settings.get("autoNightMode")
       ? this._enableAutoNight()
       : this._disableAutoNight();
   }
@@ -53,7 +53,7 @@ class Mode {
   }
 
   restore() {
-    const modes = settings.getSync("mode");
+    const modes = settings.get("mode");
 
     Object.keys(modes).forEach(x => {
       if (modes[x]) {
@@ -63,7 +63,7 @@ class Mode {
 
     document.documentElement.classList.toggle(
       `list-colors`,
-      settings.getSync("listColors")
+      settings.get("listColors")
     );
   }
 

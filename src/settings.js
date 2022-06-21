@@ -1,39 +1,37 @@
 "use strict";
-const settings = require("electron-settings");
-const { app } = require("electron");
+
+const Store = require("electron-store");
 const { touchFileSync } = require("./util");
 
-touchFileSync(settings.file());
-settings.configure({
-  dir: app.getPath("userData")
-});
+const store = new Store();
 
-settings.setSync({
-  alwaysOnTop: settings.getSync("alwaysOnTop", false),
-  autoLaunch: settings.getSync("autoLaunch", false),
-  autoNightMode: settings.getSync("autoNightMode", false),
-  disableAutoUpdateCheck: settings.getSync("disableAutoUpdateCheck", false),
-  hideTray: settings.getSync("hideTray", false),
+touchFileSync(store.path);
+store.set({
+  alwaysOnTop: store.get("alwaysOnTop", false),
+  autoLaunch: store.get("autoLaunch", false),
+  autoNightMode: store.get("autoNightMode", false),
+  disableAutoUpdateCheck: store.get("disableAutoUpdateCheck", false),
+  hideTray: store.get("hideTray", false),
   lastWindowState: {
-    x: settings.getSync("lastWindowState.x"),
-    y: settings.getSync("lastWindowState.y"),
-    width: settings.getSync("lastWindowState.width"),
-    height: settings.getSync("lastWindowState.height")
+    x: store.get("lastWindowState.x"),
+    y: store.get("lastWindowState.y"),
+    width: store.get("lastWindowState.width"),
+    height: store.get("lastWindowState.height"),
   },
-  launchMinimized: settings.getSync("launchMinimized", false),
-  menuBarHidden: settings.getSync("menuBarHidden", false),
+  launchMinimized: store.get("launchMinimized", false),
+  menuBarHidden: store.get("menuBarHidden", false),
   mode: {
-    black: settings.getSync("mode.black", false),
-    dark: settings.getSync("mode.dark", false),
-    sepia: settings.getSync("mode.sepia", false),
-    dracula: settings.getSync("mode.dracula", false)
+    black: store.get("mode.black", false),
+    dark: store.get("mode.dark", false),
+    sepia: store.get("mode.sepia", false),
+    dracula: store.get("mode.dracula", false),
   },
-  listColors: settings.getSync("listColors", true),
-  requestExitConfirmation: settings.getSync("requestExitConfirmation", true),
-  sideBarHidden: settings.getSync("sideBarHidden", false),
-  updateCheckPeriod: settings.getSync("updateCheckPeriod", "4"),
-  useGlobalShortcuts: settings.getSync("useGlobalShortcuts", false),
-  zoomFactor: settings.getSync("zoomFactor", 1)
+  listColors: store.get("listColors", true),
+  requestExitConfirmation: store.get("requestExitConfirmation", true),
+  sideBarHidden: store.get("sideBarHidden", false),
+  updateCheckPeriod: store.get("updateCheckPeriod", "4"),
+  useGlobalShortcuts: store.get("useGlobalShortcuts", false),
+  zoomFactor: store.get("zoomFactor", 1),
 });
 
-module.exports = settings;
+module.exports = { store };

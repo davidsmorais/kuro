@@ -1,7 +1,7 @@
 "use strict";
 const { webFrame } = require("electron");
 const { is } = require("./util");
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 
 class Nav {
   constructor() {
@@ -69,7 +69,7 @@ class Nav {
   sideBar() {
     document.documentElement.classList.toggle(
       "side-bar-hidden",
-      settings.getSync("sideBarHidden")
+      settings.get("sideBarHidden")
     );
   }
 
@@ -102,17 +102,17 @@ class Nav {
 
     if (zoomFactor < this._upperZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.setSync("zoomFactor", zoomFactor);
+      settings.setget("zoomFactor", zoomFactor);
     }
   }
 
   zoomReset() {
     webFrame.setZoomFactor(this._defaultZoomFactor);
-    settings.setSync("zoomFactor", this._defaultZoomFactor);
+    settings.setget("zoomFactor", this._defaultZoomFactor);
   }
 
   zoomRestore() {
-    webFrame.setZoomFactor(settings.getSync("zoomFactor"));
+    webFrame.setZoomFactor(settings.get("zoomFactor"));
   }
 
   zoomOut() {
@@ -120,7 +120,7 @@ class Nav {
 
     if (zoomFactor > this._lowerZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.setSync("zoomFactor", zoomFactor);
+      settings.setget("zoomFactor", zoomFactor);
     }
   }
 }

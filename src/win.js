@@ -2,7 +2,7 @@
 const electron = require("electron");
 const { is } = require("./util");
 const file = require("./file");
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 
 const { app, BrowserWindow } = electron;
 
@@ -17,29 +17,29 @@ class Win {
   }
 
   get _lastState() {
-    const { x, y, width, height } = settings.getSync("lastWindowState");
+    const { x, y, width, height } = settings.get("lastWindowState");
     const [defaultWidth, defaultHeight] = this._defaultDimensions;
 
     return {
       x,
       y,
       width: width || defaultWidth,
-      height: height || defaultHeight
+      height: height || defaultHeight,
     };
   }
 
   get _minDimensions() {
     const [minWidth, minHeight] = this._screenDimensions.map(x =>
-      Math.round(x * 0.3)
+      Math.round(x * 0.3),
     );
     return { minWidth, minHeight };
   }
 
   get defaultOpts() {
     return Object.assign({}, this._minDimensions, this._lastState, {
-      alwaysOnTop: settings.getSync("alwaysOnTop"),
-      autoHideMenuBar: settings.getSync("menuBarHidden"),
-      darkTheme: settings.getSync("mode.dark") || settings.getSync("mode.black"),
+      alwaysOnTop: settings.get("alwaysOnTop"),
+      autoHideMenuBar: settings.get("menuBarHidden"),
+      darkTheme: settings.get("mode.dark") || settings.get("mode.black"),
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),
@@ -48,8 +48,8 @@ class Win {
         nodeIntegration: false,
         enableRemoteModule: true,
         plugins: true,
-        preload: file.preload
-      }
+        preload: file.preload,
+      },
     });
   }
 

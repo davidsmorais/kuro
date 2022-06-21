@@ -2,7 +2,7 @@
 const { ipcRenderer: ipc } = require("electron");
 const mode = require("./mode");
 const nav = require("./nav");
-const settings = require("./settings");
+const {store} = require("./settings");
 const startup = require("./startup");
 
 ipc.on("search", () => {
@@ -92,7 +92,7 @@ ipc.on("sign-out", () => {
 });
 
 ipc.on("toggle-sidebar", () => {
-  settings.setSync("sideBarHidden", !settings.getSync("sideBarHidden"));
+  store.set("sideBarHidden", !store.get("sideBarHidden"));
   nav.sideBar();
 });
 
@@ -124,12 +124,12 @@ ipc.on("zoom-out", () => nav.zoomOut());
 
 ipc.on("zoom-reset", () => nav.zoomReset());
 
-document.addEventListener("keydown", e => nav.jumpToList(e));
+document.addEventListener("keydown", error => nav.jumpToList(e));
 
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();
 
-  if (settings.getSync("autoNightMode")) {
+  if (store.get("autoNightMode")) {
     mode.autoNight();
   }
 

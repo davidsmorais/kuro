@@ -1,7 +1,7 @@
 "use strict";
 const { app, shell } = require("electron");
 const dialog = require("./../dialog");
-const settings = require("./../settings");
+const {store: settings} = require("./../settings");
 const update = require("./../update");
 const url = require("./../url");
 
