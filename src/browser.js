@@ -24,7 +24,7 @@ ipc.on("rename-list", () => {
 
 ipc.on("hide-todo", () => {
   nav.click(
-    '.taskCard-headerActions [aria-labelledby="completed_tasks-label completed_tasks-hint"]'
+    ".taskCard-headerActions [aria-labelledby=\"completed_tasks-label completed_tasks-hint\"]",
   );
 });
 
@@ -100,7 +100,7 @@ ipc.on("return", () => {
   nav.click(".detailFooter-close");
 });
 
-ipc.on("toggle-black-mode", () => !console.log('Cenas') && mode.black());
+ipc.on("toggle-black-mode", () => mode.black());
 
 ipc.on("toggle-dark-mode", () => mode.dark());
 
@@ -124,7 +124,7 @@ ipc.on("zoom-out", () => nav.zoomOut());
 
 ipc.on("zoom-reset", () => nav.zoomReset());
 
-document.addEventListener("keydown", error => nav.jumpToList(e));
+document.addEventListener("keydown", list => nav.jumpToList(list));
 
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();

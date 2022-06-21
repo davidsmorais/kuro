@@ -9,7 +9,7 @@ class Mode {
       settings.set(`mode.${x}`, x === mode ? !modes[x] : false);
       document.documentElement.classList.toggle(
         `${x}-mode`,
-        settings.get(`mode.${x}`)
+        settings.get(`mode.${x}`),
       );
     });
   }
@@ -34,7 +34,7 @@ class Mode {
 
   listColors() {
     const newColors = !settings.get("listColors");
-    document.documentElement.classList.toggle(`list-colors`, newColors);
+    document.documentElement.classList.toggle("list-colors", newColors);
     settings.set("listColors", newColors);
   }
 
@@ -62,14 +62,15 @@ class Mode {
     });
 
     document.documentElement.classList.toggle(
-      `list-colors`,
-      settings.get("listColors")
+      "list-colors",
+      settings.get("listColors"),
     );
   }
 
   sepia() {
     this._toggle("sepia");
   }
+
   dracula() {
     this._toggle("dracula");
   }

@@ -47,6 +47,8 @@
     "rules": {
       "n/prefer-global/process": 0,
       "unicorn/prefer-module": 0,
+      "unicorn/no-for-loop": 0,
+      "unicorn/no-array-for-each": 0,
       "import/extensions": 0,
       "object-curly-spacing": 0,
       "quote-props": 0,

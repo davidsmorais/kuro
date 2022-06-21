@@ -1,11 +1,11 @@
 "use strict";
 const { webFrame } = require("electron");
 const { is } = require("./util");
-const {store: settings} = require("./settings");
+const { store: settings } = require("./settings");
 
 class Nav {
   constructor() {
-    this._defaultZoomFactor = 1.0;
+    this._defaultZoomFactor = 1;
     this._listItem = ".listItem-container";
     this._lists = ".lists";
     this._lowerZoomLimit = 0.7;
@@ -28,7 +28,9 @@ class Nav {
   }
 
   _currentIdx(lists) {
-    if (lists == null) lists = this._getLists();
+    if (lists === null) {
+      lists = this._getLists();
+    }
 
     for (let i = 0; i < lists.length; i++) {
       if (lists[i].classList.contains(this._selectedListClass)) {
@@ -43,12 +45,11 @@ class Nav {
     const myDayList = this.select(this._myDayList);
     return [
       myDayList,
-      ...document.querySelector(this._lists).querySelectorAll(this._listItem)
+      ...document.querySelector(this._lists).querySelectorAll(this._listItem),
     ];
   }
 
   click(x) {
-    console.log("🚀 ~ file: nav.js ~ line 48 ~ Nav ~ click ~ x", x);
     document.querySelector(x).click();
   }
 
@@ -59,7 +60,7 @@ class Nav {
       return null;
     }
 
-    const n = parseInt(event.key, 10);
+    const n = Number.parseInt(event.key, 10);
 
     if (n > 0 && n < 10) {
       this.selectList(n - 1);
@@ -69,7 +70,7 @@ class Nav {
   sideBar() {
     document.documentElement.classList.toggle(
       "side-bar-hidden",
-      settings.get("sideBarHidden")
+      settings.get("sideBarHidden"),
     );
   }
 
@@ -91,7 +92,10 @@ class Nav {
 
   selectList(idx, lists) {
     if (idx >= 0 && idx <= this._lastIdx) {
-      if (lists == null) lists = this._getLists();
+      if (lists === null) {
+        lists = this._getLists();
+      }
+
       const { id, className } = lists[idx].children[0];
       return id ? this._clickId(id) : this._clickClass(className);
     }
