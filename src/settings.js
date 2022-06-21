@@ -3,7 +3,25 @@
 const Store = require("electron-store");
 const { touchFileSync } = require("./util");
 
-const store = new Store();
+const store = new Store({
+  defaults: {
+    alwaysOnTop: false,
+    autoLaunch: false,
+    autoNightMode: false,
+    disableAutoUpdateCheck: false,
+    hideTray: false,
+    lastWindowState: {},
+    launchMinimized: false,
+    menuBarHidden: false,
+    mode: {},
+    listColors: true,
+    requestExitConfirmation: true,
+    sideBarHidden: false,
+    updateCheckPeriod: 4,
+    useGlobalShortcuts: false,
+    zoomFactor: 1,
+  },
+});
 
 touchFileSync(store.path);
 store.set({
