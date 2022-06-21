@@ -4,7 +4,7 @@ const fs = require("fs");
 const { is, readSheet } = require("./src/util");
 const file = require("./src/file");
 const menu = require("./src/menu");
-const settings = require("./src/settings");
+const { store } = require("./src/settings");
 const shortcut = require("./src/keymap");
 const time = require("./src/time");
 const tray = require("./src/tray");
@@ -41,9 +41,9 @@ function createMainWindow() {
 
   kuroWindow.loadURL(url.app);
 
-  kuroWindow.on("close", e => {
+  kuroWindow.on("close", error => {
     if (!exiting) {
-      e.preventDefault();
+      error.preventDefault();
 
       if (is.darwin) {
         app.hide();
@@ -53,20 +53,20 @@ function createMainWindow() {
     }
   });
 
-  kuroWindow.on("page-title-updated", e => {
-    e.preventDefault();
+  kuroWindow.on("page-title-updated", error => {
+    error.preventDefault();
   });
 
   kuroWindow.on("unresponsive", log);
 
   kuroWindow.webContents.on("did-navigate-in-page", (_, url) => {
-    settings.set("lastURL", url);
+    store.set("lastURL", url);
   });
 
   return kuroWindow;
 }
 
-app.on("ready", () => {
+app.whenReady().then(() => {
   Menu.setApplicationMenu(menu);
 
   const lang = app.getLocale();
@@ -76,23 +76,24 @@ app.on("ready", () => {
   });
 
   mainWindow = createMainWindow();
-
-  if (settings.get("useGlobalShortcuts")) {
+  if (store.get("useGlobalShortcuts")) {
     shortcut.registerGlobal();
   }
 
-  if (!settings.get("hideTray")) {
+  if (!store.get("hideTray")) {
     tray.create();
   }
 
   const { webContents } = mainWindow;
-
   webContents.on("dom-ready", () => {
-    const stylesheets = fs.readdirSync(file.style);
-    stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
+    fs.readdir(file.style, (error, files) => {
+      for (const x of files) {
+        webContents.insertCSS(readSheet(x));
+      }
+    });
 
     if (!shown) {
-      if (settings.get("launchMinimized")) {
+      if (store.get("launchMinimized")) {
         mainWindow.minimize();
       } else {
         mainWindow.show();
@@ -102,18 +103,15 @@ app.on("ready", () => {
     }
   });
 
-  webContents.on("new-window", (e, url) => {
-    e.preventDefault();
+  webContents.on("new-window", (error, url) => {
+    error.preventDefault();
     shell.openExternal(url);
   });
 
   webContents.on("crashed", log);
 
-  if (!settings.get("disableAutoUpdateCheck")) {
-    setInterval(
-      () => update.auto(),
-      time.ms(settings.get("updateCheckPeriod"))
-    );
+  if (!store.get("disableAutoUpdateCheck")) {
+    setInterval(() => update.auto(), time.ms(store.get("updateCheckPeriod")));
   }
 });
 
@@ -124,6 +122,6 @@ app.on("activate", () => mainWindow.show());
 app.on("before-quit", () => {
   exiting = true;
   if (!mainWindow.isFullScreen()) {
-    settings.set("lastWindowState", mainWindow.getBounds());
+    store.set("lastWindowState", mainWindow.getBounds());
   }
 });

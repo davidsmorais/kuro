@@ -2,14 +2,14 @@
 const { app, remote } = require("electron");
 const AutoLaunch = require("auto-launch");
 const { is } = require("./util");
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 
 const _settings = {
   name: "Kuro",
   path: is.darwin
     ? (app || remote.app).getPath("exe").replace(/\.app\/Content.*/, ".app")
     : undefined,
-  isHidden: true
+  isHidden: true,
 };
 
 class Startup {

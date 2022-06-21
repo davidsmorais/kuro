@@ -2,7 +2,7 @@
 const { ipcRenderer: ipc } = require("electron");
 const mode = require("./mode");
 const nav = require("./nav");
-const settings = require("./settings");
+const {store} = require("./settings");
 const startup = require("./startup");
 
 ipc.on("search", () => {
@@ -24,7 +24,7 @@ ipc.on("rename-list", () => {
 
 ipc.on("hide-todo", () => {
   nav.click(
-    '.taskCard-headerActions [aria-labelledby="completed_tasks-label completed_tasks-hint"]'
+    ".taskCard-headerActions [aria-labelledby=\"completed_tasks-label completed_tasks-hint\"]",
   );
 });
 
@@ -92,7 +92,7 @@ ipc.on("sign-out", () => {
 });
 
 ipc.on("toggle-sidebar", () => {
-  settings.set("sideBarHidden", !settings.get("sideBarHidden"));
+  store.set("sideBarHidden", !store.get("sideBarHidden"));
   nav.sideBar();
 });
 
@@ -124,12 +124,12 @@ ipc.on("zoom-out", () => nav.zoomOut());
 
 ipc.on("zoom-reset", () => nav.zoomReset());
 
-document.addEventListener("keydown", e => nav.jumpToList(e));
+document.addEventListener("keydown", list => nav.jumpToList(list));
 
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();
 
-  if (settings.get("autoNightMode")) {
+  if (store.get("autoNightMode")) {
     mode.autoNight();
   }
 

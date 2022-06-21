@@ -4,37 +4,37 @@ const os = require("os");
 const { activate } = require("./win");
 const { release } = require("./url");
 const file = require("./file");
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 
 class Dialog {
   get _keyReferenceInfo() {
     return [
-      `Add due date: Ctrl+Shift+T`,
-      `Add my day: Ctrl+K`,
-      `Complete todo: Ctrl+Shift+N`,
-      `Delete list: Ctrl+Shift+D`,
-      `Delete todo: Ctrl+D`,
-      `Global create todo: Ctrl+Alt+C`,
-      `Global search todo: Ctrl+Alt+F`,
-      `Global toggle window: Ctrl+Alt+A`,
-      `Hide todo: Ctrl+Shift+H`,
-      `Important: Ctrl+I`,
-      `My day: Ctrl+M`,
-      `New list: Ctrl+L`,
-      `New todo: Ctrl+N`,
-      `Planned: Ctrl+P`,
-      `Rename list: Ctrl+Y`,
-      `Rename todo: Ctrl+T`,
-      `Return: Esc`,
-      `Set reminder: Ctrl+Shift+E`,
-      `Settings: Ctrl+,`,
-      `Sign out: Ctrl+Alt+Q`,
-      `Tasks: Ctrl+J`,
-      `Toggle black mode: Ctrl+B`,
-      `Toggle dark mode: Ctrl+H`,
-      `Toggle sepia mode: Ctrl+G`,
-      `Toggle dracula mode: Ctrl+Shift+G`,
-      `Toggle sidebar: Ctrl+O`
+      "Add due date: Ctrl+Shift+T",
+      "Add my day: Ctrl+K",
+      "Complete todo: Ctrl+Shift+N",
+      "Delete list: Ctrl+Shift+D",
+      "Delete todo: Ctrl+D",
+      "Global create todo: Ctrl+Alt+C",
+      "Global search todo: Ctrl+Alt+F",
+      "Global toggle window: Ctrl+Alt+A",
+      "Hide todo: Ctrl+Shift+H",
+      "Important: Ctrl+I",
+      "My day: Ctrl+M",
+      "New list: Ctrl+L",
+      "New todo: Ctrl+N",
+      "Planned: Ctrl+P",
+      "Rename list: Ctrl+Y",
+      "Rename todo: Ctrl+T",
+      "Return: Esc",
+      "Set reminder: Ctrl+Shift+E",
+      "Settings: Ctrl+,",
+      "Sign out: Ctrl+Alt+Q",
+      "Tasks: Ctrl+J",
+      "Toggle black mode: Ctrl+B",
+      "Toggle dark mode: Ctrl+H",
+      "Toggle sepia mode: Ctrl+G",
+      "Toggle dracula mode: Ctrl+Shift+G",
+      "Toggle sidebar: Ctrl+O"
     ].join("\n");
   }
 
@@ -45,7 +45,7 @@ class Dialog {
       `Chrome: ${process.versions.chrome}`,
       `Node: ${process.versions.node}`,
       `V8: ${process.versions.v8}`,
-      `OS: ${os.type()} ${os.arch()} ${os.release()}`
+      `OS: ${os.type()} ${os.arch()} ${os.release()}`,
     ].join("\n");
   }
 
@@ -54,7 +54,7 @@ class Dialog {
       buttons: ["Done", "Copy"],
       detail: `Created by Greymond.\n\n${this._keyReferenceInfo}`,
       message: `Kuro ${app.getVersion()} (${os.arch()})`,
-      title: "Shortcut Key Reference"
+      title: "Shortcut Key Reference",
     });
   }
 
@@ -63,7 +63,7 @@ class Dialog {
       buttons: ["Done", "Copy"],
       detail: `Created by Klaus Sinani.\n\n${this._systemInfo}`,
       message: `Kuro ${app.getVersion()} (${os.arch()})`,
-      title: "About Kuro"
+      title: "About Kuro",
     });
   }
 
@@ -73,9 +73,9 @@ class Dialog {
         {
           cancelId: 1,
           defaultId: 0,
-          icon: file.icon
+          icon: file.icon,
         },
-        options
+        options,
       )
     );
   }
@@ -85,7 +85,7 @@ class Dialog {
       buttons: ["Exit", "Dismiss"],
       detail: "Are you sure you want to exit?",
       message: "Exit Kuro",
-      title: "Kuro - Exit Confirmation"
+      title: "Kuro - Exit Confirmation",
     });
   }
 
@@ -94,7 +94,7 @@ class Dialog {
       buttons: ["Sign Out", "Dismiss"],
       detail: "Are you sure you want to sign out?",
       message: "Sign out of Kuro",
-      title: "Kuro - Sign Out Confirmation"
+      title: "Kuro - Sign Out Confirmation",
     });
   }
 
@@ -103,7 +103,7 @@ class Dialog {
       buttons: ["Restart", "Dismiss"],
       detail: "Would you like to restart now?",
       message: "Restart Kuro to activate your new settings",
-      title: "Kuro - Restart Required"
+      title: "Kuro - Restart Required",
     });
   }
 
@@ -112,7 +112,7 @@ class Dialog {
       buttons: ["Download", "Dismiss"],
       detail: "Click Download to get it now",
       message: `Version ${version} is now available`,
-      title: "Update Kuro"
+      title: "Update Kuro",
     });
   }
 
@@ -161,7 +161,7 @@ class Dialog {
       buttons: ["Done"],
       detail: `Kuro is running on the latest ${app.getVersion()} version`,
       message: "There are currently no updates available",
-      title: "Kuro - No Update Available"
+      title: "Kuro - No Update Available",
     });
   }
 

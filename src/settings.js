@@ -1,35 +1,37 @@
 "use strict";
-const settings = require("electron-settings");
+
+const Store = require("electron-store");
 const { touchFileSync } = require("./util");
 
-touchFileSync(settings.file());
+const store = new Store();
 
-settings.setAll({
-  alwaysOnTop: settings.get("alwaysOnTop", false),
-  autoLaunch: settings.get("autoLaunch", false),
-  autoNightMode: settings.get("autoNightMode", false),
-  disableAutoUpdateCheck: settings.get("disableAutoUpdateCheck", false),
-  hideTray: settings.get("hideTray", false),
+touchFileSync(store.path);
+store.set({
+  alwaysOnTop: store.get("alwaysOnTop", false),
+  autoLaunch: store.get("autoLaunch", false),
+  autoNightMode: store.get("autoNightMode", false),
+  disableAutoUpdateCheck: store.get("disableAutoUpdateCheck", false),
+  hideTray: store.get("hideTray", false),
   lastWindowState: {
-    x: settings.get("lastWindowState.x"),
-    y: settings.get("lastWindowState.y"),
-    width: settings.get("lastWindowState.width"),
-    height: settings.get("lastWindowState.height")
+    x: store.get("lastWindowState.x"),
+    y: store.get("lastWindowState.y"),
+    width: store.get("lastWindowState.width"),
+    height: store.get("lastWindowState.height"),
   },
-  launchMinimized: settings.get("launchMinimized", false),
-  menuBarHidden: settings.get("menuBarHidden", false),
+  launchMinimized: store.get("launchMinimized", false),
+  menuBarHidden: store.get("menuBarHidden", false),
   mode: {
-    black: settings.get("mode.black", false),
-    dark: settings.get("mode.dark", false),
-    sepia: settings.get("mode.sepia", false),
-    dracula: settings.get("mode.dracula", false)
+    black: store.get("mode.black", false),
+    dark: store.get("mode.dark", false),
+    sepia: store.get("mode.sepia", false),
+    dracula: store.get("mode.dracula", false),
   },
-  listColors: settings.get("listColors", true),
-  requestExitConfirmation: settings.get("requestExitConfirmation", true),
-  sideBarHidden: settings.get("sideBarHidden", false),
-  updateCheckPeriod: settings.get("updateCheckPeriod", "4"),
-  useGlobalShortcuts: settings.get("useGlobalShortcuts", false),
-  zoomFactor: settings.get("zoomFactor", 1)
+  listColors: store.get("listColors", true),
+  requestExitConfirmation: store.get("requestExitConfirmation", true),
+  sideBarHidden: store.get("sideBarHidden", false),
+  updateCheckPeriod: store.get("updateCheckPeriod", "4"),
+  useGlobalShortcuts: store.get("useGlobalShortcuts", false),
+  zoomFactor: store.get("zoomFactor", 1),
 });
 
-module.exports = settings;
+module.exports = { store };

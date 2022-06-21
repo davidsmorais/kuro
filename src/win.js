@@ -2,7 +2,7 @@
 const electron = require("electron");
 const { is } = require("./util");
 const file = require("./file");
-const settings = require("./settings");
+const {store: settings} = require("./settings");
 
 const { app, BrowserWindow } = electron;
 
@@ -24,13 +24,13 @@ class Win {
       x,
       y,
       width: width || defaultWidth,
-      height: height || defaultHeight
+      height: height || defaultHeight,
     };
   }
 
   get _minDimensions() {
     const [minWidth, minHeight] = this._screenDimensions.map(x =>
-      Math.round(x * 0.3)
+      Math.round(x * 0.3),
     );
     return { minWidth, minHeight };
   }
@@ -48,8 +48,8 @@ class Win {
         nodeIntegration: false,
         enableRemoteModule: true,
         plugins: true,
-        preload: file.preload
-      }
+        preload: file.preload,
+      },
     });
   }
 
