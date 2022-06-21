@@ -129,7 +129,7 @@ class Dialog {
   }
 
   confirmExit() {
-    if (settings.get("requestExitConfirmation")) {
+    if (settings.getSync("requestExitConfirmation")) {
       if (this._exit() === 0) {
         app.quit();
       }
@@ -140,7 +140,7 @@ class Dialog {
 
   confirmActivationRestart(option, state) {
     if (this._restart() === 0) {
-      settings.set(option, state);
+      settings.setSync(option, state);
       app.quit();
       app.relaunch();
     }

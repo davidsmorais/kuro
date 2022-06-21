@@ -92,7 +92,7 @@ ipc.on("sign-out", () => {
 });
 
 ipc.on("toggle-sidebar", () => {
-  settings.set("sideBarHidden", !settings.get("sideBarHidden"));
+  settings.setSync("sideBarHidden", !settings.getSync("sideBarHidden"));
   nav.sideBar();
 });
 
@@ -129,7 +129,7 @@ document.addEventListener("keydown", e => nav.jumpToList(e));
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();
 
-  if (settings.get("autoNightMode")) {
+  if (settings.getSync("autoNightMode")) {
     mode.autoNight();
   }
 

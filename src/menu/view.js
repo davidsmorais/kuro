@@ -88,7 +88,7 @@ module.exports = {
       checked: settings.get("listColors"),
       accelerator: "CmdorCtrl+S",
       click(item) {
-        settings.set("listColors", item.checked);
+        settings.setSync("listColors", item.checked);
         activate("toggle-list-colors");
       }
     },
@@ -98,7 +98,7 @@ module.exports = {
       checked: settings.get("autoNightMode"),
       accelerator: "CmdorCtrl+Alt+N",
       click(item) {
-        settings.set("autoNightMode", item.checked);
+        settings.setSync("autoNightMode", item.checked);
         activate("auto-night-mode");
       }
     },
@@ -128,7 +128,7 @@ module.exports = {
       checked: settings.get("alwaysOnTop"),
       accelerator: "CmdorCtrl+Shift+P",
       click(item, focusedWindow) {
-        settings.set("alwaysOnTop", item.checked);
+        settings.setSync("alwaysOnTop", item.checked);
         focusedWindow.setAlwaysOnTop(item.checked);
       }
     },
@@ -160,7 +160,7 @@ module.exports = {
       checked: !settings.get("menuBarHidden"),
       visible: !is.darwin,
       click(item, focusedWindow) {
-        settings.set("menuBarHidden", !item.checked);
+        settings.setSync("menuBarHidden", !item.checked);
         focusedWindow.setMenuBarVisibility(item.checked);
         focusedWindow.setAutoHideMenuBar(!item.checked);
       }

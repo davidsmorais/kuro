@@ -15,6 +15,7 @@ const win = require("./src/win");
 const { log } = console;
 
 require("electron-debug")({ enabled: true });
+
 require("electron-dl")();
 require("electron-context-menu")();
 
@@ -37,6 +38,10 @@ app.on("second-instance", () => {
 });
 
 function createMainWindow() {
+  settings.configure({
+    dir: app.getPath('userData')
+  });
+
   const kuroWindow = new BrowserWindow(win.defaultOpts);
 
   kuroWindow.loadURL(url.app);
@@ -60,13 +65,13 @@ function createMainWindow() {
   kuroWindow.on("unresponsive", log);
 
   kuroWindow.webContents.on("did-navigate-in-page", (_, url) => {
-    settings.set("lastURL", url);
+    settings.setSync("lastURL", url);
   });
 
   return kuroWindow;
 }
 
-app.on("ready", () => {
+app.whenReady().then(() => {
   Menu.setApplicationMenu(menu);
 
   const lang = app.getLocale();
@@ -76,23 +81,21 @@ app.on("ready", () => {
   });
 
   mainWindow = createMainWindow();
-
-  if (settings.get("useGlobalShortcuts")) {
+  if (settings.getSync("useGlobalShortcuts")) {
     shortcut.registerGlobal();
   }
 
-  if (!settings.get("hideTray")) {
+  if (!settings.getSync("hideTray")) {
     tray.create();
   }
 
   const { webContents } = mainWindow;
-
   webContents.on("dom-ready", () => {
     const stylesheets = fs.readdirSync(file.style);
     stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
 
     if (!shown) {
-      if (settings.get("launchMinimized")) {
+      if (settings.getSync("launchMinimized")) {
         mainWindow.minimize();
       } else {
         mainWindow.show();
@@ -109,10 +112,10 @@ app.on("ready", () => {
 
   webContents.on("crashed", log);
 
-  if (!settings.get("disableAutoUpdateCheck")) {
+  if (!settings.getSync("disableAutoUpdateCheck")) {
     setInterval(
       () => update.auto(),
-      time.ms(settings.get("updateCheckPeriod"))
+      time.ms(settings.getSync("updateCheckPeriod"))
     );
   }
 });
@@ -124,6 +127,6 @@ app.on("activate", () => mainWindow.show());
 app.on("before-quit", () => {
   exiting = true;
   if (!mainWindow.isFullScreen()) {
-    settings.set("lastWindowState", mainWindow.getBounds());
+    settings.setSync("lastWindowState", mainWindow.getBounds());
   }
 });

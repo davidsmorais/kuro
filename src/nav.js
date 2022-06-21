@@ -69,7 +69,7 @@ class Nav {
   sideBar() {
     document.documentElement.classList.toggle(
       "side-bar-hidden",
-      settings.get("sideBarHidden")
+      settings.getSync("sideBarHidden")
     );
   }
 
@@ -102,17 +102,17 @@ class Nav {
 
     if (zoomFactor < this._upperZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.set("zoomFactor", zoomFactor);
+      settings.setSync("zoomFactor", zoomFactor);
     }
   }
 
   zoomReset() {
     webFrame.setZoomFactor(this._defaultZoomFactor);
-    settings.set("zoomFactor", this._defaultZoomFactor);
+    settings.setSync("zoomFactor", this._defaultZoomFactor);
   }
 
   zoomRestore() {
-    webFrame.setZoomFactor(settings.get("zoomFactor"));
+    webFrame.setZoomFactor(settings.getSync("zoomFactor"));
   }
 
   zoomOut() {
@@ -120,7 +120,7 @@ class Nav {
 
     if (zoomFactor > this._lowerZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.set("zoomFactor", zoomFactor);
+      settings.setSync("zoomFactor", zoomFactor);
     }
   }
 }

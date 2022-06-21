@@ -17,7 +17,7 @@ class Win {
   }
 
   get _lastState() {
-    const { x, y, width, height } = settings.get("lastWindowState");
+    const { x, y, width, height } = settings.getSync("lastWindowState");
     const [defaultWidth, defaultHeight] = this._defaultDimensions;
 
     return {
@@ -37,9 +37,9 @@ class Win {
 
   get defaultOpts() {
     return Object.assign({}, this._minDimensions, this._lastState, {
-      alwaysOnTop: settings.get("alwaysOnTop"),
-      autoHideMenuBar: settings.get("menuBarHidden"),
-      darkTheme: settings.get("mode.dark") || settings.get("mode.black"),
+      alwaysOnTop: settings.getSync("alwaysOnTop"),
+      autoHideMenuBar: settings.getSync("menuBarHidden"),
+      darkTheme: settings.getSync("mode.dark") || settings.getSync("mode.black"),
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),

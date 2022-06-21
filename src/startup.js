@@ -6,9 +6,9 @@ const settings = require("./settings");
 
 const _settings = {
   name: "Kuro",
-  path: is.darwin
-    ? (app || remote.app).getPath("exe").replace(/\.app\/Content.*/, ".app")
-    : undefined,
+  path: is.darwin ?
+    (app || remote.app).getPath("exe").replace(/\.app\/Content.*/, ".app") :
+    undefined,
   isHidden: true
 };
 
@@ -32,7 +32,7 @@ class Startup {
   }
 
   autoLaunch() {
-    if (settings.get("autoLaunch")) {
+    if (settings.getSync("autoLaunch")) {
       this._activate();
     } else {
       this._deactivate();

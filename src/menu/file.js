@@ -1,198 +1,230 @@
-'use strict';
-const {shell} = require('electron');
-const {activate} = require('./../win');
-const {is} = require('./../util');
-const {setAcc} = require('./../keymap');
-const dialog = require('./../dialog');
-const file = require('./../file');
-const settings = require('./../settings');
+"use strict";
+const { shell } = require("electron");
+const { activate } = require("./../win");
+const { is } = require("./../util");
+const { setAcc } = require("./../keymap");
+const dialog = require("./../dialog");
+const file = require("./../file");
+const settings = require("./../settings");
 
 module.exports = {
-  label: 'File',
+  label: "File",
   submenu: [
     {
-      label: 'Search',
-      accelerator: 'CmdorCtrl+F',
+      label: "Search",
+      accelerator: "CmdorCtrl+F",
       click() {
-        activate('search');
+        activate("search");
       }
-    }, {
-      type: 'separator'
-    }, {
-      label: 'List',
+    },
+    {
+      type: "separator"
+    },
+    {
+      label: "List",
       submenu: [
         {
-          label: 'New List',
-          accelerator: setAcc('new-list', 'CmdorCtrl+L'),
+          label: "New List",
+          accelerator: setAcc("new-list", "CmdorCtrl+L"),
           click() {
-            activate('new-list');
+            activate("new-list");
           }
-        }, {
-          label: 'Delete List',
-          accelerator: setAcc('delete-list', 'CmdorCtrl+Shift+D'),
+        },
+        {
+          label: "Delete List",
+          accelerator: setAcc("delete-list", "CmdorCtrl+Shift+D"),
           click() {
-            activate('delete-list');
+            activate("delete-list");
           }
-        }, {
-          label: 'Rename List',
-          accelerator: setAcc('rename-list', 'CmdorCtrl+Y'),
+        },
+        {
+          label: "Rename List",
+          accelerator: setAcc("rename-list", "CmdorCtrl+Y"),
           click() {
-            activate('rename-list');
+            activate("rename-list");
           }
-        }, {
-          type: 'separator'
-        }, {
-          label: 'Hide Completed Todos',
-          accelerator: setAcc('hide-todo', 'CmdorCtrl+Shift+H'),
+        },
+        {
+          type: "separator"
+        },
+        {
+          label: "Hide Completed Todos",
+          accelerator: setAcc("hide-todo", "CmdorCtrl+Shift+H"),
           click() {
-            activate('hide-todo');
+            activate("hide-todo");
           }
         }
       ]
-    }, {
-      label: 'Todo',
+    },
+    {
+      label: "Todo",
       submenu: [
         {
-          label: 'New Todo',
-          accelerator: setAcc('new-todo', 'CmdorCtrl+N'),
+          label: "New Todo",
+          accelerator: setAcc("new-todo", "CmdorCtrl+N"),
           click() {
-            activate('new-todo');
+            activate("new-todo");
           }
-        }, {
-          label: 'Delete Todo',
-          accelerator: setAcc('delete-todo', 'CmdorCtrl+D'),
+        },
+        {
+          label: "Delete Todo",
+          accelerator: setAcc("delete-todo", "CmdorCtrl+D"),
           click() {
-            activate('delete-todo');
+            activate("delete-todo");
           }
-        }, {
-          label: 'Rename Todo',
-          accelerator: setAcc('rename-todo', 'CmdorCtrl+T'),
+        },
+        {
+          label: "Rename Todo",
+          accelerator: setAcc("rename-todo", "CmdorCtrl+T"),
           click() {
-            activate('rename-todo');
+            activate("rename-todo");
           }
-        }, {
-          type: 'separator'
-        }, {
-          label: 'Add to My Day',
-          accelerator: setAcc('add-my-day', 'CmdorCtrl+K'),
+        },
+        {
+          type: "separator"
+        },
+        {
+          label: "Add to My Day",
+          accelerator: setAcc("add-my-day", "CmdorCtrl+K"),
           click() {
-            activate('add-my-day');
+            activate("add-my-day");
           }
-        }, {
-          label: 'Complete Todo',
-          accelerator: setAcc('complete-todo', 'CmdorCtrl+Shift+N'),
+        },
+        {
+          label: "Complete Todo",
+          accelerator: setAcc("complete-todo", "CmdorCtrl+Shift+N"),
           click() {
-            activate('complete-todo');
+            activate("complete-todo");
           }
-        }, {
-          type: 'separator'
-        }, {
-          label: 'Set Reminder',
-          accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
+        },
+        {
+          type: "separator"
+        },
+        {
+          label: "Set Reminder",
+          accelerator: setAcc("set-reminder", "CmdorCtrl+Shift+E"),
           click() {
-            activate('set-reminder');
+            activate("set-reminder");
           }
-        }, {
-          label: 'Add Due Date',
-          accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
+        },
+        {
+          label: "Add Due Date",
+          accelerator: setAcc("add-due-date", "CmdorCtrl+Shift+T"),
           click() {
-            activate('add-due-date');
+            activate("add-due-date");
           }
         }
       ]
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Go to',
+    },
+    {
+      type: "separator"
+    },
+    {
+      label: "Go to",
       submenu: [
         {
-          label: 'My Day',
-          accelerator: setAcc('my-day', 'CmdorCtrl+M'),
+          label: "My Day",
+          accelerator: setAcc("my-day", "CmdorCtrl+M"),
           click() {
-            activate('my-day');
+            activate("my-day");
           }
-        }, {
-          label: 'Important',
-          accelerator: setAcc('important', 'CmdorCtrl+I'),
+        },
+        {
+          label: "Important",
+          accelerator: setAcc("important", "CmdorCtrl+I"),
           click() {
-            activate('important');
+            activate("important");
           }
-        }, {
-          label: 'Planned',
-          accelerator: setAcc('planned', 'CmdorCtrl+P'),
+        },
+        {
+          label: "Planned",
+          accelerator: setAcc("planned", "CmdorCtrl+P"),
           click() {
-            activate('planned');
+            activate("planned");
           }
-        }, {
-          label: 'Tasks',
-          accelerator: setAcc('tasks', 'CmdorCtrl+A'),
+        },
+        {
+          label: "Tasks",
+          accelerator: setAcc("tasks", "CmdorCtrl+A"),
           click() {
-            activate('tasks');
+            activate("tasks");
           }
         }
       ]
-    }, {
-      label: 'Return to Todos',
-      accelerator: setAcc('return', 'Esc'),
+    },
+    {
+      label: "Return to Todos",
+      accelerator: setAcc("return", "Esc"),
       click() {
-        activate('return');
+        activate("return");
       }
-    }, {
-      type: 'separator'
-    }, {
-      label: 'To-Do Settings',
-      accelerator: setAcc('settings', 'CmdorCtrl+,'),
+    },
+    {
+      type: "separator"
+    },
+    {
+      label: "To-Do Settings",
+      accelerator: setAcc("settings", "CmdorCtrl+,"),
       click() {
-        activate('settings');
+        activate("settings");
       }
-    }, {
-      label: 'Launch on Start',
-      type: 'checkbox',
-      checked: settings.get('autoLaunch'),
+    },
+    {
+      label: "Launch on Start",
+      type: "checkbox",
+      checked: settings.getSync("autoLaunch"),
       click(item) {
-        settings.set('autoLaunch', item.checked);
-        activate('auto-launch');
+        settings.setSync("autoLaunch", item.checked);
+        activate("auto-launch");
       }
-    }, {
-      label: 'Launch Minimized',
-      type: 'checkbox',
-      checked: settings.get('launchMinimized'),
+    },
+    {
+      label: "Launch Minimized",
+      type: "checkbox",
+      checked: settings.getSync("launchMinimized"),
       click(item) {
-        settings.set('launchMinimized', item.checked);
+        settings.setSync("launchMinimized", item.checked);
       }
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Edit Shortcut Keys',
-      accelerator: 'CmdorCtrl+.',
+    },
+    {
+      type: "separator"
+    },
+    {
+      label: "Edit Shortcut Keys",
+      accelerator: "CmdorCtrl+.",
       click() {
         shell.openPath(file.localConfig);
       }
-    }, {
-      label: 'Enable Global Shortcut Keys',
-      type: 'checkbox',
-      checked: settings.get('useGlobalShortcuts'),
+    },
+    {
+      label: "Enable Global Shortcut Keys",
+      type: "checkbox",
+      checked: settings.getSync("useGlobalShortcuts"),
       click(item) {
-        dialog.confirmActivationRestart('useGlobalShortcuts', item.checked);
-        item.checked = settings.get('useGlobalShortcuts');
+        dialog.confirmActivationRestart("useGlobalShortcuts", item.checked);
+        item.checked = settings.getSync("useGlobalShortcuts");
       }
-    }, {
-      label: 'Request Exit Confirmation',
-      type: 'checkbox',
-      checked: settings.get('requestExitConfirmation'),
+    },
+    {
+      label: "Request Exit Confirmation",
+      type: "checkbox",
+      checked: settings.getSync("requestExitConfirmation"),
       click(item) {
-        settings.set('requestExitConfirmation', item.checked);
+        settings.setSync("requestExitConfirmation", item.checked);
       }
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Sign out',
-      accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
+    },
+    {
+      type: "separator"
+    },
+    {
+      label: "Sign out",
+      accelerator: setAcc("sign-out", "CmdorCtrl+Alt+Q"),
       click() {
         dialog.confirmSignOut();
       }
-    }, {
-      label: 'Exit',
+    },
+    {
+      label: "Exit",
       visible: !is.darwin,
       click() {
         dialog.confirmExit();

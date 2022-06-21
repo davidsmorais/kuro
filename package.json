@@ -25,11 +25,12 @@
     "start": "electron ."
   },
   "dependencies": {
+    "@electron/remote": "^2.0.8",
     "auto-launch": "^5.0.1",
     "electron-context-menu": "^3.2.0",
     "electron-debug": "^1.4.0",
     "electron-dl": "^1.10.0",
-    "electron-settings": "^3.1.4"
+    "electron-settings": "^4.0.2"
   },
   "devDependencies": {
     "electron": "^19.0.4",
@@ -44,8 +45,13 @@
       "node"
     ],
     "rules": {
+      "object-curly-spacing": 0,
       "quote-props": 0,
-      "unicorn/prefer-query-selector": 0
+      "unicorn/prefer-query-selector": 0,
+      "quotes": [
+        "error",
+        "double"
+      ]
     },
     "space": 2
   },

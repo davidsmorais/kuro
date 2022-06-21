@@ -93,7 +93,7 @@ module.exports = [
     checked: settings.get("listColors"),
     click(item) {
       win.appear();
-      settings.set("listColors", item.checked);
+      settings.setSync("listColors", item.checked);
       win.activate("toggle-list-colors");
     }
   },
@@ -103,7 +103,7 @@ module.exports = [
     checked: settings.get("autoNightMode"),
     click(item) {
       win.appear();
-      settings.set("autoNightMode", item.checked);
+      settings.setSync("autoNightMode", item.checked);
       win.activate("auto-night-mode");
     }
   },
