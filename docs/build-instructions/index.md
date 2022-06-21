@@ -10,6 +10,7 @@ You need the following packages to build the `.rpm` packagetarget
  sudo apt-get update
  sudo apt-get install --no-install-recommends -y gcc-multilib g++-multilib
  sudo apt-get install --no-install-recommends -y rpm
+ sudo apt-get install snapd && sudo snap install snapcraft --clasic
 ```
 
 ### `.pacman`
