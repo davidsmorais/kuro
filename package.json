@@ -32,7 +32,7 @@
     "electron-store": "^8.0.2"
   },
   "devDependencies": {
-    "electron": "^19.0.4",
+    "electron": "^18.3.4",
     "electron-builder": "^23.1.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^9.9.0",
@@ -95,31 +95,36 @@
         {
           "target": "AppImage",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "deb",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "pacman",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "rpm",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "snap",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         }
       ]
