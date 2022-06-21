@@ -102,13 +102,13 @@ class Nav {
 
     if (zoomFactor < this._upperZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.setget("zoomFactor", zoomFactor);
+      settings.set("zoomFactor", zoomFactor);
     }
   }
 
   zoomReset() {
     webFrame.setZoomFactor(this._defaultZoomFactor);
-    settings.setget("zoomFactor", this._defaultZoomFactor);
+    settings.set("zoomFactor", this._defaultZoomFactor);
   }
 
   zoomRestore() {
@@ -120,7 +120,7 @@ class Nav {
 
     if (zoomFactor > this._lowerZoomLimit) {
       webFrame.setZoomFactor(zoomFactor);
-      settings.setget("zoomFactor", zoomFactor);
+      settings.set("zoomFactor", zoomFactor);
     }
   }
 }

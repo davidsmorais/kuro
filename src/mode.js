@@ -6,7 +6,7 @@ class Mode {
   _toggle(mode) {
     const modes = settings.get("mode");
     Object.keys(modes).forEach(x => {
-      settings.setget(`mode.${x}`, x === mode ? !modes[x] : false);
+      settings.set(`mode.${x}`, x === mode ? !modes[x] : false);
       document.documentElement.classList.toggle(
         `${x}-mode`,
         settings.get(`mode.${x}`)
@@ -35,7 +35,7 @@ class Mode {
   listColors() {
     const newColors = !settings.get("listColors");
     document.documentElement.classList.toggle(`list-colors`, newColors);
-    settings.setget("listColors", newColors);
+    settings.set("listColors", newColors);
   }
 
   autoNight() {

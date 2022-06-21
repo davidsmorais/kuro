@@ -100,7 +100,7 @@ ipc.on("return", () => {
   nav.click(".detailFooter-close");
 });
 
-ipc.on("toggle-black-mode", () => mode.black());
+ipc.on("toggle-black-mode", () => !console.log('Cenas') && mode.black());
 
 ipc.on("toggle-dark-mode", () => mode.dark());
 
