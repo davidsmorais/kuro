@@ -21,11 +21,10 @@
     "postinstall": "electron-builder install-app-deps",
     "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
-    "release": "yarn version && rm -rf dist build && yarn icons && build --publish always",
+    "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish always",
     "start": "electron ."
   },
   "dependencies": {
-    "@electron/remote": "^2.0.8",
     "auto-launch": "^5.0.1",
     "electron-context-menu": "^3.2.0",
     "electron-debug": "^1.4.0",
@@ -34,7 +33,7 @@
   },
   "devDependencies": {
     "electron": "^19.0.4",
-    "electron-builder": "20.40.2",
+    "electron-builder": "^23.1.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^9.9.0",
     "xo": "*"
@@ -96,28 +95,24 @@
         {
           "target": "AppImage",
           "arch": [
-            "ia32",
             "x64"
           ]
         },
         {
           "target": "deb",
           "arch": [
-            "ia32",
             "x64"
           ]
         },
         {
           "target": "pacman",
           "arch": [
-            "ia32",
             "x64"
           ]
         },
         {
           "target": "rpm",
           "arch": [
-            "ia32",
             "x64"
           ]
         },
