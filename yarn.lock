@@ -1166,7 +1166,11 @@ cli-cursor@^2.1.0:
   dependencies:
     restore-cursor "^2.0.0"
 
+<<<<<<< HEAD
 cli-truncate@^2.0.0:
+=======
+cli-truncate@^2.1.0:
+>>>>>>> 1fdd371 (update electron-context-menu to latest version)
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-truncate/-/cli-truncate-2.1.0.tgz#c39e28bf05edcde5be3b98992a22deed5a2b93c7"
   integrity sha512-n8fOixwDD6b/ObinzTrp1ZKFzbgvKZvuz/TvejnLn1aQfC6r52XEx85FmuC+3HI+JM7coBRXUvNqEU2PHVrHpg==
@@ -1652,6 +1656,7 @@ electron-builder@20.40.2:
     update-notifier "^2.5.0"
     yargs "^13.2.2"
 
+<<<<<<< HEAD
 electron-context-menu@^0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/electron-context-menu/-/electron-context-menu-0.16.0.tgz#4f53b4640e321f536415a625505a908518f5dff7"
@@ -1660,6 +1665,16 @@ electron-context-menu@^0.16.0:
     cli-truncate "^2.0.0"
     electron-dl "^1.2.0"
     electron-is-dev "^1.0.1"
+=======
+electron-context-menu@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/electron-context-menu/-/electron-context-menu-3.2.0.tgz#b7c3b9361cb21940217434b563246c36e46de9aa"
+  integrity sha512-JX6t8JmnaB28h1D6XrpGK/OLxXLDWzkBXZ2shvegThkTDOH8NaSiQBBv/FkFI0rmOUfLezWhPQibnrc0Tm96yA==
+  dependencies:
+    cli-truncate "^2.1.0"
+    electron-dl "^3.2.1"
+    electron-is-dev "^2.0.0"
+>>>>>>> 1fdd371 (update electron-context-menu to latest version)
 
 electron-debug@^1.4.0:
   version "1.5.0"
@@ -1669,7 +1684,7 @@ electron-debug@^1.4.0:
     electron-is-dev "^0.3.0"
     electron-localshortcut "^3.0.0"
 
-electron-dl@^1.10.0, electron-dl@^1.2.0:
+electron-dl@^1.10.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/electron-dl/-/electron-dl-1.14.0.tgz#1466f1b945664ca3d784268307c2b935728177bf"
   integrity sha512-4okyei42a1mLsvLK7hLrIfd20EQzB18nIlLTwBV992aMSmTGLUEFRTmO1MfSslGNrzD8nuPuy1l/VxO8so4lig==
@@ -1677,6 +1692,15 @@ electron-dl@^1.10.0, electron-dl@^1.2.0:
     ext-name "^5.0.0"
     pupa "^1.0.0"
     unused-filename "^1.0.0"
+
+electron-dl@^3.2.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/electron-dl/-/electron-dl-3.3.1.tgz#14164595bebcc636c671eb791b2a3265003f76c4"
+  integrity sha512-kmcSYZyHVEHHHFKlZWW58GiCmu2NSu3Rdwnl3+/fr/ftQYHJULVf1QkrCBPFE2bp/Ly113Za7c8wJZs1nBy04A==
+  dependencies:
+    ext-name "^5.0.0"
+    pupa "^2.0.1"
+    unused-filename "^2.1.0"
 
 electron-icon-maker@^0.0.5:
   version "0.0.5"
@@ -1697,10 +1721,17 @@ electron-is-dev@^0.3.0:
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
   integrity sha1-FOb9pcaOnk7L7/nM8DfL18BcWv4=
 
+<<<<<<< HEAD
 electron-is-dev@^1.0.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-1.2.0.tgz#2e5cea0a1b3ccf1c86f577cee77363ef55deb05e"
   integrity sha512-R1oD5gMBPS7PVU8gJwH6CtT0e6VSoD0+SzSnYpNm+dBkcijgA+K7VAMHDfnRq/lkKPZArpzplTW6jfiMYosdzw==
+=======
+electron-is-dev@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-2.0.0.tgz#833487a069b8dad21425c67a19847d9064ab19bd"
+  integrity sha512-3X99K852Yoqu9AcW50qz3ibYBWY79/pBhlMCab8ToEWS48R0T9tyxRiQhwylE7zQdXrMnx2JKqUJyMPmt5FBqA==
+>>>>>>> 1fdd371 (update electron-context-menu to latest version)
 
 electron-localshortcut@^3.0.0:
   version "3.1.0"
@@ -1845,6 +1876,11 @@ escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
+
+escape-goat@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/escape-goat/-/escape-goat-2.1.1.tgz#1b2dc77003676c457ec760b2dc68edb648188675"
+  integrity sha512-8/uIhbG12Csjy2JEW7D9pHbreaVaS/OpN3ycnyvElTdwM5n6GY6W6e2IPemfvGZeUMqZ9A/3GqIZMgKnBhAw/Q==
 
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -4344,6 +4380,11 @@ path-exists@^3.0.0:
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
   integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
 
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
+
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
@@ -4712,6 +4753,13 @@ pupa@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pupa/-/pupa-1.0.0.tgz#9a9568a5af7e657b8462a6e9d5328743560ceff6"
   integrity sha1-mpVopa9+ZXuEYqbp1TKHQ1YM7/Y=
+
+pupa@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/pupa/-/pupa-2.1.1.tgz#f5e8fd4afc2c5d97828faa523549ed8744a20d62"
+  integrity sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==
+  dependencies:
+    escape-goat "^2.0.0"
 
 qs@~6.5.2:
   version "6.5.3"
@@ -5897,6 +5945,14 @@ unused-filename@^1.0.0:
   dependencies:
     modify-filename "^1.1.0"
     path-exists "^3.0.0"
+
+unused-filename@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/unused-filename/-/unused-filename-2.1.0.tgz#33719c4e8d9644f32d2dec1bc8525c6aaeb4ba51"
+  integrity sha512-BMiNwJbuWmqCpAM1FqxCTD7lXF97AvfQC8Kr/DIeA6VtvhJaMDupZ82+inbjl5yVP44PcxOuCSxye1QMS0wZyg==
+  dependencies:
+    modify-filename "^1.1.0"
+    path-exists "^4.0.0"
 
 unzip-response@^2.0.1:
   version "2.0.1"
