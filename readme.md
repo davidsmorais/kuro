@@ -6,9 +6,6 @@
 ****
 ## Description
 
-[![Join the chat at https://gitter.im/davidsmorais/kuro](https://badges.gitter.im/davidsmorais/kuro.svg)](https://gitter.im/davidsmorais/kuro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-
 Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://dsmorais.com)
 
 Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer actively maintained
@@ -68,41 +65,9 @@ _Soon Kuro will support the flatpak format_
 Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.
 
 
-
 ## Keyboard Shortcuts
-- **Add To-Do to Current List** -  <kbd>Ctrl</kbd> + <kbd>N</kbd>
-- **Complete Todo** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>
-- **Add Due Date to Selected To-Do** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
-- **Add Selected To-Do to My Day** -  <kbd>Ctrl</kbd> + <kbd>K</kbd>
-- **Delete Selected To-Do** -  <kbd>Ctrl</kbd> + <kbd>D</kbd>
-- **Rename Selected To-Do** -  <kbd>Ctrl</kbd> + <kbd>T</kbd>
-- **Add Reminder to Selected To-Do** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd>+ <kbd>E</kbd>
-- **Toggle Completed To-Dos** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>
-- **Settings** -  <kbd>Ctrl</kbd> + <kbd>,</kbd>
-- **Sign Out** -  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Q</kbd>
-- **Quit Kuro** -  <kbd>Ctrl</kbd> + <kbd>Q</kbd>
+Checkout the [Wiki](https://github.com/davidsmorais/kuro/wiki/Keyboard-Shortcuts) page for all keyboard shortcuts
 
-### List Shortcuts
-- **Delete List** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd>  + <kbd>D</kbd>
-- **Add To-Do to My Day** -  <kbd>Ctrl</kbd> + <kbd>K</kbd>
-- **New List** -  <kbd>Ctrl</kbd> + <kbd>L</kbd>
-- **Go to Important** -  <kbd>Ctrl</kbd> + <kbd>I</kbd>
-- **Go to My Day** -  <kbd>Ctrl</kbd> + <kbd>M</kbd>
-- **Go to Tasks** -  <kbd>Ctrl</kbd> + <kbd>J</kbd>
-- **Go to Planned** -  <kbd>Ctrl</kbd> + <kbd>P</kbd>
-- **Rename List** -  <kbd>Ctrl</kbd> + <kbd>P</kbd>
-### Theme Shortcuts
-- **Black Theme** -  <kbd>Ctrl</kbd> + <kbd>B</kbd>
-- **Dark Theme** -  <kbd>Ctrl</kbd> + <kbd>H</kbd>
-- **Dracula Theme** -  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd>
-- **Sepia Theme** -  <kbd>Ctrl</kbd> + <kbd>G</kbd>
-- **Toggle List Colors** -  <kbd>Ctrl</kbd> + <kbd>S</kbd>
-- **Toggle Sidebar** -  <kbd>Ctrl</kbd> + <kbd>O</kbd>
-
-### Global Shortcuts
-- **Create To-Do** -  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd>
-- **Search To-Do** -  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd>
-- **Toggle Kuro Window** -  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd>
 ## [Devlog](./docs/devlog.md)
 
 ### Latest Update 21/03/2022
@@ -115,12 +80,11 @@ Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/iss
 _________________________________________________________
 
 ## Documentation
-- [Kuro's Build Instructions](./docs/build-instructions/index.md)
-- [Keyboard](#keyboard-shortcuts)
+Check out our [Wiki](https://github.com/davidsmorais/kuro/wiki) for documentation
 
 ## To-Do List
 - [X] Full rebranding of Ao into Kuro
-- [ ] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
+- [x] Cleaning all the bugs. These can be found in the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 - [ ] Implementing CI/CD for Linux packages 🚀
 - [X] Revision of documentation
   - [ ] Landing Page with Documentation
