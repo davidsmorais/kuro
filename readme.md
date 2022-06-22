@@ -29,17 +29,42 @@ Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer act
 🆕 **Dracula Theme** 🧛
 ![image](https://user-images.githubusercontent.com/22729436/164089242-84b1aa28-ce4c-4750-9645-529039f896bd.png)
 
-### Installation
+## Installation
 ![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/kuro-desktop)
 
 Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) page and download your distribution's package.
+Checkout our [Installation Guide](https://github.com/davidsmorais/kuro/wiki/Installing-Kuro) for more information
+### Snapcraft
+
+Kuro can be found on the [Snap Store](https://snapcraft.io/kuro-desktop/).
+If you have Snap installed on your system you can install Kuro by running
+```
+sudo snap install kuro-desktop --edge
+```
+### AUR
+
+Kuro can be found in [AUR](https://aur.archlinux.org/packages/kuro-appimage) (Thanks to [Reverier-Xu](https://github.com/Reverier-Xu)).
+To install Kuro, you can run
+
+```
+paru -S kuro-appimage
+```
+
+or 
+
+```
+yay -S kuro-appimage
+```
+
+### Flatpak 🔜 
+_Soon Kuro will support the flatpak format_
 
 * **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
 
 
-### Bug 🐞, Questions ❓ or  Feature Request 🚀 ?
+## Bug 🐞, Questions ❓ or  Feature Request 🚀 ?
 Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.
 
 
