@@ -49,7 +49,7 @@ html.list-colors body .color-skyblue .icon svg {
   fill: var(--skyblue) !important;
 }
 
-/* Body  */
+/* * Body  * */
 body {
   background-color: var(--bg-primary) !important;
 }
@@ -90,7 +90,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
 }
-/* Sidebar */
+/* * Sidebar * */
 
 .listItem,
 .listItem-container.active .emoji.medium {
@@ -109,7 +109,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   color: var(--font-color-secondary);
 }
 
-/* Main Container */
+/* * Main Container * */
 .backgroundLines {
   display: none;
 }
@@ -121,7 +121,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background-color: transparent !important;
 }
 
-/* Modals */
+/* * Modals * */
 .modal .modal-content {
   color: var(--font-color-primary) !important;
 }
@@ -149,7 +149,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-secondary);
   color: var(--font-color-primary);
 }
-/* Settings Panel */
+/* * Settings Panel * */
 .sortable-lists li input {
   color: var(--font-color-secondary) !important;
 }
@@ -159,8 +159,14 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .o365sx-neutral-dark-font {
   color: var(--font-color-primary) !important;
 }
-
-/* Navbar & Search */
+/* * Suggestions Panel * */
+.ms-Panel-main {
+  background: var(--bg-tertiary) !important;
+}
+.details {
+  background: var(--bg-secondary) !important;
+}
+/* * Navbar & Search * */
 #Region_3 {
   display: none;
 }
