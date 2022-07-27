@@ -22,6 +22,7 @@
     "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
     "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish always",
+    "build-snap": "electron-builder --linux snap",
     "start": "electron ."
   },
   "dependencies": {
@@ -77,6 +78,9 @@
   },
   "build": {
     "appId": "com.davidsmorais.kuro",
+    "snap": {
+      "title": "Kuro"
+    },
     "files": [
       "**/*",
       "!media${/*}",
@@ -127,10 +131,6 @@
           ]
         }
       ]
-    },
-    "snap": {
-      "grade": "stable",
-      "confinement": "strict"
     }
   }
 }
