@@ -1,37 +1,37 @@
-'use strict';
-const {app} = require('electron');
-const {setAcc} = require('./../keymap');
-const dialog = require('./../dialog');
+"use strict";
+const {app} = require("electron");
+const {setAcc} = require("./../keymap");
+const dialog = require("./../dialog");
 
 module.exports = {
   label: app.getName(),
   submenu: [
     {
-      role: 'about',
+      role: "about",
       click() {
         dialog.confirmAbout();
-      }
+      },
     }, {
-      type: 'separator'
+      type: "separator",
     }, {
-      role: 'services',
-      submenu: []
+      role: "services",
+      submenu: [],
     }, {
-      type: 'separator'
+      type: "separator",
     }, {
-      role: 'hide'
+      role: "hide",
     }, {
-      role: 'hideothers'
+      role: "hideothers",
     }, {
-      role: 'unhide'
+      role: "unhide",
     }, {
-      type: 'separator'
+      type: "separator",
     }, {
-      label: 'Exit',
-      accelerator: setAcc('exit', 'CmdorCtrl+Q'),
+      label: "Exit",
+      accelerator: setAcc("exit", "CmdorCtrl+Q"),
       click() {
         dialog.confirmExit();
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

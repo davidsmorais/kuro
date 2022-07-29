@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class Time {
   hours() {
@@ -11,7 +11,7 @@ class Time {
   }
 
   ms(hours) {
-    return 1000 * 60 * 60 * parseInt(hours, 10);
+    return 1000 * 60 * 60 * Number.parseInt(hours, 10);
   }
 
   transitionSpan() {

@@ -1,11 +1,11 @@
 "use strict";
-const { join } = require("path");
+const path = require("path");
 const { homedir } = require("os");
 
 module.exports = {
-  icon: join(__dirname, "../static/Icon.png"),
-  localConfig: join(homedir(), ".kuro.json"),
-  preload: join(__dirname, "./browser.js"),
-  style: join(__dirname, "./style"),
-  trayIcon: join(__dirname, "../static/IconTray.png")
+  icon: path.join(__dirname, "../static/Icon.png"),
+  localConfig: path.join(homedir(), ".kuro.json"),
+  preload: path.join(__dirname, "./browser.js"),
+  style: path.join(__dirname, "./style"),
+  trayIcon: path.join(__dirname, "../static/IconTray.png"),
 };
