@@ -29,6 +29,6 @@ module.exports = {
     "toggle-dracula-mode": "Ctrl+Shift+G",
     "toggle-list-colors": "Ctrl+S",
     "toggle-sidebar": "Ctrl+O",
-    exit: "Ctrl+Q"
-  }
+    exit: "Ctrl+Q",
+  },
 };

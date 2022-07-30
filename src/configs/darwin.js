@@ -27,6 +27,6 @@ module.exports = {
     "toggle-dark-mode": "Cmd+H",
     "toggle-sepia-mode": "Cmd+G",
     "toggle-sidebar": "Cmd+O",
-    exit: "Cmd+Q"
-  }
+    exit: "Cmd+Q",
+  },
 };

@@ -1,9 +1,9 @@
-'use strict';
-const electron = require('electron');
-const {is} = require('./util');
-const file = require('./file');
-const template = require('./menu/tray');
-const win = require('./win');
+"use strict";
+const electron = require("electron");
+const {is} = require("./util");
+const file = require("./file");
+const template = require("./menu/tray");
+const win = require("./win");
 
 const {app, Menu} = electron;
 
@@ -20,7 +20,7 @@ class Tray {
     this._tray = new electron.Tray(file.trayIcon);
     this._tray.setToolTip(app.getName());
     this._tray.setContextMenu(Menu.buildFromTemplate(template));
-    this._tray.on('click', win.toggle);
+    this._tray.on("click", win.toggle);
   }
 }
 

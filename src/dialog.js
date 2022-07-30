@@ -34,7 +34,7 @@ class Dialog {
       "Toggle dark mode: Ctrl+H",
       "Toggle sepia mode: Ctrl+G",
       "Toggle dracula mode: Ctrl+Shift+G",
-      "Toggle sidebar: Ctrl+O"
+      "Toggle sidebar: Ctrl+O",
     ].join("\n");
   }
 
@@ -76,7 +76,7 @@ class Dialog {
           icon: file.icon,
         },
         options,
-      )
+      ),
     );
   }
 

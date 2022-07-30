@@ -1,17 +1,17 @@
 :root {
-  --grey: #2d2d2d;
+  --grey: #2D2D2D;
   --med-grey: #666666;
-  --light-grey: #cccccc;
-  --red: #f35863;
-  --blue: #4a61fd;
-  --skyblue: #3cb9e9;
-  --purple: #9900d0;
-  --green: #5bd244;
+  --light-grey: #CCCCCC;
+  --red: #F35863;
+  --blue: #4A61FD;
+  --skyblue: #3CB9E9;
+  --purple: #9900D0;
+  --green: #5BD244;
   --bg-brand: #007262 !important;
-  --bg-brand-hover: #1e9484 !important;
-  --bg-brand-hover-secondary: #004c52 !important;
-  --bg-brand-secondary: #004c52 !important;
-  --bg-brand-disable: #303f40 !important;
+  --bg-brand-hover: #1E9484 !important;
+  --bg-brand-hover-secondary: #004C52 !important;
+  --bg-brand-secondary: #004C52 !important;
+  --bg-brand-disable: #303F40 !important;
 }
 html.list-colors body .color-red span,
 html.list-colors body .color-red span span,
@@ -48,18 +48,14 @@ html.list-colors body .color-skyblue .icon svg {
   color: var(--skyblue) !important;
   fill: var(--skyblue) !important;
 }
-
 /* * Body  * */
 body {
   background-color: var(--bg-primary) !important;
+  -webkit-app-region: drag;
 }
 html {
   overflow: hidden;
 }
-body {
-  -webkit-app-region: drag;
-}
-
 ::-webkit-scrollbar {
   width: 6px !important;
 }
@@ -70,7 +66,6 @@ body {
   border-radius: 0px !important;
   background: var(--bg-scrollbar) !important;
 }
-
 .keyboardNavigation .listItem:focus {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
 }
@@ -91,7 +86,6 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   }
 }
 /* * Sidebar * */
-
 .listItem,
 .listItem-container.active .emoji.medium {
   background-color: transparent !important;
@@ -108,7 +102,6 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-tertiary);
   color: var(--font-color-secondary);
 }
-
 /* * Main Container * */
 .backgroundLines {
   display: none;
@@ -120,7 +113,6 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 #baseAddInput-addTask {
   background-color: transparent !important;
 }
-
 /* * Modals * */
 .modal .modal-content {
   color: var(--font-color-primary) !important;
@@ -129,12 +121,10 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-tertiary) !important;
   color: var(--font-color-secondary) !important;
 }
-
 .button.red {
   background: var(--font-color-warning) !important;
   color: var(--font-color-primary) !important;
 }
-
 .ms-Callout-container .ms-Tooltip * {
   background: var(--bg-secondary);
   color: var(--font-color-primary);

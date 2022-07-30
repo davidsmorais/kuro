@@ -13,5 +13,5 @@ module.exports = {
   searchFeatureRequests: "https://github.com/davidsmorais/kuro/feature-request",
   source: "https://github.com/davidsmorais/kuro",
   update:
-    "https://raw.githubusercontent.com/davidsmorais/kuro/master/docs/update.json"
+    "https://raw.githubusercontent.com/davidsmorais/kuro/master/docs/update.json",
 };

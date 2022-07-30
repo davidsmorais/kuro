@@ -1,14 +1,14 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  role: 'window',
+  role: "window",
   submenu: [
     {
-      role: 'minimize'
+      role: "minimize",
     }, {
-      role: 'close'
+      role: "close",
     }, {
-      role: 'front'
-    }
-  ]
+      role: "front",
+    },
+  ],
 };

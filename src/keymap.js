@@ -19,7 +19,7 @@ class Keymap {
       this.setAcc("global-toggle-window", "CmdorCtrl+Alt+A"),
       () => {
         win.toggle();
-      }
+      },
     );
 
     const searchTodo = globalShortcut.register(
@@ -27,7 +27,7 @@ class Keymap {
       () => {
         win.appear();
         win.activate("search");
-      }
+      },
     );
 
     const createTodo = globalShortcut.register(
@@ -35,7 +35,7 @@ class Keymap {
       () => {
         win.appear();
         win.activate("new-todo", true);
-      }
+      },
     );
 
     if (toggleKuro && searchTodo && createTodo) {

@@ -1,7 +1,7 @@
-'use strict';
-const fs = require('fs');
-const defaultConfig = require('./configs');
-const file = require('./file');
+"use strict";
+const fs = require("fs");
+const defaultConfig = require("./configs");
+const file = require("./file");
 
 const {log} = console;
 
@@ -12,7 +12,7 @@ class Config {
 
   get _local() {
     try {
-      return JSON.parse(fs.readFileSync(file.localConfig, 'utf8'));
+      return JSON.parse(fs.readFileSync(file.localConfig, "utf8"));
     } catch (error) {
       return log(error);
     }
@@ -35,8 +35,8 @@ class Config {
     });
 
     Object.keys(result).forEach(type => {
-      const [opts, defaultOpts] = [data[type], this._default[type]].map(Object.keys);
-      const deprecated = opts.filter(x => !defaultOpts.includes(x));
+      const [options, defaultOptions] = [data[type], this._default[type]].map(element => Object.keys(element));
+      const deprecated = options.filter(x => !defaultOptions.includes(x));
       deprecated.forEach(x => delete result[type][x]);
     });
 

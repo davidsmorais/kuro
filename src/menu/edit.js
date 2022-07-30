@@ -1,28 +1,28 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  label: 'Edit',
+  label: "Edit",
   submenu: [
     {
-      type: 'separator'
+      type: "separator",
     }, {
-      role: 'undo'
+      role: "undo",
     }, {
-      role: 'redo'
+      role: "redo",
     }, {
-      type: 'separator'
+      type: "separator",
     }, {
-      role: 'cut'
+      role: "cut",
     }, {
-      role: 'copy'
+      role: "copy",
     }, {
-      role: 'paste'
+      role: "paste",
     }, {
-      role: 'pasteandmatchstyle'
+      role: "pasteandmatchstyle",
     }, {
-      role: 'delete'
+      role: "delete",
     }, {
-      role: 'selectall'
-    }
-  ]
+      role: "selectall",
+    },
+  ],
 };

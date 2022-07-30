@@ -1,14 +1,14 @@
-'use strict';
-const {app} = require('electron');
-const {get} = require('https');
-const dialog = require('./dialog');
-const url = require('./url');
+"use strict";
+const {app} = require("electron");
+const {get} = require("https");
+const dialog = require("./dialog");
+const url = require("./url");
 
 const {log} = console;
 
 class Update {
   _compareToLocal(version) {
-    const [x, y] = [version, app.getVersion()].map(x => x.split('.').map(Number));
+    const [x, y] = [version, app.getVersion()].map(x => x.split(".").map(Number));
 
     for (let i = 0; i < 3; i++) {
       const dif = x[i] - y[i];
@@ -22,19 +22,19 @@ class Update {
 
   _fetchUpdateData() {
     return new Promise((resolve, reject) => {
-      const request = get(url.update, res => {
-        const {statusCode: sc} = res;
+      const request = get(url.update, response => {
+        const {statusCode: sc} = response;
 
         if (sc < 200 || sc > 299) {
           reject(new Error(`Request to get update data failed with HTTP status code: ${sc}`));
         }
 
         const data = [];
-        res.on('data', d => data.push(d));
-        res.on('end', () => resolve(JSON.parse(data.join(''))));
+        response.on("data", d => data.push(d));
+        response.on("end", () => resolve(JSON.parse(data.join(""))));
       });
 
-      request.on('error', err => reject(err));
+      request.on("error", error => reject(error));
     });
   }
 

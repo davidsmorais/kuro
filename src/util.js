@@ -1,6 +1,6 @@
-'use strict';
-const {dirname, join} = require('path');
-const fs = require('fs');
+"use strict";
+const path = require("path");
+const fs = require("fs");
 
 const {log} = console;
 const {platform} = process;
@@ -8,17 +8,17 @@ const {platform} = process;
 class Util {
   get is() {
     return {
-      darwin: platform === 'darwin',
-      linux: platform === 'linux',
+      darwin: platform === "darwin",
+      linux: platform === "linux",
       undef: x => x === undefined,
-      win32: platform === 'win32'
+      win32: platform === "win32",
     };
   }
 
-  ensureFileSync(path, data) {
-    if (!fs.existsSync(path)) {
+  ensureFileSync(file, data) {
+    if (!fs.existsSync(file)) {
       try {
-        fs.writeFileSync(path, data);
+        fs.writeFileSync(file, data);
       } catch (error) {
         log(error);
       }
@@ -26,17 +26,17 @@ class Util {
   }
 
   readSheet(x) {
-    return fs.readFileSync(join(__dirname, './style', x), 'utf8');
+    return fs.readFileSync(path.join(__dirname, "./style", x), "utf8");
   }
 
   touchFileSync(x) {
-    const dir = dirname(x);
+    const dir = path.dirname(x);
 
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
     }
 
-    return fs.closeSync(fs.openSync(x, 'a'));
+    return fs.closeSync(fs.openSync(x, "a"));
   }
 }
 
