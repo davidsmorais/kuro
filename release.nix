@@ -1,12 +1,12 @@
 { lib, fetchFromGitHub
 , makeWrapper, makeDesktopItem, mkYarnPackage
-, electron_9, yarn2nix
+, electron_18, yarn2nix
 }:
 
 let
   executableName = "kuro";
-  version = "6.9.0";
-  electron = electron_9;
+  version = "8.1.4";
+  electron = electron_18;
 
 in mkYarnPackage rec {
   name = "kuro-${version}";
@@ -31,7 +31,7 @@ in mkYarnPackage rec {
     # icons
     echo "Installing icons..."
     for size in 16x16 24x24 32x32 48x48 64x64 72x72 96x96 128x128 192x192 256x256 512x512 1024x1024; do
-      install -Dm644 ./deps/kuro/build/icon.png $out/share/icons/hicolor/$size/apps/kuro.png
+      install -Dm644 ./deps/kuro/static/Icon.png $out/share/icons/hicolor/$size/apps/kuro.png
     done
 
     # desktop item
@@ -60,10 +60,8 @@ in mkYarnPackage rec {
       genericName = "Microsoft To-Do Client";
       comment = concatStringsSep " "
                   (splitString "\n" meta.description);
-      categories = "Office;";
-      extraEntries = ''
-        StartupWMClass=kuro
-      '';
+      categories = [ "Office" ];
+      startupWMClass = "kuro";
     };
 
   meta = with lib; {
