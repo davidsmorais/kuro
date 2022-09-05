@@ -1,5 +1,6 @@
 html.sepia-mode {
   --bg-primary: #E5D79B !important;
+  --bg-primary-transparent: #E5D79B33 !important;
   --bg-secondary: #F0E8C5 !important;
   --bg-tertiary: #D7CEAB !important;
   --bg-hover: #E9DEB0 !important;

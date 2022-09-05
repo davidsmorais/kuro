@@ -102,6 +102,20 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-tertiary);
   color: var(--font-color-secondary);
 }
+/* * Notifications * */
+#root #container #app #notifications {
+  z-index: 10;
+}
+#root #container #app #notifications .notificationToast {
+  background: var(--bg-primary-transparent) !important;
+  backdrop-filter: blur(5px);
+}
+#root #container #app #notifications .notificationToast .notificationToast-cancelButton {
+  color: var(--red) !important;
+}
+#root #container #app #notifications .notificationToast button {
+  border-color: var(--bg-tertiary);
+}
 /* * Main Container * */
 .backgroundLines {
   display: none;

@@ -1,5 +1,6 @@
 html.dark-mode {
   --bg-primary: #121212 !important;
+  --bg-primary-transparent: #12121233 !important;
   --bg-secondary: #1F1F1F !important;
   --bg-tertiary: #333333 !important;
   --bg-hover: #1F1F1F !important;

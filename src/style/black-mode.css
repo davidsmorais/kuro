@@ -1,5 +1,6 @@
 html.black-mode {
   --bg-primary: rgba(0, 0, 0, 1) !important;
+  --bg-primary-transparent: rgba(0, 0, 0, 0.2) !important;
   --bg-secondary: rgba(10, 10, 10, 1) !important;
   --bg-tertiary: #222222 !important;
   --bg-hover: #121212 !important;
