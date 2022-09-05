@@ -41,7 +41,7 @@ function createMainWindow() {
 
   kuroWindow.loadURL(url.app);
 
-  kuroWindow.on("close", error => {
+  kuroWindow.on("close", (error) => {
     if (!exiting) {
       error.preventDefault();
 
@@ -53,7 +53,7 @@ function createMainWindow() {
     }
   });
 
-  kuroWindow.on("page-title-updated", error => {
+  kuroWindow.on("page-title-updated", (error) => {
     error.preventDefault();
   });
 
@@ -94,7 +94,7 @@ app.whenReady().then(() => {
 
     if (!shown) {
       if (store.get("launchMinimized")) {
-        mainWindow.minimize();
+        mainWindow.hide();
       } else {
         mainWindow.show();
       }
