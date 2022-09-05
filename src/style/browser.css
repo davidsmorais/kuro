@@ -163,9 +163,6 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 #root #container #O365_NavHeader {
   background: transparent;
 }
-#root #container #O365_NavHeader .searchToolbar {
-  background: var(--bg-secondary);
-}
 #root #container #O365_NavHeader .searchToolbar i {
   color: var(--bg-brand-hover) !important;
 }
@@ -174,6 +171,18 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 }
 #root #container #O365_NavHeader .searchToolbar-input[type="text"] {
   color: var(--font-color-primary);
+  background: var(--bg-tertiary) !important;
+}
+#root #container #O365_NavHeader .searchToolbar {
+  color: var(--font-color-secondary) !important;
+  background: var(--bg-tertiary) !important;
+  border-color: var(--blue) !important;
+}
+#root #container #O365_NavHeader .searchToolbar input {
+  outline: none;
+}
+#root #container #O365_NavHeader .searchToolbar input::placeholder {
+  color: var(--font-color-primary) !important;
 }
 #root #container #O365_NavHeader div {
   background: transparent;
