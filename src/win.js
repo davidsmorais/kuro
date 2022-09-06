@@ -29,8 +29,9 @@ class Win {
   }
 
   get _minDimensions() {
-    const [minWidth, minHeight] = this._screenDimensions.map(x =>
-      Math.round(x * 0.3),
+    const multipliers = [0.1, 0.3];
+    const [minWidth, minHeight] = this._screenDimensions.map((x, idx) =>
+      Math.round(x * multipliers[idx]),
     );
     return { minWidth, minHeight };
   }

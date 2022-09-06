@@ -1,5 +1,6 @@
 html.dracula-mode {
   --bg-primary: #282A36 !important;
+  --bg-primary-transparent: #282A3633 !important;
   --bg-secondary: #333648 !important;
   --bg-tertiary: #303342 !important;
   --bg-hover: #3B3E51 !important;
