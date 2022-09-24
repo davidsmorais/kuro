@@ -44,7 +44,7 @@ class Win {
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),
-      titleBarStyle: "hiddenInset",
+      titleBarStyle: "default",
       webPreferences: {
         nodeIntegration: false,
         enableRemoteModule: true,
