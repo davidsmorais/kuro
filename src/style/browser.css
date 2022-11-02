@@ -51,7 +51,6 @@ html.list-colors body .color-skyblue .icon svg {
 /* * Body  * */
 body {
   background-color: var(--bg-primary) !important;
-  -webkit-app-region: drag;
 }
 html {
   overflow: hidden;
