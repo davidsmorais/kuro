@@ -86,6 +86,22 @@
       "!media${/*}",
       "!docs${/*}"
     ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "icons/win/icon.ico",
+      "publish": {
+        "provider": "github",
+        "releaseType": "release"
+      }
+    },
     "linux": {
       "category": "Office",
       "icon": "icons/png",
