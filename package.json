@@ -21,8 +21,9 @@
     "postinstall": "electron-builder install-app-deps",
     "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
-    "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish always",
+    "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish never",
     "build-snap": "electron-builder --linux snap",
+    "build-win": "electron-builder --win",
     "start": "electron ."
   },
   "dependencies": {
