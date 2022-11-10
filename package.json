@@ -34,7 +34,7 @@
     "electron-store": "^8.1.0"
   },
   "devDependencies": {
-    "electron": "^18.3.4",
+    "electron": "^18.3.7",
     "electron-builder": "^23.1.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^14.9.1",
