@@ -1,18 +1,28 @@
-{ lib, fetchFromGitHub
-, makeWrapper, makeDesktopItem, mkYarnPackage
-, electron_18, yarn2nix
+{ lib
+, fetchFromGitHub
+, makeWrapper
+, makeDesktopItem
+, mkYarnPackage
+, electron_18
+, yarn2nix
 }:
 
 let
-  executableName = "kuro";
-  version = "8.1.4";
+  pname = "kuro";
+  executableName = pname;
+  version = "8.1.6";
   electron = electron_18;
 
 in mkYarnPackage rec {
-  name = "kuro-${version}";
+  name = "${pname}-${version}";
   inherit version;
 
-  src = ./.;  # TODO: replace with fetchFromGitHub
+  src = fetchFromGitHub {
+    owner = "davidsmorais";
+    repo = pname;
+    rev = "v${version}";
+    sha256 = "sha256-T67zHspUkwL/YrocnGhaLOz7SvcAV8FFIukCQzEiaiQ=";
+  };
 
   packageJSON = ./package.json;
   yarnLock = ./yarn.lock;
@@ -54,15 +64,15 @@ in mkYarnPackage rec {
 
   desktopItem = with lib;
     makeDesktopItem {
-      name = "kuro";
+      name = pname;
       exec = executableName;
-      icon = "kuro";
-      desktopName = "kuro";
+      icon = pname;
+      desktopName = pname;
       genericName = "Microsoft To-Do Client";
       comment = concatStringsSep " "
                   (splitString "\n" meta.description);
       categories = [ "Office" ];
-      startupWMClass = "kuro";
+      startupWMClass = pname;
     };
 
   meta = with lib; {
@@ -71,10 +81,9 @@ in mkYarnPackage rec {
       community-driven, free Microsoft To-Do app,
       used by people in more than 120 countries.
     '';
-    homepage = "https://github.com/pythonInRelay/kuro";
+    homepage = "https://github.com/davidsmorais/kuro";
     license = licenses.mit;
-    # maintainers = maintainers.ckopo;
+    maintainers = with maintainers; [ ChaosAttractor ];
     inherit (electron.meta) platforms;
   };
 }
-
