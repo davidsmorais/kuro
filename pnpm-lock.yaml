@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   auto-launch: ^5.0.1
   electron: ^22.1.0
-  electron-builder: ^23.1.0
+  electron-builder: ^23.6.0
   electron-context-menu: ^3.6.1
   electron-debug: ^1.4.0
   electron-dl: ^1.10.0
