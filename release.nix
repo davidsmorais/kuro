@@ -3,15 +3,15 @@
 , makeWrapper
 , makeDesktopItem
 , mkYarnPackage
-, electron_18
+, electron_22
 , yarn2nix
 }:
 
 let
   pname = "kuro";
   executableName = pname;
-  version = "8.1.6";
-  electron = electron_18;
+  version = "8.1.7";
+  electron = electron_22;
 
 in mkYarnPackage rec {
   name = "${pname}-${version}";
