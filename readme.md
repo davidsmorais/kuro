@@ -49,13 +49,13 @@ To install Kuro, you can run
 paru -S kuro-appimage
 ```
 
-or 
+or
 
 ```
 yay -S kuro-appimage
 ```
 
-### Flatpak 🔜 
+### Flatpak 🔜
 _Soon Kuro will support the flatpak format_
 
 * **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
@@ -70,11 +70,12 @@ Checkout the [Wiki](https://github.com/davidsmorais/kuro/wiki/Keyboard-Shortcuts
 
 ## [Devlog](./docs/devlog.md)
 
-### Latest Update 21/03/2022
-I think most theme issues are closed and have just released a version which also fixes the auto updater. Please download 8.0.4a.
+### 26/01/2023
+Kuro is relatively stable and I have been working on other projects.
+Today, I have updated Electron and some other dependencies to their latest, most secure versions. In doing so, Kuro has stopped supporting 32bit systems.
+The last working version on 32bit systems is [8.1.6](https://github.com/davidsmorais/kuro/releases/tag/v8.1.6)
 
-I'm thinking  about adding new themes to make Kuro even more customizable.
-I'm thinking about removing the "Sepia" theme, but would like to have some insights on its usage before doing so.
+---
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 
 _________________________________________________________
