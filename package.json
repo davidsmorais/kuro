@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
+    "icons": "electron-icon-maker --input=./static/IconTray.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
     "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish never",
     "build-snap": "electron-builder --linux snap",
@@ -28,13 +28,13 @@
   },
   "dependencies": {
     "auto-launch": "^5.0.1",
-    "electron-context-menu": "^3.6.0",
+    "electron-context-menu": "^3.6.1",
     "electron-debug": "^1.4.0",
     "electron-dl": "^1.10.0",
     "electron-store": "^8.1.0"
   },
   "devDependencies": {
-    "electron": "^18.3.7",
+    "electron": "^22.1.0",
     "electron-builder": "^23.1.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^14.9.1",
