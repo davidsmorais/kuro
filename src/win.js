@@ -48,6 +48,7 @@ class Win {
       webPreferences: {
         nodeIntegration: false,
         enableRemoteModule: true,
+        sandbox: false,
         plugins: true,
         preload: file.preload,
       },
