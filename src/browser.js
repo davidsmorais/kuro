@@ -2,7 +2,7 @@
 const { ipcRenderer: ipc } = require("electron");
 const mode = require("./mode");
 const nav = require("./nav");
-const {store} = require("./settings");
+const { store } = require("./settings");
 const startup = require("./startup");
 
 ipc.on("search", () => {
@@ -135,4 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   nav.sideBar();
   mode.restore();
+});
+
+// Open links in system browser
+document.addEventListener("click", event => {
+  if (event.target.tagName.toLowerCase() === "a") {
+    event.preventDefault();
+    require("electron").shell.openExternal(event.target.href);
+  }
 });
