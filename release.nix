@@ -21,7 +21,7 @@ in mkYarnPackage rec {
     owner = "davidsmorais";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-T67zHspUkwL/YrocnGhaLOz7SvcAV8FFIukCQzEiaiQ=";
+    sha256 = "sha256-+4HgH8HBQ+KIN2u+3ZsPMORPl5C7BO+rXR0RsA79EGg=";
   };
 
   packageJSON = ./package.json;
