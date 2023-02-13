@@ -1794,11 +1794,11 @@
       };
     }
     {
-      name = "electron_dl___electron_dl_1.14.0.tgz";
+      name = "electron_dl___electron_dl_2.0.0.tgz";
       path = fetchurl {
-        name = "electron_dl___electron_dl_1.14.0.tgz";
-        url  = "https://registry.yarnpkg.com/electron-dl/-/electron-dl-1.14.0.tgz";
-        sha512 = "4okyei42a1mLsvLK7hLrIfd20EQzB18nIlLTwBV992aMSmTGLUEFRTmO1MfSslGNrzD8nuPuy1l/VxO8so4lig==";
+        name = "electron_dl___electron_dl_2.0.0.tgz";
+        url  = "https://registry.yarnpkg.com/electron-dl/-/electron-dl-2.0.0.tgz";
+        sha512 = "crv64+Z2ZCsHCoJHBBOypDKx8cy+4jTGMc5/rDDzIajihDN/wITkJOdb6XG8b43YlWr3NS1/r6j+IdwaFNmMiQ==";
       };
     }
     {
@@ -4978,14 +4978,6 @@
       };
     }
     {
-      name = "pupa___pupa_1.0.0.tgz";
-      path = fetchurl {
-        name = "pupa___pupa_1.0.0.tgz";
-        url  = "https://registry.yarnpkg.com/pupa/-/pupa-1.0.0.tgz";
-        sha512 = "WTQm0CKSL1kn+DQCuu970eBPGmhIcfDyDBa9cbgR/grZ2jLrQmLDHoqqAPWLTRlOHFUrBBmL7FQJBZALA+llQg==";
-      };
-    }
-    {
       name = "pupa___pupa_2.1.1.tgz";
       path = fetchurl {
         name = "pupa___pupa_2.1.1.tgz";
@@ -6031,14 +6023,6 @@
         name = "untildify___untildify_3.0.3.tgz";
         url  = "https://registry.yarnpkg.com/untildify/-/untildify-3.0.3.tgz";
         sha512 = "iSk/J8efr8uPT/Z4eSUywnqyrQU7DSdMfdqK4iWEaUVVmcP5JcnpRqmVMwcwcnmI1ATFNgC5V90u09tBynNFKA==";
-      };
-    }
-    {
-      name = "unused_filename___unused_filename_1.0.0.tgz";
-      path = fetchurl {
-        name = "unused_filename___unused_filename_1.0.0.tgz";
-        url  = "https://registry.yarnpkg.com/unused-filename/-/unused-filename-1.0.0.tgz";
-        sha512 = "CzxEtvTNfsydlKb30IeExGVcRAQv9CLgzoYmnQskceQTV/EZY4jTOrtUcUBlWnAfZdi1UmX1JO0hMKQTDcwCVw==";
       };
     }
     {
