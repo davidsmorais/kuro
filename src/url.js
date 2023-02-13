@@ -2,6 +2,7 @@
 
 module.exports = {
   app: "https://to-do.live.com/tasks/",
+  todoBase: "https://to-do.live.com/",
   community: "https://gitter.im/davidsmorais/kuro",
   homepage: "https://github.com/davidsmorais/kuro",
   issue: "https://github.com/davidsmorais/kuro/issues/new",

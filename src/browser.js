@@ -4,6 +4,7 @@ const mode = require("./mode");
 const nav = require("./nav");
 const { store } = require("./settings");
 const startup = require("./startup");
+const url = require("./url");
 
 ipc.on("search", () => {
   nav.click(".search");
@@ -24,7 +25,7 @@ ipc.on("rename-list", () => {
 
 ipc.on("hide-todo", () => {
   nav.click(
-    ".taskCard-headerActions [aria-labelledby=\"completed_tasks-label completed_tasks-hint\"]",
+    '.taskCard-headerActions [aria-labelledby="completed_tasks-label completed_tasks-hint"]'
   );
 });
 
@@ -124,7 +125,7 @@ ipc.on("zoom-out", () => nav.zoomOut());
 
 ipc.on("zoom-reset", () => nav.zoomReset());
 
-document.addEventListener("keydown", list => nav.jumpToList(list));
+document.addEventListener("keydown", (list) => nav.jumpToList(list));
 
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();
@@ -138,9 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Open links in system browser
-document.addEventListener("click", event => {
+document.addEventListener("click", (event) => {
   if (event.target.tagName.toLowerCase() === "a") {
-    event.preventDefault();
-    require("electron").shell.openExternal(event.target.href);
+    const targetHref = event.target.href;
+    if (!targetHref.includes(url.todoBase)) {
+      event.preventDefault();
+      require("electron").shell.openExternal(event.target.href);
+    }
   }
 });
