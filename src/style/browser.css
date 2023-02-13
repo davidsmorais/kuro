@@ -1,18 +1,21 @@
 :root {
-  --grey: #2D2D2D;
+  --grey: #2d2d2d;
   --med-grey: #666666;
-  --light-grey: #CCCCCC;
-  --red: #F35863;
-  --blue: #4A61FD;
-  --skyblue: #3CB9E9;
-  --purple: #9900D0;
-  --green: #5BD244;
+  --light-grey: #cccccc;
+  --red: #f35863;
+  --blue: #4a7dfd;
+  --skyblue: #3cb9e9;
+  --purple: #7a45bf;
+  --green: #6ec35d;
   --bg-brand: #007262 !important;
-  --bg-brand-hover: #1E9484 !important;
-  --bg-brand-hover-secondary: #004C52 !important;
-  --bg-brand-secondary: #004C52 !important;
-  --bg-brand-disable: #303F40 !important;
+  --bg-brand-hover: #1e9484 !important;
+  --bg-brand-hover-secondary: #004c52 !important;
+  --bg-brand-secondary: #004c52 !important;
+  --bg-brand-disable: #303f40 !important;
 }
+html .theme-red .fluentIcon,
+html .theme-red .toolbarButton .toolbarButton-inner,
+html .theme-red h2.listTitle,
 html.list-colors body .color-red span,
 html.list-colors body .color-red span span,
 html.list-colors body .color-red span i,
@@ -20,6 +23,9 @@ html.list-colors body .color-red .icon svg {
   color: var(--red) !important;
   fill: var(--red) !important;
 }
+html .theme-blue .fluentIcon,
+html .theme-blue .toolbarButton .toolbarButton-inner,
+html .theme-blue h2.listTitle,
 html.list-colors body .color-blue span,
 html.list-colors body .color-blue span span,
 html.list-colors body .color-blue span i,
@@ -27,6 +33,9 @@ html.list-colors body .color-blue .icon svg {
   color: var(--blue) !important;
   fill: var(--blue) !important;
 }
+html .theme-green .fluentIcon,
+html .theme-green .toolbarButton .toolbarButton-inner,
+html .theme-green h2.listTitle,
 html.list-colors body .color-green span,
 html.list-colors body .color-green span span,
 html.list-colors body .color-green span i,
@@ -34,6 +43,9 @@ html.list-colors body .color-green .icon svg {
   color: var(--green) !important;
   fill: var(--green) !important;
 }
+html .theme-purple .fluentIcon,
+html .theme-purple .toolbarButton .toolbarButton-inner,
+html .theme-purple h2.listTitle,
 html.list-colors body .color-purple span,
 html.list-colors body .color-purple span span,
 html.list-colors body .color-purple span i,
@@ -41,6 +53,9 @@ html.list-colors body .color-purple .icon svg {
   color: var(--purple) !important;
   fill: var(--purple) !important;
 }
+html .theme-skyblue .fluentIcon,
+html .theme-skyblue .toolbarButton .toolbarButton-inner,
+html .theme-skyblue h2.listTitle,
 html.list-colors body .color-skyblue span,
 html.list-colors body .color-skyblue span span,
 html.list-colors body .color-skyblue span i,
@@ -109,7 +124,12 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-primary-transparent) !important;
   backdrop-filter: blur(5px);
 }
-#root #container #app #notifications .notificationToast .notificationToast-cancelButton {
+#root
+  #container
+  #app
+  #notifications
+  .notificationToast
+  .notificationToast-cancelButton {
   color: var(--red) !important;
 }
 #root #container #app #notifications .notificationToast button {
