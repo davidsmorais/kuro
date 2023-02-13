@@ -10,7 +10,7 @@
 let
   pname = "kuro";
   executableName = pname;
-  version = "8.1.8";
+  version = "8.1.9";
   electron = electron_22;
 
 in mkYarnPackage rec {
