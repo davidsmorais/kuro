@@ -16,6 +16,8 @@
 html .theme-red .fluentIcon,
 html .theme-red .toolbarButton .toolbarButton-inner,
 html .theme-red h2.listTitle,
+html .theme-red input::placeholder,
+html .theme-red svg,
 html.list-colors body .color-red span,
 html.list-colors body .color-red span span,
 html.list-colors body .color-red span i,
@@ -26,6 +28,8 @@ html.list-colors body .color-red .icon svg {
 html .theme-blue .fluentIcon,
 html .theme-blue .toolbarButton .toolbarButton-inner,
 html .theme-blue h2.listTitle,
+html .theme-blue input::placeholder,
+html .theme-blue svg,
 html.list-colors body .color-blue span,
 html.list-colors body .color-blue span span,
 html.list-colors body .color-blue span i,
@@ -35,6 +39,8 @@ html.list-colors body .color-blue .icon svg {
 }
 html .theme-green .fluentIcon,
 html .theme-green .toolbarButton .toolbarButton-inner,
+html .theme-green input::placeholder,
+html .theme-green svg,
 html .theme-green h2.listTitle,
 html.list-colors body .color-green span,
 html.list-colors body .color-green span span,
@@ -45,6 +51,8 @@ html.list-colors body .color-green .icon svg {
 }
 html .theme-purple .fluentIcon,
 html .theme-purple .toolbarButton .toolbarButton-inner,
+html .theme-purple input::placeholder,
+html .theme-purple svg,
 html .theme-purple h2.listTitle,
 html.list-colors body .color-purple span,
 html.list-colors body .color-purple span span,
@@ -56,6 +64,8 @@ html.list-colors body .color-purple .icon svg {
 html .theme-skyblue .fluentIcon,
 html .theme-skyblue .toolbarButton .toolbarButton-inner,
 html .theme-skyblue h2.listTitle,
+html .theme-skyblue input::placeholder,
+html .theme-skyblue svg,
 html.list-colors body .color-skyblue span,
 html.list-colors body .color-skyblue span span,
 html.list-colors body .color-skyblue span i,
@@ -124,12 +134,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-primary-transparent) !important;
   backdrop-filter: blur(5px);
 }
-#root
-  #container
-  #app
-  #notifications
-  .notificationToast
-  .notificationToast-cancelButton {
+#root #container #app #notifications .notificationToast .notificationToast-cancelButton {
   color: var(--red) !important;
 }
 #root #container #app #notifications .notificationToast button {

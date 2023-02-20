@@ -6,7 +6,7 @@ specifiers:
   electron-builder: ^23.6.0
   electron-context-menu: ^3.6.1
   electron-debug: ^1.4.0
-  electron-dl: ^1.10.0
+  electron-dl: ^2.0.0
   electron-icon-maker: ^0.0.5
   electron-store: ^8.1.0
   stylelint: ^14.9.1
@@ -16,7 +16,7 @@ dependencies:
   auto-launch: 5.0.5
   electron-context-menu: 3.6.1
   electron-debug: 1.5.0
-  electron-dl: 1.14.0
+  electron-dl: 2.0.0
   electron-store: 8.1.0
 
 devDependencies:
@@ -1828,12 +1828,12 @@ packages:
       - supports-color
     dev: false
 
-  /electron-dl/1.14.0:
-    resolution: {integrity: sha512-4okyei42a1mLsvLK7hLrIfd20EQzB18nIlLTwBV992aMSmTGLUEFRTmO1MfSslGNrzD8nuPuy1l/VxO8so4lig==}
+  /electron-dl/2.0.0:
+    resolution: {integrity: sha512-crv64+Z2ZCsHCoJHBBOypDKx8cy+4jTGMc5/rDDzIajihDN/wITkJOdb6XG8b43YlWr3NS1/r6j+IdwaFNmMiQ==}
     dependencies:
       ext-name: 5.0.0
-      pupa: 1.0.0
-      unused-filename: 1.0.0
+      pupa: 2.1.1
+      unused-filename: 2.1.0
     dev: false
 
   /electron-dl/3.5.0:
@@ -4589,11 +4589,6 @@ packages:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
 
-  /pupa/1.0.0:
-    resolution: {integrity: sha512-WTQm0CKSL1kn+DQCuu970eBPGmhIcfDyDBa9cbgR/grZ2jLrQmLDHoqqAPWLTRlOHFUrBBmL7FQJBZALA+llQg==}
-    engines: {node: '>=4'}
-    dev: false
-
   /pupa/2.1.1:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
@@ -5499,14 +5494,6 @@ packages:
   /untildify/3.0.3:
     resolution: {integrity: sha512-iSk/J8efr8uPT/Z4eSUywnqyrQU7DSdMfdqK4iWEaUVVmcP5JcnpRqmVMwcwcnmI1ATFNgC5V90u09tBynNFKA==}
     engines: {node: '>=4'}
-    dev: false
-
-  /unused-filename/1.0.0:
-    resolution: {integrity: sha512-CzxEtvTNfsydlKb30IeExGVcRAQv9CLgzoYmnQskceQTV/EZY4jTOrtUcUBlWnAfZdi1UmX1JO0hMKQTDcwCVw==}
-    engines: {node: '>=4'}
-    dependencies:
-      modify-filename: 1.1.0
-      path-exists: 3.0.0
     dev: false
 
   /unused-filename/2.1.0:
