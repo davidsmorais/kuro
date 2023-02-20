@@ -29,6 +29,7 @@ module.exports = {
     "toggle-sidebar": "Ctrl+O",
     exit: "Ctrl+Q",
   },
+
   theme: {
     bgPrimary: "#282A36",
     bgPrimaryTransparent: "#282A3633",
@@ -39,6 +40,11 @@ module.exports = {
     bgHoverTertiary: "#222D6E",
     bgActive: "#333855",
     bgActiveSecondary: "#3F456B",
+    bgBrand: "#007262",
+    bgBrandHover: "#1e9484",
+    bgBrandHoverSecondary: "#004c52",
+    bgBrandSecondary: "#004c52",
+    bgBrandDisable: "#303f40",
     bgActiveTertiary: "#2D366C",
     bgSeparator: "#44475A33",
     bgBorder: "#44475A33",
