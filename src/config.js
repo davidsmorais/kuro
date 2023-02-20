@@ -32,15 +32,7 @@ class Config {
   }
 
   _updateConfig(data) {
-    console.log(
-      "🚀 ~ file: config.js:35 ~ Config ~ _updateConfig ~ data",
-      data
-    );
     const result = Object.assign({}, this._default);
-    console.log(
-      "🚀 ~ file: config.js:37 ~ Config ~ _updateConfig ~ result",
-      result
-    );
 
     Object.keys(data).forEach((type) => {
       result[type] = Object.assign({}, result[type], data[type]);

@@ -1,6 +1,7 @@
 "use strict";
 const { app, BrowserWindow, Menu, shell, session } = require("electron");
 const fs = require("fs");
+const kebabCase = require("lodash/kebabCase");
 const { is, readSheet } = require("./src/util");
 const file = require("./src/file");
 const menu = require("./src/menu");
@@ -11,6 +12,7 @@ const tray = require("./src/tray");
 const update = require("./src/update");
 const url = require("./src/url");
 const win = require("./src/win");
+const { customTheme } = require("./src/config");
 
 const { log } = console;
 
@@ -91,6 +93,16 @@ app.whenReady().then(() => {
         webContents.insertCSS(readSheet(x));
       }
     });
+    const customThemeCss = `html {
+      ${Object.keys(customTheme)
+        .map((x) => `--${kebabCase(x)}: ${customTheme[x]} !important;`)
+        .join("")}
+    }`;
+    console.log(
+      "🚀 ~ file: index.js:101 ~ webContents.on ~ customThemeCss",
+      customThemeCss
+    );
+    webContents.insertCSS(customThemeCss);
 
     if (!shown) {
       if (store.get("launchMinimized")) {
