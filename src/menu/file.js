@@ -5,7 +5,7 @@ const { is } = require("./../util");
 const { setAcc } = require("./../keymap");
 const dialog = require("./../dialog");
 const file = require("./../file");
-const {store: settings} = require("./../settings");
+const { store: settings } = require("./../settings");
 
 module.exports = {
   label: "File",
@@ -190,7 +190,7 @@ module.exports = {
       type: "separator",
     },
     {
-      label: "Edit Shortcut Keys",
+      label: "Edit Settings (JSON)",
       accelerator: "CmdorCtrl+.",
       click() {
         shell.openPath(file.localConfig);
