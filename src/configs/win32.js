@@ -29,7 +29,6 @@ module.exports = {
     "toggle-sidebar": "Ctrl+O",
     exit: "Ctrl+Q",
   },
-
   theme: {
     bgPrimary: "#282A36",
     bgPrimaryTransparent: "#282A3633",

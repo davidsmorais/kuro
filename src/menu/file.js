@@ -170,6 +170,16 @@ module.exports = {
       },
     },
     {
+      label: "Edit Kuro Settings (JSON)",
+      accelerator: "CmdorCtrl+.",
+      click() {
+        shell.openPath(file.localConfig);
+      },
+    },
+    {
+      type: "separator",
+    },
+    {
       label: "Launch on Start",
       type: "checkbox",
       checked: settings.get("autoLaunch"),
@@ -184,16 +194,6 @@ module.exports = {
       checked: settings.get("launchMinimized"),
       click(item) {
         settings.set("launchMinimized", item.checked);
-      },
-    },
-    {
-      type: "separator",
-    },
-    {
-      label: "Edit Settings (JSON)",
-      accelerator: "CmdorCtrl+.",
-      click() {
-        shell.openPath(file.localConfig);
       },
     },
     {
