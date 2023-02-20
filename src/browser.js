@@ -84,6 +84,12 @@ ipc.on("settings", () => {
   nav.click("#owaSettingsButton");
 });
 
+ipc.on("toggle-dark-mode", () => {
+  nav.click("#owaSettingsButton");
+  nav.click("#dark_mode .ms-Toggle-background");
+});
+
+ipc.on("toggle-custom-mode", () => mode.custom());
 ipc.on("sign-out", () => {
   nav.click("#O365_MainLink_Me");
 
@@ -100,8 +106,6 @@ ipc.on("toggle-sidebar", () => {
 ipc.on("return", () => {
   nav.click(".detailFooter-close");
 });
-
-ipc.on("toggle-dark-mode", () => mode.dark());
 
 ipc.on("toggle-list-colors", () => mode.listColors());
 

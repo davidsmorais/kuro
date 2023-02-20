@@ -51,19 +51,19 @@ module.exports = {
     },
     {
       label: "Dark Theme",
-      accelerator: setAcc("toggle-dark-mode", "CmdorCtrl+H"),
+      accelerator: setAcc("toggle-dark-mode", "CmdorCtrl+B"),
       click() {
         activate("toggle-dark-mode");
       },
     },
     {
-      label: "Toggle List Colors",
+      label: "Custom Theme",
       type: "checkbox",
       checked: settings.get("listColors"),
       accelerator: "CmdorCtrl+S",
       click(item) {
-        settings.set("listColors", item.checked);
-        activate("toggle-list-colors");
+        //settings.set("listColors", item.checked);
+        activate("toggle-custom-mode");
       },
     },
     {

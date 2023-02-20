@@ -93,7 +93,7 @@ app.whenReady().then(() => {
         webContents.insertCSS(readSheet(x));
       }
     });
-    const customThemeCss = `html {
+    const customThemeCss = `html.custom-mode {
       ${Object.keys(customTheme)
         .map((x) => `--${kebabCase(x)}: ${customTheme[x]} !important;`)
         .join("")}

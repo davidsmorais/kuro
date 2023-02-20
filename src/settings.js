@@ -39,7 +39,7 @@ store.set({
   launchMinimized: store.get("launchMinimized", false),
   menuBarHidden: store.get("menuBarHidden", false),
   mode: {
-    dark: store.get("mode.dark", false),
+    custom: store.get("mode.custom", false),
   },
   listColors: store.get("listColors", true),
   requestExitConfirmation: store.get("requestExitConfirmation", true),

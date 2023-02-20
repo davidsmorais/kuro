@@ -55,27 +55,29 @@ module.exports = [
     type: "separator",
   },
   {
-    label: "Toggle Theme",
-    submenu: [
-      {
-        label: "Dark Theme",
-        click() {
-          win.appear();
-          win.activate("toggle-dark-mode");
-        },
-      },
-    ],
-  },
-  {
-    label: "Toggle List Colors",
-    type: "checkbox",
-    checked: settings.get("listColors"),
-    click(item) {
+    label: "Dark Theme",
+    click() {
       win.appear();
-      settings.set("listColors", item.checked);
-      win.activate("toggle-list-colors");
+      win.activate("toggle-dark-mode");
     },
   },
+  {
+    label: "Custom Theme",
+    click() {
+      win.appear();
+      win.activate("toggle-custom-mode");
+    },
+  },
+  // {
+  //   label: "Toggle List Colors",
+  //   type: "checkbox",
+  //   checked: settings.get("listColors"),
+  //   click(item) {
+  //     win.appear();
+  //     settings.set("listColors", item.checked);
+  //     win.activate("toggle-list-colors");
+  //   },
+  // },
   {
     label: "Auto Night Mode",
     type: "checkbox",
