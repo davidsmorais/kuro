@@ -5,7 +5,7 @@ const { is } = require("./../util");
 const { setAcc } = require("./../keymap");
 const dialog = require("./../dialog");
 const file = require("./../file");
-const {store: settings} = require("./../settings");
+const { store: settings } = require("./../settings");
 
 module.exports = {
   label: "File",
@@ -170,6 +170,16 @@ module.exports = {
       },
     },
     {
+      label: "Edit Kuro Settings (JSON)",
+      accelerator: "CmdorCtrl+.",
+      click() {
+        shell.openPath(file.localConfig);
+      },
+    },
+    {
+      type: "separator",
+    },
+    {
       label: "Launch on Start",
       type: "checkbox",
       checked: settings.get("autoLaunch"),
@@ -184,16 +194,6 @@ module.exports = {
       checked: settings.get("launchMinimized"),
       click(item) {
         settings.set("launchMinimized", item.checked);
-      },
-    },
-    {
-      type: "separator",
-    },
-    {
-      label: "Edit Shortcut Keys",
-      accelerator: "CmdorCtrl+.",
-      click() {
-        shell.openPath(file.localConfig);
       },
     },
     {
