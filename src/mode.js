@@ -5,7 +5,6 @@ const win = require("./win");
 
 class Mode {
   _toggle(mode) {
-    console.log("🚀 ~ file: mode.js:8 ~ Mode ~ _toggle ~ mode:", mode);
     if (!mode) {
       win.activate("toggle-dark-mode");
     } else {

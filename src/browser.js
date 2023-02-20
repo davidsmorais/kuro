@@ -85,8 +85,12 @@ ipc.on("settings", () => {
 });
 
 ipc.on("toggle-dark-mode", () => {
-  nav.click("#owaSettingsButton");
+  console.log("Everyday im togglin");
+  if (!nav.select("#dark_mode")) {
+    nav.click("#owaSettingsButton");
+  }
   nav.click("#dark_mode .ms-Toggle-background");
+  nav.click("#owaSettingsButton");
 });
 
 ipc.on("toggle-custom-mode", () => mode.custom());
