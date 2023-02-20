@@ -2,7 +2,7 @@
 const electron = require("electron");
 const { is } = require("./util");
 const file = require("./file");
-const {store: settings} = require("./settings");
+const { store: settings } = require("./settings");
 
 const { app, BrowserWindow } = electron;
 
@@ -13,7 +13,7 @@ class Win {
   }
 
   get _defaultDimensions() {
-    return this._screenDimensions.map(x => Math.round(x * 0.9));
+    return this._screenDimensions.map((x) => Math.round(x * 0.9));
   }
 
   get _lastState() {
@@ -31,7 +31,7 @@ class Win {
   get _minDimensions() {
     const multipliers = [0.1, 0.3];
     const [minWidth, minHeight] = this._screenDimensions.map((x, idx) =>
-      Math.round(x * multipliers[idx]),
+      Math.round(x * multipliers[idx])
     );
     return { minWidth, minHeight };
   }
@@ -40,7 +40,6 @@ class Win {
     return Object.assign({}, this._minDimensions, this._lastState, {
       alwaysOnTop: settings.get("alwaysOnTop"),
       autoHideMenuBar: settings.get("menuBarHidden"),
-      darkTheme: settings.get("mode.dark") || settings.get("mode.black"),
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),

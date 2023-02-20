@@ -1,4 +1,5 @@
 "use strict";
+const nav = require("./nav");
 const { store: settings } = require("./settings");
 const time = require("./time");
 const win = require("./win");
@@ -7,9 +8,9 @@ class Mode {
   _toggle(mode) {
     if (!mode) {
       win.activate("toggle-dark-mode");
+      settings.set("mode.custom", false);
     } else {
       const modes = settings.get("mode");
-      console.log("🚀 ~ file: mode.js:12 ~ Mode ~ _toggle ~ modes:", modes);
       Object.keys(modes).forEach((x) => {
         settings.set(`mode.${x}`, x === mode ? !modes[x] : false);
         document.documentElement.classList.toggle(
@@ -21,10 +22,11 @@ class Mode {
   }
 
   _enableAutoNight() {
-    if (time.isDaytime()) {
-      this._toggle(null);
-    } else if (!settings.get("mode.dark")) {
-      this._toggle("dark");
+    const isInDarkMode = nav.select("html").attributes["data-theme"].value;
+    if (time.isDaytime() && !isInDarkMode) {
+      this._toggle();
+    } else if (isInDarkMode) {
+      this._toggle();
     }
 
     setTimeout(() => {
