@@ -98,10 +98,7 @@ app.whenReady().then(() => {
         .map((x) => `--${kebabCase(x)}: ${customTheme[x]} !important;`)
         .join("")}
     }`;
-    console.log(
-      "🚀 ~ file: index.js:101 ~ webContents.on ~ customThemeCss",
-      customThemeCss
-    );
+
     webContents.insertCSS(customThemeCss);
 
     if (!shown) {
