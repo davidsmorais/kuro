@@ -1,15 +1,15 @@
 "use strict";
-const {store: settings} = require("./settings");
+const { store: settings } = require("./settings");
 const time = require("./time");
 
 class Mode {
   _toggle(mode) {
     const modes = settings.get("mode");
-    Object.keys(modes).forEach(x => {
+    Object.keys(modes).forEach((x) => {
       settings.set(`mode.${x}`, x === mode ? !modes[x] : false);
       document.documentElement.classList.toggle(
         `${x}-mode`,
-        settings.get(`mode.${x}`),
+        settings.get(`mode.${x}`)
       );
     });
   }
@@ -44,10 +44,6 @@ class Mode {
       : this._disableAutoNight();
   }
 
-  black() {
-    this._toggle("black");
-  }
-
   dark() {
     this._toggle("dark");
   }
@@ -55,7 +51,7 @@ class Mode {
   restore() {
     const modes = settings.get("mode");
 
-    Object.keys(modes).forEach(x => {
+    Object.keys(modes).forEach((x) => {
       if (modes[x]) {
         document.documentElement.classList.toggle(`${x}-mode`, modes[x]);
       }
@@ -63,16 +59,8 @@ class Mode {
 
     document.documentElement.classList.toggle(
       "list-colors",
-      settings.get("listColors"),
+      settings.get("listColors")
     );
-  }
-
-  sepia() {
-    this._toggle("sepia");
-  }
-
-  dracula() {
-    this._toggle("dracula");
   }
 }
 

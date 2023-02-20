@@ -4,7 +4,7 @@ const os = require("os");
 const { activate } = require("./win");
 const { release } = require("./url");
 const file = require("./file");
-const {store: settings} = require("./settings");
+const { store: settings } = require("./settings");
 
 class Dialog {
   get _keyReferenceInfo() {
@@ -30,10 +30,7 @@ class Dialog {
       "Settings: Ctrl+,",
       "Sign out: Ctrl+Alt+Q",
       "Tasks: Ctrl+J",
-      "Toggle black mode: Ctrl+B",
-      "Toggle dark mode: Ctrl+H",
-      "Toggle sepia mode: Ctrl+G",
-      "Toggle dracula mode: Ctrl+Shift+G",
+      "Toggle dark mode: Ctrl+B",
       "Toggle sidebar: Ctrl+O",
     ].join("\n");
   }
@@ -75,8 +72,8 @@ class Dialog {
           defaultId: 0,
           icon: file.icon,
         },
-        options,
-      ),
+        options
+      )
     );
   }
 

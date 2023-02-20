@@ -39,10 +39,7 @@ store.set({
   launchMinimized: store.get("launchMinimized", false),
   menuBarHidden: store.get("menuBarHidden", false),
   mode: {
-    black: store.get("mode.black", false),
     dark: store.get("mode.dark", false),
-    sepia: store.get("mode.sepia", false),
-    dracula: store.get("mode.dracula", false),
   },
   listColors: store.get("listColors", true),
   requestExitConfirmation: store.get("requestExitConfirmation", true),

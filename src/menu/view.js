@@ -3,7 +3,7 @@ const { activate } = require("./../win");
 const { is } = require("./../util");
 const { setAcc } = require("./../keymap");
 const dialog = require("./../dialog");
-const {store: settings} = require("./../settings");
+const { store: settings } = require("./../settings");
 
 module.exports = {
   label: "View",
@@ -50,37 +50,11 @@ module.exports = {
       type: "separator",
     },
     {
-      label: "Toggle Theme",
-      submenu: [
-        {
-          label: "Sepia Theme",
-          accelerator: setAcc("toggle-sepia-mode", "CmdOrCtrl+G"),
-          click() {
-            activate("toggle-sepia-mode");
-          },
-        },
-        {
-          label: "Dracula Theme",
-          accelerator: setAcc("toggle-dracula-mode", "CmdOrCtrl+Shift+G"),
-          click() {
-            activate("toggle-dracula-mode");
-          },
-        },
-        {
-          label: "Black Theme",
-          accelerator: setAcc("toggle-black-mode", "CmdOrCtrl+B"),
-          click() {
-            activate("toggle-black-mode");
-          },
-        },
-        {
-          label: "Dark Theme",
-          accelerator: setAcc("toggle-dark-mode", "CmdorCtrl+H"),
-          click() {
-            activate("toggle-dark-mode");
-          },
-        },
-      ],
+      label: "Dark Theme",
+      accelerator: setAcc("toggle-dark-mode", "CmdorCtrl+H"),
+      click() {
+        activate("toggle-dark-mode");
+      },
     },
     {
       label: "Toggle List Colors",

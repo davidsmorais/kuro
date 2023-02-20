@@ -101,13 +101,7 @@ ipc.on("return", () => {
   nav.click(".detailFooter-close");
 });
 
-ipc.on("toggle-black-mode", () => mode.black());
-
 ipc.on("toggle-dark-mode", () => mode.dark());
-
-ipc.on("toggle-sepia-mode", () => mode.sepia());
-
-ipc.on("toggle-dracula-mode", () => mode.dracula());
 
 ipc.on("toggle-list-colors", () => mode.listColors());
 

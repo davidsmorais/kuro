@@ -1,7 +1,7 @@
 "use strict";
 const { shell } = require("electron");
 const dialog = require("./../dialog");
-const {store: settings} = require("./../settings");
+const { store: settings } = require("./../settings");
 const url = require("./../url");
 const win = require("./../win");
 
@@ -57,27 +57,6 @@ module.exports = [
   {
     label: "Toggle Theme",
     submenu: [
-      {
-        label: "Sepia Theme",
-        click() {
-          win.appear();
-          win.activate("toggle-sepia-mode");
-        },
-      },
-      {
-        label: "Dracula Theme",
-        click() {
-          win.appear();
-          win.activate("toggle-dracula-mode");
-        },
-      },
-      {
-        label: "Black Theme",
-        click() {
-          win.appear();
-          win.activate("toggle-black-mode");
-        },
-      },
       {
         label: "Dark Theme",
         click() {
