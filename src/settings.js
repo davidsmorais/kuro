@@ -13,7 +13,9 @@ const store = new Store({
     lastWindowState: {},
     launchMinimized: false,
     menuBarHidden: false,
-    mode: {},
+    mode: {
+      custom: false,
+    },
     listColors: true,
     requestExitConfirmation: true,
     sideBarHidden: false,

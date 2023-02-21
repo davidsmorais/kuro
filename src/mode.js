@@ -22,7 +22,7 @@ class Mode {
   }
 
   _enableAutoNight() {
-    const isInDarkMode = nav.select("html").attributes["data-theme"].value;
+    const isInDarkMode = nav.select("html")?.attributes?.["data-theme"]?.value;
     if (time.isDaytime() && !isInDarkMode) {
       this._toggle();
     } else if (isInDarkMode) {
