@@ -35,7 +35,7 @@ ipc.on("new-todo", () => {
 });
 
 ipc.on("rename-todo", () => {
-  nav.click(".taskItem.selected.active");
+  nav.click(".taskItem.selected.active button");
   nav.click(".editableContent-editButton");
 });
 
@@ -45,13 +45,13 @@ ipc.on("delete-todo", () => {
 });
 
 ipc.on("add-my-day", () => {
-  nav.click(".taskItem.selected.active");
+  nav.click(".taskItem.selected.active button");
   nav.click(".section-innerClick");
   nav.click(".detailFooter-close");
 });
 
 ipc.on("complete-todo", () => {
-  nav.click(".taskItem.selected.active .checkBox");
+  nav.click(".taskItem.selected.active button .checkBox");
 });
 
 ipc.on("my-day", () => {
@@ -71,13 +71,17 @@ ipc.on("tasks", () => {
 });
 
 ipc.on("set-reminder", () => {
-  nav.click(".taskItem.selected.active");
-  nav.click(".ms-Icon--Ringer");
+  nav.click(".taskItem.selected.active button");
+  nav.click(
+    ".details-body .section:nth-of-type(2) .section-item:nth-of-type(1) button",
+  );
 });
 
 ipc.on("add-due-date", () => {
-  nav.click(".taskItem.selected.active");
-  nav.click(".section-icon .ms-Icon--Calendar");
+  nav.click(".taskItem.selected.active button");
+  nav.click(
+    ".details-body .section:nth-of-type(2) .section-item:nth-of-type(2) button",
+  );
 });
 
 ipc.on("settings", () => {
