@@ -67,13 +67,6 @@ class Nav {
     }
   }
 
-  sideBar() {
-    document.documentElement.classList.toggle(
-      "side-bar-hidden",
-      settings.get("sideBarHidden"),
-    );
-  }
-
   nextList() {
     const lists = this._getLists();
     const idx = this._currentIdx(lists);

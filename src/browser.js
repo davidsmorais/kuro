@@ -103,8 +103,11 @@ ipc.on("sign-out", () => {
 });
 
 ipc.on("toggle-sidebar", () => {
-  store.set("sideBarHidden", !store.get("sideBarHidden"));
-  nav.sideBar();
+  if (nav.select(".sidebar-header")) {
+    nav.click(".sidebar-header button");
+  } else {
+    nav.click("#main .sidebarNavButton > button");
+  }
 });
 
 ipc.on("return", () => {

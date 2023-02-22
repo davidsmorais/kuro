@@ -39,7 +39,7 @@
     "electron-builder": "^23.6.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^14.9.1",
-    "xo": "^0.51.0"
+    "xo": "^0.53.1"
   },
   "xo": {
     "envs": [

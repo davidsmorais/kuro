@@ -122,7 +122,6 @@ module.exports = {
     {
       label: "Toggle Side Bar",
       type: "checkbox",
-      checked: !settings.get("sideBarHidden"),
       accelerator: setAcc("toggle-sidebar", "CmdorCtrl+O"),
       click() {
         activate("toggle-sidebar");
