@@ -5,6 +5,7 @@ module.exports = {
     "add-due-date": "Ctrl+Shift+T",
     "add-my-day": "Ctrl+K",
     "complete-todo": "Ctrl+Shift+N",
+    "set-repeat": "Ctrl+Shift+U",
     "delete-list": "Ctrl+Shift+D",
     "delete-todo": "Ctrl+D",
     "global-create-todo": "Ctrl+Alt+C",
@@ -23,8 +24,8 @@ module.exports = {
     settings: "Ctrl+,",
     "sign-out": "Ctrl+Alt+Q",
     tasks: "Ctrl+J",
-    "toggle-dark-mode": "Ctrl+B",
-    "toggle-sidebar": "Ctrl+O",
+    "toggle-dark-mode": "Ctrl+H",
+    "toggle-sidebar": "Ctrl+B",
     exit: "Ctrl+Q",
   },
   theme: {

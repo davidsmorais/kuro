@@ -3,6 +3,8 @@
 module.exports = {
   shortcutKeys: {
     "add-due-date": "Ctrl+Shift+T",
+    "set-reminder": "Ctrl+Shift+E",
+    "set-repeat": "Ctrl+Shift+U",
     "add-my-day": "Ctrl+K",
     "complete-todo": "Ctrl+Shift+N",
     "delete-list": "Ctrl+Shift+D",
@@ -19,7 +21,6 @@ module.exports = {
     "rename-list": "Ctrl+Y",
     "rename-todo": "Ctrl+T",
     return: "Esc",
-    "set-reminder": "Ctrl+Shift+E",
     settings: "Ctrl+,",
     "sign-out": "Ctrl+Alt+Q",
     tasks: "Ctrl+J",

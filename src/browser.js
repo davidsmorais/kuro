@@ -84,6 +84,12 @@ ipc.on("add-due-date", () => {
   );
 });
 
+ipc.on("set-repeat", () => {
+  nav.click(".taskItem.selected.active button");
+  nav.click(
+    ".details-body .section:nth-of-type(2) .section-item:nth-of-type(3) button",
+  );
+});
 ipc.on("settings", () => {
   nav.click("#owaSettingsButton");
 });

@@ -114,6 +114,13 @@ module.exports = {
             activate("add-due-date");
           },
         },
+        {
+          label: "Set Repeat",
+          accelerator: setAcc("set-repeat", "CmdorCtrl+Shift+U"),
+          click() {
+            activate("set-repeat");
+          },
+        },
       ],
     },
     {
