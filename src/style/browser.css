@@ -134,7 +134,12 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-primary-transparent) !important;
   backdrop-filter: blur(5px);
 }
-#root #container #app #notifications .notificationToast .notificationToast-cancelButton {
+#root
+  #container
+  #app
+  #notifications
+  .notificationToast
+  .notificationToast-cancelButton {
   color: var(--red) !important;
 }
 #root #container #app #notifications .notificationToast button {
@@ -187,6 +192,9 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .o365sx-neutral-dark-font {
   color: var(--font-color-primary) !important;
 }
+#FlexPane_Overflow_Container #O365fpcontainerid {
+  border-color: var(--bg-secondary) !important;
+}
 /* * Suggestions Panel * */
 .ms-Panel-main {
   background: var(--bg-tertiary) !important;
@@ -199,11 +207,15 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 #todoWhatsNewBtn_container {
   display: none;
 }
+.o365cs-base .o365sx-button {
+  color: var(--font-color-brand) !important;
+  background-color: var(--bg-primary) !important;
+}
 #root #container #O365_NavHeader {
   background: transparent;
 }
 #root #container #O365_NavHeader .searchToolbar i {
-  color: var(--bg-brand-hover) !important;
+  color: var(--font-color-brand) !important;
 }
 #root #container #O365_NavHeader .searchToolbar-icon:hover {
   background: var(--bg-tertiary) !important;
