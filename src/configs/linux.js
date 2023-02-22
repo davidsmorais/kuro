@@ -23,9 +23,9 @@ module.exports = {
     settings: "Ctrl+,",
     "sign-out": "Ctrl+Alt+Q",
     tasks: "Ctrl+J",
-    "toggle-dark-mode": "Ctrl+B",
+    "toggle-dark-mode": "Ctrl+H",
     "toggle-custom-mode": "Ctrl+S",
-    "toggle-sidebar": "Ctrl+O",
+    "toggle-sidebar": "Ctrl+B",
     exit: "Ctrl+Q",
   },
   theme: {

@@ -25,7 +25,7 @@ ipc.on("rename-list", () => {
 
 ipc.on("hide-todo", () => {
   nav.click(
-    '.taskCard-headerActions [aria-labelledby="completed_tasks-label completed_tasks-hint"]'
+    ".taskCard-headerActions [aria-labelledby=\"completed_tasks-label completed_tasks-hint\"]",
   );
 });
 
@@ -89,6 +89,7 @@ ipc.on("toggle-dark-mode", () => {
   if (!nav.select("#dark_mode")) {
     nav.click("#owaSettingsButton");
   }
+
   nav.click("#dark_mode .ms-Toggle-background");
   nav.click("#owaSettingsButton");
 });
@@ -130,7 +131,7 @@ ipc.on("zoom-out", () => nav.zoomOut());
 
 ipc.on("zoom-reset", () => nav.zoomReset());
 
-document.addEventListener("keydown", (list) => nav.jumpToList(list));
+document.addEventListener("keydown", list => nav.jumpToList(list));
 
 document.addEventListener("DOMContentLoaded", () => {
   nav.zoomRestore();
@@ -139,12 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
     mode.autoNight();
   }
 
-  nav.sideBar();
   mode.restore();
 });
 
 // Open links in system browser
-document.addEventListener("click", (event) => {
+document.addEventListener("click", event => {
   if (event.target.tagName.toLowerCase() === "a") {
     const targetHref = event.target.href;
     if (!targetHref.includes(url.todoBase)) {

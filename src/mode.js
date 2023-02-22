@@ -6,18 +6,18 @@ const win = require("./win");
 
 class Mode {
   _toggle(mode) {
-    if (!mode) {
-      win.activate("toggle-dark-mode");
-      settings.set("mode.custom", false);
-    } else {
+    if (mode) {
       const modes = settings.get("mode");
-      Object.keys(modes).forEach((x) => {
+      Object.keys(modes).forEach(x => {
         settings.set(`mode.${x}`, x === mode ? !modes[x] : false);
         document.documentElement.classList.toggle(
           `${x}-mode`,
-          settings.get(`mode.${x}`)
+          settings.get(`mode.${x}`),
         );
       });
+    } else {
+      win.activate("toggle-dark-mode");
+      settings.set("mode.custom", false);
     }
   }
 
@@ -63,7 +63,7 @@ class Mode {
   restore() {
     const modes = settings.get("mode");
 
-    Object.keys(modes).forEach((x) => {
+    Object.keys(modes).forEach(x => {
       if (modes[x] && x === "custom") {
         document.documentElement.classList.toggle(`${x}-mode`, modes[x]);
       }
@@ -71,7 +71,7 @@ class Mode {
 
     document.documentElement.classList.toggle(
       "list-colors",
-      settings.get("listColors")
+      settings.get("listColors"),
     );
   }
 }
