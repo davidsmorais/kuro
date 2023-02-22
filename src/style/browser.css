@@ -195,7 +195,8 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-secondary) !important;
 }
 /* * Navbar & Search * */
-#Region_3 {
+#Region_3 #todoHelpBtn_container,
+#todoWhatsNewBtn_container {
   display: none;
 }
 #root #container #O365_NavHeader {

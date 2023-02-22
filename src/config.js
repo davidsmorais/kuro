@@ -1,5 +1,5 @@
 "use strict";
-const fs = require("fs");
+const fs = require("node:fs");
 const defaultConfig = require("./configs");
 const file = require("./file");
 
@@ -34,19 +34,20 @@ class Config {
   _updateConfig(data) {
     const result = Object.assign({}, this._default);
 
-    Object.keys(data).forEach((type) => {
+    Object.keys(data).forEach(type => {
       result[type] = Object.assign({}, result[type], data[type]);
     });
 
-    Object.keys(result).forEach((type) => {
+    Object.keys(result).forEach(type => {
       if (!data[type]) {
         data[type] = {};
       }
+
       const [options, defaultOptions] = [data[type], this._default[type]].map(
-        (element) => Object.keys(element)
+        element => Object.keys(element),
       );
-      const deprecated = options.filter((x) => !defaultOptions.includes(x));
-      deprecated.forEach((x) => delete result[type][x]);
+      const deprecated = options.filter(x => !defaultOptions.includes(x));
+      deprecated.forEach(x => delete result[type][x]);
     });
 
     return result;
