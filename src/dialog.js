@@ -1,6 +1,6 @@
 "use strict";
 const { app, clipboard, dialog, shell } = require("electron");
-const os = require("os");
+const os = require("node:os");
 const { activate } = require("./win");
 const { release } = require("./url");
 const file = require("./file");
@@ -10,28 +10,31 @@ class Dialog {
   get _keyReferenceInfo() {
     return [
       "Add due date: Ctrl+Shift+T",
+      "Add reminder: Ctrl+Shift+E",
+      "Set repeat: Ctrl+Shift+U",
       "Add my day: Ctrl+K",
-      "Complete todo: Ctrl+Shift+N",
+      "Complete ToDo: Ctrl+Shift+N",
       "Delete list: Ctrl+Shift+D",
-      "Delete todo: Ctrl+D",
-      "Global create todo: Ctrl+Alt+C",
-      "Global search todo: Ctrl+Alt+F",
+      "Delete ToDo: Ctrl+D",
+      "Global create ToDo: Ctrl+Alt+C",
+      "Global search ToDo: Ctrl+Alt+F",
       "Global toggle window: Ctrl+Alt+A",
-      "Hide todo: Ctrl+Shift+H",
+      "Hide ToDo: Ctrl+Shift+H",
       "Important: Ctrl+I",
       "My day: Ctrl+M",
       "New list: Ctrl+L",
-      "New todo: Ctrl+N",
+      "New ToDo: Ctrl+N",
       "Planned: Ctrl+P",
       "Rename list: Ctrl+Y",
-      "Rename todo: Ctrl+T",
+      "Rename ToDo: Ctrl+T",
       "Return: Esc",
       "Set reminder: Ctrl+Shift+E",
       "Settings: Ctrl+,",
       "Sign out: Ctrl+Alt+Q",
       "Tasks: Ctrl+J",
-      "Toggle dark mode: Ctrl+B",
-      "Toggle sidebar: Ctrl+O",
+      "Toggle custom mode: Ctrl+S",
+      "Toggle dark theme: Ctrl+H",
+      "Toggle sidebar: Ctrl+B",
     ].join("\n");
   }
 
@@ -72,8 +75,8 @@ class Dialog {
           defaultId: 0,
           icon: file.icon,
         },
-        options
-      )
+        options,
+      ),
     );
   }
 

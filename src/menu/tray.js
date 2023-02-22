@@ -36,7 +36,7 @@ module.exports = [
         },
       },
       {
-        label: "New Todo",
+        label: "New ToDo",
         click() {
           win.appear();
           win.activate("new-todo");

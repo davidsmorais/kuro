@@ -48,7 +48,7 @@ module.exports = {
           type: "separator",
         },
         {
-          label: "Hide Completed Todos",
+          label: "Hide Completed ToDos",
           accelerator: setAcc("hide-todo", "CmdorCtrl+Shift+H"),
           click() {
             activate("hide-todo");
@@ -57,24 +57,24 @@ module.exports = {
       ],
     },
     {
-      label: "Todo",
+      label: "ToDo",
       submenu: [
         {
-          label: "New Todo",
+          label: "New ToDo",
           accelerator: setAcc("new-todo", "CmdorCtrl+N"),
           click() {
             activate("new-todo");
           },
         },
         {
-          label: "Delete Todo",
+          label: "Delete ToDo",
           accelerator: setAcc("delete-todo", "CmdorCtrl+D"),
           click() {
             activate("delete-todo");
           },
         },
         {
-          label: "Rename Todo",
+          label: "Rename ToDo",
           accelerator: setAcc("rename-todo", "CmdorCtrl+T"),
           click() {
             activate("rename-todo");
@@ -91,7 +91,7 @@ module.exports = {
           },
         },
         {
-          label: "Complete Todo",
+          label: "Complete ToDo",
           accelerator: setAcc("complete-todo", "CmdorCtrl+Shift+N"),
           click() {
             activate("complete-todo");
@@ -153,7 +153,7 @@ module.exports = {
       ],
     },
     {
-      label: "Return to Todos",
+      label: "Return to ToDos",
       accelerator: setAcc("return", "Esc"),
       click() {
         activate("return");
