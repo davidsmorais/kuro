@@ -1,30 +1,19 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
-![banner](./static/banner.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/davidsmorais/kuro/master/static/Icon.png" width="300" />
+</p>
 
-
-
-****
 ## Description
 
 Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://dsmorais.com)
 
-Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer actively maintained
-
 ## Main Features
-- Complete UI overhaul with 4 extra themes (**Dark, Black, Dracula and Sepia**).
-  - More themes/customization to come in the future
-- List colors according to your list theme
-- Global shortcuts
-- The perfect replacement for a Microsoft To-Do desktop client
-- More to come 🔜
+- The best Microsoft ToDo desktop client for Linux
+- [Custom Themes 🎨](https://github.com/davidsmorais/kuro/wiki/Custom-Themes-%F0%9F%8E%A8)
+- [Global Keyboard Shortcuts ⌨️](https://github.com/davidsmorais/kuro/wiki/Keyboard-Shortcuts)
 
+![image](https://user-images.githubusercontent.com/22729436/221692628-73b21cee-567f-4e48-a91c-3cd8db7b9438.png)
 
-
-![image](https://user-images.githubusercontent.com/22729436/164089586-63a1db82-a241-459a-83ee-d20fc0f9dacf.png)
-![image](https://user-images.githubusercontent.com/22729436/164090755-034ad40d-d2ce-4769-885f-dbbae3379b12.png)
-
-🆕 **Dracula Theme** 🧛
-![image](https://user-images.githubusercontent.com/22729436/164089242-84b1aa28-ce4c-4750-9645-529039f896bd.png)
+> ⚠️ Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer actively maintained
 
 ## Installation
 ![Latest version](https://badge.fury.io/gh/davidsmorais%2Fkuro.svg)
@@ -33,6 +22,7 @@ Kuro is a fork of [Ao](https://github.com/klaussinani/ao) which is no longer act
 
 Head over to the [releases 🚀](https://github.com/davidsmorais/kuro/releases) page and download your distribution's package.
 Checkout our [Installation Guide](https://github.com/davidsmorais/kuro/wiki/Installing-Kuro) for more information
+
 ### Snapcraft
 
 Kuro can be found on the [Snap Store](https://snapcraft.io/kuro-desktop/).
@@ -55,9 +45,6 @@ or
 yay -S kuro-appimage
 ```
 
-### Flatpak 🔜
-_Soon Kuro will support the flatpak format_
-
 * **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
 
 
@@ -65,8 +52,6 @@ _Soon Kuro will support the flatpak format_
 Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.
 
 
-## Keyboard Shortcuts
-Checkout the [Wiki](https://github.com/davidsmorais/kuro/wiki/Keyboard-Shortcuts) page for all keyboard shortcuts
 
 ## [Devlog](./docs/devlog.md)
 
@@ -80,6 +65,11 @@ Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/iss
 
 _________________________________________________________
 
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
+
+---
+
 ## Documentation
 Check out our [Wiki](https://github.com/davidsmorais/kuro/wiki) for documentation
 
@@ -90,7 +80,3 @@ Check out our [Wiki](https://github.com/davidsmorais/kuro/wiki) for documentatio
 - [X] Revision of documentation
   - [ ] Landing Page with Documentation
 - [ ] Multi account support
-  - I'm seeing multiple To-Do tabs, but am open to feedback
-- [ ] New feature discovery 🛑
-  - Custom themes
-  - Change branding color
