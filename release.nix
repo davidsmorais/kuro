@@ -2,35 +2,35 @@
 , fetchFromGitHub
 , makeWrapper
 , makeDesktopItem
+, copyDesktopItems
 , mkYarnPackage
-, electron_22
-, yarn2nix
+, electron
 }:
 
-let
+mkYarnPackage rec {
   pname = "kuro";
+  version = "9.0.0";
   executableName = pname;
-  version = "8.1.9";
-  electron = electron_22;
-
-in mkYarnPackage rec {
-  name = "${pname}-${version}";
-  inherit version;
 
   src = fetchFromGitHub {
     owner = "davidsmorais";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-+4HgH8HBQ+KIN2u+3ZsPMORPl5C7BO+rXR0RsA79EGg=";
+    sha256 = "sha256-9Z/r5T5ZI5aBghHmwiJcft/x/wTRzDlbIupujN2RFfU=";
   };
 
   packageJSON = ./package.json;
   yarnLock = ./yarn.lock;
   yarnNix = ./yarn.nix;
 
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [
+    makeWrapper
+    copyDesktopItems
+  ];
 
   installPhase = ''
+    runHook preInstall
+
     # resources
     echo "Installing resources..."
     mkdir -p "$out/share/kuro/electron"
@@ -45,42 +45,32 @@ in mkYarnPackage rec {
       install -Dm644 ./deps/kuro/static/Icon.png $out/share/icons/hicolor/$size/apps/kuro.png
     done
 
-    # desktop item
-    echo "Installing desktop item..."
-    mkdir -p "$out/share"
-    ln -s "${desktopItem}/share/applications" "$out/share/applications"
-
     # executable wrapper
     makeWrapper '${electron}/bin/electron' "$out/bin/${executableName}" \
       --argv0 "kuro" \
       --add-flags "$out/share/kuro/electron"
-  '';
 
+    runHook postInstall
+  '';
   # Do not attempt generating a tarball for contents again.
   # note: `doDist = false;` does not work.
-  distPhase = ''
-    true
-  '';
+  distPhase = "true";
 
-  desktopItem = with lib;
-    makeDesktopItem {
+  desktopItems = [
+    (makeDesktopItem {
       name = pname;
-      exec = executableName;
+      exec = pname;
       icon = pname;
-      desktopName = pname;
+      desktopName = "Kuro";
       genericName = "Microsoft To-Do Client";
-      comment = concatStringsSep " "
-                  (splitString "\n" meta.description);
+      comment = meta.description;
       categories = [ "Office" ];
       startupWMClass = pname;
-    };
+    })
+  ];
 
   meta = with lib; {
-    description = ''
-      kuro is an unofficial, featureful, open source,
-      community-driven, free Microsoft To-Do app,
-      used by people in more than 120 countries.
-    '';
+    description = "An unofficial, featureful, open source, community-driven, free Microsoft To-Do app";
     homepage = "https://github.com/davidsmorais/kuro";
     license = licenses.mit;
     maintainers = with maintainers; [ ChaosAttractor ];
