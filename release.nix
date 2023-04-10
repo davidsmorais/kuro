@@ -23,32 +23,41 @@ mkYarnPackage rec {
   yarnLock = ./yarn.lock;
   yarnNix = ./yarn.nix;
 
+  ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+
   nativeBuildInputs = [
     makeWrapper
     copyDesktopItems
   ];
 
+  postBuild = ''
+    pushd deps/kuro
+
+    yarn --offline run electron-builder \
+      --dir \
+      -c.electronDist=${electron}/lib/electron \
+      -c.electronVersion=${electron.version}
+
+    popd
+  '';
+
   installPhase = ''
     runHook preInstall
 
     # resources
-    echo "Installing resources..."
-    mkdir -p "$out/share/kuro/electron"
-    cp -r './deps/kuro/static' "$out/share/kuro/electron"
-    cp -r './deps/kuro/src' "$out/share/kuro/electron"
-    cp -r './deps/kuro/index.js' "$out/share/kuro/electron"
-    cp -r './node_modules' "$out/share/kuro/electron"
+    mkdir -p "$out/share/lib/kuro"
+    cp -r ./deps/kuro/dist/*-unpacked/{locales,resources{,.pak}} "$out/share/lib/kuro"
 
     # icons
-    echo "Installing icons..."
     for size in 16x16 24x24 32x32 48x48 64x64 72x72 96x96 128x128 192x192 256x256 512x512 1024x1024; do
       install -Dm644 ./deps/kuro/static/Icon.png $out/share/icons/hicolor/$size/apps/kuro.png
     done
 
     # executable wrapper
     makeWrapper '${electron}/bin/electron' "$out/bin/${executableName}" \
-      --argv0 "kuro" \
-      --add-flags "$out/share/kuro/electron"
+      --add-flags "$out/share/lib/kuro/resources/app.asar" \
+      --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform-hint=auto --enable-features=WaylandWindowDecorations}}" \
+      --inherit-argv0
 
     runHook postInstall
   '';
