@@ -35,7 +35,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "electron": "^22.1.0",
+    "electron": "^22.3.21",
     "electron-builder": "^23.6.0",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^14.9.1",
