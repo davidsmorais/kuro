@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  build:
+  BuildOrRelease:
     # the type of machine to run the job on
     runs-on: ${{ matrix.os }}
     
@@ -23,12 +23,18 @@ jobs:
         with:
           node-version: 20
       
-      - name: ⚙️ Install packages for building .flatpak
+      - name: ⚙️📦️ Install flatpak for building .flatpak
+        # https://www.electron.build/configuration/flatpak
         if: matrix.os == 'ubuntu-latest'
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: flatpak flatpak-builder
-
+        
+      - name: ⚙️📦️ Install runtime,base for building .flatpak
+        run: |
+          flatpak install runtime/org.freedesktop.Platform/x86_64/23.08 -y
+          flatpak install app/org.electronjs.Electron2.BaseApp/x86_64/23.08 -y
+      
       - name: ⚙️ yarn install
         run: yarn install
       - name: ⚙️ yarn run release
@@ -37,7 +43,6 @@ jobs:
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: build1
           path: |
             dist/*.AppImage
             dist/*.pacman
@@ -47,16 +52,6 @@ jobs:
             dist/*.flatpak
             dist/*.exe
       
-  release:
-    # the type of machine to run the job on
-    runs-on: ${{ matrix.os }}
-    
-    # create a build matrix for jobs
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    
-    steps:
       - name: 🚀️ release
         uses: softprops/action-gh-release@v2
         with:
