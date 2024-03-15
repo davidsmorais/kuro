@@ -23,6 +23,7 @@
     "test": "xo && stylelint 'src/style/*.css'",
     "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish never",
     "build-snap": "electron-builder --linux snap",
+    "build-flatpak": "electron-builder --linux flatpak",
     "build-win": "electron-builder --win",
     "start": "electron ."
   },
@@ -83,6 +84,14 @@
     "snap": {
       "title": "Kuro"
     },
+    "flatpak":{
+      "license": "license.md",
+      "useWaylandFlags": true,
+      "runtime": "org.freedesktop.Platform",
+      "runtimeVersion": "23.08",
+      "base": "org.electronjs.Electron2.BaseApp",
+      "baseVersion": "23.08"
+    },
     "files": [
       "**/*",
       "!media${/*}",
@@ -140,6 +149,12 @@
         {
           "target": "snap",
           "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "flatpak",
+          "arch":[
             "x64"
           ]
         }
