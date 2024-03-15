@@ -39,7 +39,7 @@ jobs:
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: build
+          name: binary-${{ matrix.os }}
           path: |
             dist/*.AppImage
             dist/*.pacman
