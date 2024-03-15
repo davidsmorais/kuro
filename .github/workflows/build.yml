@@ -41,7 +41,7 @@ jobs:
       - name: ⚙️ yarn install
         run: yarn install
       - name: ⚙️ yarn run release
-        run: DEBUG="@malept/flatpak-bundler" yarn run release
+        run: yarn run release
       
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
