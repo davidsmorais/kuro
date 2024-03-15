@@ -32,6 +32,7 @@ jobs:
         
       - name: ⚙️📦️ Install runtime,base for building .flatpak
         run: |
+          flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
           flatpak install runtime/org.freedesktop.Platform/x86_64/23.08 -y
           flatpak install app/org.electronjs.Electron2.BaseApp/x86_64/23.08 -y
       
