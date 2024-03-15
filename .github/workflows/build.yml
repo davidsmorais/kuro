@@ -40,8 +40,10 @@ jobs:
           node-version: 20
       
       - name: Install packages for building .flatpak
-        run: apt install flatpak flatpak-builder -y
-        
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: flatpak flatpak-builder
+
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
