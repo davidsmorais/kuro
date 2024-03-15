@@ -1,59 +1,55 @@
 name: Build/release
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
-  release-windows:
-    runs-on: windows-latest
-
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v4
-
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      
-      - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
-        with:
-          build_script_name: "release"
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.github_token }}
-
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
-  
   release-linux:
-    runs-on: ubuntu-latest
+    # the type of machine to run the job on
+    runs-on: ${{ matrix.os }}
+    
+    # create a build matrix for jobs
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
 
     steps:
-      - name: Check out Git repository
+      - name: ⚙️ Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install Node.js, NPM and Yarn
+      - name: ⚙️ Install Node.js, NPM and Yarn
         uses: actions/setup-node@v4
         with:
           node-version: 20
       
-      - name: Install packages for building .flatpak
+      - name: ⚙️ Install packages for building .flatpak
+        if: matrix.os == 'ubuntu-latest'
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: flatpak flatpak-builder
 
-      - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+      - name: ⚙️ yarn install
+        run: yarn install
+      - name: ⚙️ yarn run release
+        run: yarn run release
+      
+      - name: 🌐️ Upload results
+        uses: actions/upload-artifact@v4
         with:
-          build_script_name: "release"
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.github_token }}
-
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          name: build1
+          path: |
+            dist/*.AppImage
+            dist/*.pacman
+            dist/*.deb
+            dist/*.snap
+            dist/*.rpm
+            dist/*.flatpak
+            dist/*.exe
+      - name: 🚀️ release
+        uses: softprops/action-gh-release@v1
+        with:
+          file: dist/*
         env:
-          DEBUG: "@malept/flatpak-bundler"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
