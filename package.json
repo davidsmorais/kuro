@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "electron": "^22.3.25",
-    "electron-builder": "^23.6.0",
+    "electron-builder": "^24.13.3",
     "electron-icon-maker": "^0.0.5",
     "stylelint": "^14.9.1",
     "xo": "^0.53.1"
@@ -84,7 +84,7 @@
     "snap": {
       "title": "Kuro"
     },
-    "flatpak":{
+    "flatpak": {
       "license": "license.md",
       "useWaylandFlags": true,
       "runtime": "org.freedesktop.Platform",
@@ -154,7 +154,7 @@
         },
         {
           "target": "flatpak",
-          "arch":[
+          "arch": [
             "x64"
           ]
         }
