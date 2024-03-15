@@ -3,6 +3,8 @@ name: Build/release
 on:
   push:
 
+permissions:
+  contents: write
 
 jobs:
   BuildOrRelease:
