@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  release-linux:
+  build:
     # the type of machine to run the job on
     runs-on: ${{ matrix.os }}
     
@@ -32,7 +32,7 @@ jobs:
       - name: ⚙️ yarn install
         run: yarn install
       - name: ⚙️ yarn run release
-        run: yarn run release
+        run: DEBUG="@malept/flatpak-bundler" yarn run release
       
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
@@ -46,10 +46,21 @@ jobs:
             dist/*.rpm
             dist/*.flatpak
             dist/*.exe
+      
+  release:
+    # the type of machine to run the job on
+    runs-on: ${{ matrix.os }}
+    
+    # create a build matrix for jobs
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    
+    steps:
       - name: 🚀️ release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: "dist/*"
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
