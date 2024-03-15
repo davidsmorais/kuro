@@ -84,14 +84,6 @@
     "snap": {
       "title": "Kuro"
     },
-    "flatpak": {
-      "license": "license.md",
-      "useWaylandFlags": true,
-      "runtime": "org.freedesktop.Platform",
-      "runtimeVersion": "23.08",
-      "base": "org.electronjs.Electron2.BaseApp",
-      "baseVersion": "23.08"
-    },
     "files": [
       "**/*",
       "!media${/*}",
@@ -148,12 +140,6 @@
         },
         {
           "target": "snap",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "flatpak",
           "arch": [
             "x64"
           ]
