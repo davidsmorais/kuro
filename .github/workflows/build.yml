@@ -43,7 +43,7 @@ jobs:
       - name: ⚙️ yarn run release
         run: yarn run release
         env:
-          DEBUG: @malept/flatpak-bundler
+          DEBUG: '@malept/flatpak-bundler'
       
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
