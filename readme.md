@@ -4,7 +4,8 @@
 
 ## Description
 
-Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://dsmorais.com)
+Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app for Linux, made by [David Morais](https://davidmorais.com)
+
 
 ## Main Features
 - The best Microsoft ToDo desktop client for Linux
