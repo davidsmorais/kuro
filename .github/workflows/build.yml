@@ -1,0 +1,60 @@
+name: Build/release
+
+on:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  BuildOrRelease:
+    # the type of machine to run the job on
+    runs-on: ${{ matrix.os }}
+    
+    # create a build matrix for jobs
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: ⚙️ Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️📦️ Build(Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          docker run --rm \
+          --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS_TAG|TRAVIS|TRAVIS_REPO_|TRAVIS_BUILD_|TRAVIS_BRANCH|TRAVIS_PULL_REQUEST_|APPVEYOR_|CSC_|GH_|GITHUB_|BT_|AWS_|STRIP|BUILD_') \
+          --env ELECTRON_CACHE="/root/.cache/electron" \
+          --env ELECTRON_BUILDER_CACHE="/root/.cache/electron-builder" \
+          -v ${PWD}:/project \
+          -v ${PWD##*/}-node-modules:/project/node_modules \
+          -v ~/.cache/electron:/root/.cache/electron \
+          -v ~/.cache/electron-builder:/root/.cache/electron-builder \
+          electronuserland/builder \
+          /bin/bash -c "yarn install && yarn icons && yarn run electron-builder --publish never"
+      
+      - name: ⚙️📦️ Build(Windows)
+        if: matrix.os == 'windows-latest'
+        run: yarn install && yarn icons && yarn run electron-builder --publish never
+      
+      - name: 🌐️ Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: binary-${{ matrix.os }}
+          path: |
+            dist/*.AppImage
+            dist/*.pacman
+            dist/*.deb
+            dist/*.snap
+            dist/*.rpm
+            dist/*.flatpak
+            dist/*.exe
+      
+      - name: 🚀️ release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "dist/*"
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
