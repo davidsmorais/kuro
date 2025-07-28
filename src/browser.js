@@ -1,5 +1,5 @@
 "use strict";
-const { ipcRenderer: ipc } = require("electron");
+const { ipcRenderer: ipc, shell } = require("electron");
 const mode = require("./mode");
 const nav = require("./nav");
 const { store } = require("./settings");
@@ -155,11 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Open links in system browser
 document.addEventListener("click", event => {
-  if (event.target.tagName.toLowerCase() === "a") {
-    const targetHref = event.target.href;
-    if (!targetHref.includes(url.todoBase)) {
+    const target = event.target.closest("a[href]");
+    if (target && target.href.startsWith("http")) {
       event.preventDefault();
-      require("electron").shell.openExternal(event.target.href);
+      shell.openExternal(target.href);
     }
-  }
-});
+},true);
