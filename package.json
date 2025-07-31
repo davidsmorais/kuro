@@ -115,23 +115,6 @@
         "--socket=wayland",
         "--device=all",
         "--filesystem=home"
-      ],
-      "modules": [
-        {
-          "name": "kuro",
-          "buildsystem": "simple",
-          "build-commands": [
-            "install -Dm755 ../src/main.js /app/bin/kuro",
-            "install -Dm644 ../static/Icon.png /app/share/icons/hicolor/256x256/apps/com.davidsmorais.kuro.png"
-          ],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/davidsmorais/kuro.git",
-              "tag": "9.0.0"
-            }
-          ]
-        }
       ]
     },
     "linux": {
