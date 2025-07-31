@@ -125,7 +125,8 @@ ipc.on("return", () => {
   nav.click(".detailFooter-close");
 });
 
-ipc.on("toggle-list-colors", () => mode.listColors());
+
+ipc.on("invert-new-task-position", () => mode.invertNewTaskPosition());
 
 ipc.on("auto-night-mode", () => mode.autoNight());
 

@@ -16,6 +16,7 @@ const store = new Store({
     mode: {
       custom: false,
     },
+    invertNewTaskPosition: false,
     listColors: true,
     requestExitConfirmation: true,
     updateCheckPeriod: 4,
@@ -42,6 +43,7 @@ store.set({
   mode: {
     custom: store.get("mode.custom", false),
   },
+  invertNewTaskPosition: store.get("invertNewTaskPosition", false),
   listColors: store.get("listColors", true),
   requestExitConfirmation: store.get("requestExitConfirmation", true),
   updateCheckPeriod: store.get("updateCheckPeriod", "4"),

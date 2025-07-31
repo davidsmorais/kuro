@@ -68,16 +68,6 @@ module.exports = [
       win.activate("toggle-custom-mode");
     },
   },
-  // {
-  //   label: "Toggle List Colors",
-  //   type: "checkbox",
-  //   checked: settings.get("listColors"),
-  //   click(item) {
-  //     win.appear();
-  //     settings.set("listColors", item.checked);
-  //     win.activate("toggle-list-colors");
-  //   },
-  // },
   {
     label: "Auto Night Mode",
     type: "checkbox",
@@ -92,7 +82,7 @@ module.exports = [
     type: "separator",
   },
   {
-    label: "To-Do Settings",
+    label: "MS ToDo Settings",
     click() {
       win.appear();
       win.activate("settings");

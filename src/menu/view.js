@@ -62,7 +62,7 @@ module.exports = {
       checked: settings.get("listColors"),
       accelerator: "CmdorCtrl+S",
       click(item) {
-        //settings.set("listColors", item.checked);
+        settings.set("listColors", item.checked);
         activate("toggle-custom-mode");
       },
     },

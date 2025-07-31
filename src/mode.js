@@ -40,11 +40,15 @@ class Mode {
     this._toggle(null);
   }
 
-  listColors() {
-    const newColors = !settings.get("listColors");
-    document.documentElement.classList.toggle("list-colors", newColors);
-    settings.set("listColors", newColors);
+  invertNewTaskPosition() {
+    const invert = !settings.get("invertNewTaskPosition");
+    document.documentElement.classList.toggle(
+      "reverse-new-task",
+      invert,
+    );
+    settings.set("invertNewTaskPosition", invert);
   }
+
 
   autoNight() {
     return settings.get("autoNightMode")
@@ -69,10 +73,6 @@ class Mode {
       }
     });
 
-    document.documentElement.classList.toggle(
-      "list-colors",
-      settings.get("listColors"),
-    );
   }
 }
 
