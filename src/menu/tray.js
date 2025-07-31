@@ -78,6 +78,17 @@ module.exports = [
       win.activate("auto-night-mode");
     },
   },
+
+  {
+    label: "Invert New Task Position",
+    type: "checkbox",
+    checked: settings.get("invertNewTaskPosition"),
+    click(item) {
+      win.appear();
+      settings.set("invertNewTaskPosition", item.checked);
+      win.activate("invert-new-task-position");
+    },
+  },
   {
     type: "separator",
   },

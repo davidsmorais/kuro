@@ -41,7 +41,7 @@ class Mode {
   }
 
   invertNewTaskPosition() {
-    const invert = !settings.get("invertNewTaskPosition");
+    const invert = settings.get("invertNewTaskPosition");
     document.documentElement.classList.toggle(
       "reverse-new-task",
       invert,

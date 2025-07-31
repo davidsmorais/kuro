@@ -95,7 +95,6 @@ ipc.on("settings", () => {
 });
 
 ipc.on("toggle-dark-mode", () => {
-  console.log("Everyday im togglin");
   if (!nav.select("#dark_mode")) {
     nav.click("#owaSettingsButton");
   }

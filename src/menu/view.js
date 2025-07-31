@@ -57,16 +57,6 @@ module.exports = {
       },
     },
     {
-      label: "Custom Theme",
-      type: "checkbox",
-      checked: settings.get("listColors"),
-      accelerator: "CmdorCtrl+S",
-      click(item) {
-        settings.set("listColors", item.checked);
-        activate("toggle-custom-mode");
-      },
-    },
-    {
       label: "Auto Night Mode",
       type: "checkbox",
       checked: settings.get("autoNightMode"),

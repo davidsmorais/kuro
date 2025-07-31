@@ -73,6 +73,10 @@ html.list-colors body .color-skyblue .icon svg {
   color: var(--skyblue) !important;
   fill: var(--skyblue) !important;
 }
+html.reverse-new-task #main .main-background{
+  flex-direction: column-reverse;
+  margin-bottom: 16px;
+}
 /* * Body  * */
 body {
   background-color: var(--bg-primary) !important;
