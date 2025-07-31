@@ -22,3 +22,6 @@ build
 
 # Nix compiled
 result
+
+# Flatpak
+.flatpak-builder

@@ -103,35 +103,36 @@
         "releaseType": "release"
       }
     },
-    "flatpak": {  "artifactName": "com.davidsmorais.kuro",
-  "runtime": "org.freedesktop.Platform",
-  "runtimeVersion": "21.08",
-  "sdk": "org.freedesktop.Sdk",
-  "finishArgs": [
-    "--share=network",
-    "--share=ipc",
-    "--socket=x11",
-    "--socket=wayland",
-    "--device=all",
-    "--filesystem=home"
-  ],
-  "modules": [
-    {
-      "name": "kuro",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm755 ../src/main.js /app/bin/kuro",
-        "install -Dm644 ../static/Icon.png /app/share/icons/hicolor/256x256/apps/com.davidsmorais.kuro.png"
+    "flatpak": {
+      "artifactName": "com.davidsmorais.kuro",
+      "runtime": "org.freedesktop.Platform",
+      "runtimeVersion": "22.08",
+      "sdk": "org.freedesktop.Sdk",
+      "finishArgs": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=all",
+        "--filesystem=home"
       ],
-      "sources": [
+      "modules": [
         {
-          "type": "git",
-          "url": "https://github.com/davidsmorais/kuro.git",
-          "tag": "9.0.0"
+          "name": "kuro",
+          "buildsystem": "simple",
+          "build-commands": [
+            "install -Dm755 ../src/main.js /app/bin/kuro",
+            "install -Dm644 ../static/Icon.png /app/share/icons/hicolor/256x256/apps/com.davidsmorais.kuro.png"
+          ],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/davidsmorais/kuro.git",
+              "tag": "9.0.0"
+            }
+          ]
         }
       ]
-    }
-  ]
     },
     "linux": {
       "category": "Office",
@@ -174,7 +175,7 @@
           ]
         },
         {
-        "target": "flatpak",
+          "target": "flatpak",
           "arch": [
             "x64"
           ]
