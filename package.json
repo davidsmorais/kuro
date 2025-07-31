@@ -104,7 +104,8 @@
       }
     },
     "flatpak": {
-      "artifactName": "com.davidsmorais.kuro",
+      "artifactName": "com.davidsmorais.kuro.${ext}",
+      "category": "Office",
       "runtime": "org.freedesktop.Platform",
       "runtimeVersion": "22.08",
       "sdk": "org.freedesktop.Sdk",
