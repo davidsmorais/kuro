@@ -1,7 +1,7 @@
 {
   "name": "kuro",
   "productName": "Kuro",
-  "version": "9.0.0",
+  "version": "9.0.0-flatpak",
   "description": "Elegant Microsoft To-Do desktop app (Ao fork)",
   "license": "MIT",
   "repository": "davidsmorais/kuro",
