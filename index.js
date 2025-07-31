@@ -86,7 +86,12 @@ app.whenReady().then(() => {
     tray.create();
   }
 
+
   const { webContents } = mainWindow;
+
+    if (store.get('invertNewTaskPosition')) {
+      webContents.executeJavaScript('document.documentElement.classList.add("reverse-new-task")');
+    }
   webContents.on("dom-ready", () => {
     fs.readdir(file.style, (error, files) => {
       for (const x of files) {
