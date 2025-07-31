@@ -64,10 +64,6 @@ The last working version on 32bit systems is [8.1.6](https://github.com/davidsmo
 ---
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
 
-_________________________________________________________
-
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 
 ---
 
