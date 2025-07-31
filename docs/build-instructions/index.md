@@ -30,6 +30,10 @@ After logging in to the snapcraft store
  snapcraft upload --release=stable dist/kuro-desktop_<release_name>
 ```
 
+### `flatpak`
+You need to have `flatpak` and `flatpak-builer` installed in your system.
+Install the freekdesktop platforms and the runtime:
+```flatpak install org.freedesktop.Platform -y```
 
 ### Windows
 You can build the package for Windows. Simply clone the repo install the dependencies and run `pnpm build-win`
