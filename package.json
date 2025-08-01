@@ -23,6 +23,7 @@
     "test": "xo && stylelint 'src/style/*.css'",
     "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish never",
     "build-snap": "electron-builder --linux snap",
+    "build-flatpak": "electron-builder build --linux flatpak",
     "build-win": "electron-builder --win",
     "start": "electron ."
   },
