@@ -73,7 +73,6 @@ class Win {
   }
 
   toggle() {
-    console.log("Toggling");
     const [win] = BrowserWindow.getAllWindows();
     if (win.isVisible()) {
       win.hide();

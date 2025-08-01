@@ -231,8 +231,9 @@ module.exports = {
       },
     },
     {
-      label: "Exit",
+      label: "Exit Kuro",
       visible: !is.darwin,
+      accelerator: setAcc("exit", "CmdorCtrl+Q"),
       click() {
         dialog.confirmExit();
       },

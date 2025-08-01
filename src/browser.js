@@ -4,7 +4,7 @@ const mode = require("./mode");
 const nav = require("./nav");
 const { store } = require("./settings");
 const startup = require("./startup");
-const url = require("./url");
+const dialog = require("./dialog");
 
 ipc.on("search", () => {
   nav.click(".search");
@@ -122,8 +122,12 @@ ipc.on("toggle-sidebar", () => {
 
 ipc.on("return", () => {
   nav.click(".detailFooter-close");
+
 });
 
+ipc.on("exit", () => {
+  dialog.confirmExit()
+});
 
 ipc.on("invert-new-task-position", () => mode.invertNewTaskPosition());
 

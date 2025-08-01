@@ -112,7 +112,7 @@ module.exports = {
     {
       label: "Toggle Side Bar",
       type: "checkbox",
-      accelerator: setAcc("toggle-sidebar", "CmdorCtrl+O"),
+      accelerator: setAcc("toggle-sidebar", "CmdorCtrl+B"),
       click() {
         activate("toggle-sidebar");
       },
