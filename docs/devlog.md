@@ -17,3 +17,9 @@ I think most theme issues are closed and have just released a version which also
 I'm thinking  about adding new themes to make Kuro even more customizable.
 I'm thinking about removing the "Sepia" theme, but would like to have some insights on its usage before doing so.
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
+
+
+### 26/01/2023
+Kuro is relatively stable and I have been working on other projects.
+Today, I have updated Electron and some other dependencies to their latest, most secure versions. In doing so, Kuro has stopped supporting 32bit systems.
+The last working version on 32bit systems is [8.1.6](https://github.com/davidsmorais/kuro/releases/tag/v8.1.6)
