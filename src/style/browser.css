@@ -13,31 +13,6 @@
   --bg-brand-secondary: #004c52 !important;
   --bg-brand-disable: #303f40 !important;
 }
-html .theme-red .fluentIcon,
-html .theme-red .toolbarButton .toolbarButton-inner,
-html .theme-red h2.listTitle,
-html .theme-red input::placeholder,
-html .theme-red svg,
-html .theme-blue .fluentIcon,
-html .theme-blue .toolbarButton .toolbarButton-inner,
-html .theme-blue h2.listTitle,
-html .theme-blue input::placeholder,
-html .theme-blue svg,
-html .theme-green .fluentIcon,
-html .theme-green .toolbarButton .toolbarButton-inner,
-html .theme-green input::placeholder,
-html .theme-green svg,
-html .theme-green h2.listTitle,
-html .theme-purple .fluentIcon,
-html .theme-purple .toolbarButton .toolbarButton-inner,
-html .theme-purple input::placeholder,
-html .theme-purple svg,
-html .theme-purple h2.listTitle,
-html .theme-skyblue .fluentIcon,
-html .theme-skyblue .toolbarButton .toolbarButton-inner,
-html .theme-skyblue h2.listTitle,
-html .theme-skyblue input::placeholder,
-html .theme-skyblue svg,
 html.reverse-new-task #main .main-background{
   flex-direction: column-reverse;
   margin-bottom: 16px;
