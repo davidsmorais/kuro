@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2017 - present
 Original Creator - Klaus Sinani <klaussinani@gmail.com> (klaussinani.github.io)
-Current Maintainer - David Morais <david@dsmorais.com> (dsmorais.com)
+Current Maintainer - David Morais <david@davidmorais.com> (david@davidmorais.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
