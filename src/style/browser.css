@@ -66,6 +66,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
 .sidebar-footer {
   display: none;
 }
+.ms-Panel-navigation,
 .editableContent .edit {
   background: var(--bg-tertiary);
   color: var(--font-color-secondary);
