@@ -56,10 +56,8 @@ Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a P
 
 ## [Devlog](./docs/devlog.md)
 
-### 26/01/2023
-Kuro is relatively stable and I have been working on other projects.
-Today, I have updated Electron and some other dependencies to their latest, most secure versions. In doing so, Kuro has stopped supporting 32bit systems.
-The last working version on 32bit systems is [8.1.6](https://github.com/davidsmorais/kuro/releases/tag/v8.1.6)
+### 01/08/2025
+Two years have passed since the last update, and Kuro has been stable. I have been working on other projects, but I am still committed to maintaining Kuro. 9.1 should be released soon, with some fixes, security updates and a tiny new feature ✨
 
 ---
 Please provide feedback on the [issues](https://github.com/davidsmorais/kuro/issues) page 🚀
