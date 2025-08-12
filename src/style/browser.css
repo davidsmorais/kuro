@@ -110,8 +110,8 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   color: var(--font-color-secondary) !important;
 }
 .button.red {
-  background: var(--font-color-warning) !important;
-  color: var(--font-color-primary) !important;
+  background: var(--bg-danger, var(--font-color-warning)) !important;
+  color: var(--font-color-danger, var(--font-color-primary)) !important;
 }
 .ms-Callout-container .ms-Tooltip * {
   background: var(--bg-secondary);
