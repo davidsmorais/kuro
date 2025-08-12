@@ -159,8 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Open links in system browser
 document.addEventListener("click", event => {
+  const TODO_BASE_URL = 'https://to-do.live.com'
     const target = event.target.closest("a[href]");
-    if (target && target.href.startsWith("http")) {
+    if (target && target.href.startsWith("http") && !target.href.startsWith(TODO_BASE_URL)) {
       event.preventDefault();
       shell.openExternal(target.href);
     }
