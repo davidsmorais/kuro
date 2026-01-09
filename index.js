@@ -93,7 +93,7 @@ app.whenReady().then(() => {
       webContents.executeJavaScript('document.documentElement.classList.add("reverse-new-task")');
     }
   webContents.on("dom-ready", () => {
-    fs.readdir(file.style, (error, files) => {
+    fs.readdir(file.style, (_error, files) => {
       for (const x of files) {
         webContents.insertCSS(readSheet(x));
       }
