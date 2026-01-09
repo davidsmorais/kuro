@@ -108,7 +108,7 @@
       "artifactName": "com.davidsmorais.kuro.${ext}",
       "category": "Office",
       "runtime": "org.freedesktop.Platform",
-      "runtimeVersion": "22.08",
+      "runtimeVersion": "25.08",
       "sdk": "org.freedesktop.Sdk",
       "finishArgs": [
         "--share=network",
