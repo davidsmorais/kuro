@@ -115,7 +115,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--device=all",
+        "--device=dri",
         "--filesystem=home"
       ]
     },
