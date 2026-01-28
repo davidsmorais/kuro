@@ -29,7 +29,7 @@ Checkout our [Installation Guide](https://github.com/davidsmorais/kuro/wiki/Inst
 Kuro can be found on the [Snap Store](https://snapcraft.io/kuro-desktop/).
 If you have Snap installed on your system you can install Kuro by running
 ```
-sudo snap install kuro-desktop --edge
+sudo snap install kuro-desktop
 ```
 ### AUR
 
