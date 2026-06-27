@@ -159,10 +159,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Open links in system browser
 document.addEventListener("click", event => {
-  const TODO_BASE_URL = 'https://to-do.live.com'
-    const target = event.target.closest("a[href]");
-    if (target && target.href.startsWith("http") && !target.href.startsWith(TODO_BASE_URL)) {
-      event.preventDefault();
-      shell.openExternal(target.href);
-    }
-},true);
+  const TODO_BASE_URL = 'https://to-do.live.com';
+  const targetUrl = event.target.closest("div.linkedEntity > button.linkedEntity-container")?.title
+    || event.target.closest("a[href]")?.href;
+  if (targetUrl && targetUrl.startsWith("http") && !targetUrl.startsWith(TODO_BASE_URL)) {
+    event.preventDefault();
+    event.stopPropagation();
+    shell.openExternal(targetUrl);
+  }
+}, true);
