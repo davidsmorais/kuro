@@ -34,7 +34,7 @@
     "electron-debug": "^1.4.0",
     "electron-dl": "^2.0.0",
     "electron-store": "^8.1.0",
-    "lodash": "^4.17.23"
+    "lodash": "^4.18.1"
   },
   "devDependencies": {
     "electron": "^37.3.1",
