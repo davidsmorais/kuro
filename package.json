@@ -127,7 +127,8 @@
       "icon": "icons/png",
       "executableArgs": [
         "--no-sandbox",
-        "--ozone-platform-hint=auto"
+        "--ozone-platform-hint=auto",
+        "--enable-wayland-ime"
       ],
       "description": "Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries. (Ao fork)",
       "synopsis": "Elegant Microsoft To-Do desktop app (Ao fork)",

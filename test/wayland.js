@@ -12,5 +12,9 @@ assert.equal(packageJson.build.snap.allowNativeWayland, true);
 assert.ok(
   packageJson.build.linux.executableArgs.includes("--ozone-platform-hint=auto"),
 );
+assert.ok(
+  packageJson.build.linux.executableArgs.includes("--enable-wayland-ime"),
+  "native Wayland must explicitly enable Chromium IME support",
+);
 
 console.log("Wayland packaging configuration tests passed");
