@@ -5,6 +5,7 @@
 , copyDesktopItems
 , mkYarnPackage
 , electron
+, imagemagick
 }:
 
 mkYarnPackage rec {
@@ -28,6 +29,7 @@ mkYarnPackage rec {
   nativeBuildInputs = [
     makeWrapper
     copyDesktopItems
+    imagemagick
   ];
 
   postBuild = ''
@@ -48,9 +50,12 @@ mkYarnPackage rec {
     mkdir -p "$out/share/lib/kuro"
     cp -r ./deps/kuro/dist/*-unpacked/{locales,resources{,.pak}} "$out/share/lib/kuro"
 
-    # icons
-    for size in 16x16 24x24 32x32 48x48 64x64 72x72 96x96 128x128 192x192 256x256 512x512 1024x1024; do
-      install -Dm644 ./deps/kuro/static/Icon.png $out/share/icons/hicolor/$size/apps/kuro.png
+    # icons - the source icon is 1080x1080, which is not a hicolor size, so
+    # render one correctly sized PNG per hicolor directory (referenced by the
+    # desktop item's Icon=kuro).
+    for size in 16 24 32 48 64 72 96 128 192 256 512; do
+      magick ./deps/kuro/static/Icon.png -resize "''${size}x''${size}" kuro-$size.png
+      install -Dm644 kuro-$size.png "$out/share/icons/hicolor/''${size}x''${size}/apps/kuro.png"
     done
 
     # executable wrapper
@@ -82,6 +87,7 @@ mkYarnPackage rec {
     description = "An unofficial, featureful, open source, community-driven, free Microsoft To-Do app";
     homepage = "https://github.com/davidsmorais/kuro";
     license = licenses.mit;
+    mainProgram = executableName;
     maintainers = with maintainers; [ ChaosAttractor ];
     inherit (electron.meta) platforms;
   };

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src data:;">
+    <meta name="color-scheme" content="light dark">
+    <title>Kuro Settings</title>
+    <link rel="stylesheet" href="settings.css">
+  </head>
+  <body>
+    <header class="tabs" role="tablist" aria-label="Settings">
+      <div class="tab-indicator" aria-hidden="true"></div>
+      <button class="tab" type="button" role="tab" id="tab-general" aria-controls="panel-general" aria-selected="true" data-tab="general">General</button>
+      <button class="tab" type="button" role="tab" id="tab-appearance" aria-controls="panel-appearance" aria-selected="false" tabindex="-1" data-tab="appearance">Appearance</button>
+      <button class="tab" type="button" role="tab" id="tab-shortcuts" aria-controls="panel-shortcuts" aria-selected="false" tabindex="-1" data-tab="shortcuts">Shortcuts</button>
+    </header>
+
+    <main>
+      <section class="panel" id="panel-general" role="tabpanel" aria-labelledby="tab-general">
+        <h2 class="section-title" data-string="sectionStartup"></h2>
+        <div class="rows" data-group="startup"></div>
+
+        <h2 class="section-title" data-string="sectionWindow"></h2>
+        <div class="rows" data-group="window"></div>
+
+        <h2 class="section-title" data-string="sectionUpdates"></h2>
+        <div class="rows" data-group="updates"></div>
+        <div class="row row-select">
+          <label for="updateCheckPeriod" data-string="updateCheckPeriod"></label>
+          <select id="updateCheckPeriod"></select>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-appearance" role="tabpanel" aria-labelledby="tab-appearance" hidden>
+        <h2 class="section-title" data-string="sectionTheme"></h2>
+        <div class="rows" data-group="theme"></div>
+        <div class="row row-select">
+          <label for="language" data-string="language"></label>
+          <select id="language"></select>
+        </div>
+
+        <h2 class="section-title" data-string="sectionCustomTheme"></h2>
+        <p class="hint" data-string="customThemeHint"></p>
+        <div class="colors" id="theme-colors"></div>
+        <div class="actions">
+          <button type="button" id="reset-theme" data-string="resetTheme"></button>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-shortcuts" role="tabpanel" aria-labelledby="tab-shortcuts" hidden>
+        <p class="hint" data-string="shortcutsHint"></p>
+        <table class="shortcuts">
+          <thead>
+            <tr>
+              <th scope="col" data-string="command"></th>
+              <th scope="col" data-string="shortcut"></th>
+            </tr>
+          </thead>
+          <tbody id="shortcut-rows"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <p class="config-path"><span data-string="configPath"></span>: <code id="config-path"></code></p>
+      <div class="buttons">
+        <button type="button" id="open-json" data-string="openJson"></button>
+        <button type="button" id="open-folder" data-string="openFolder"></button>
+      </div>
+      <p class="hint hint-footer" data-string="menuNote"></p>
+    </footer>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

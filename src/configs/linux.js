@@ -27,6 +27,8 @@ module.exports = {
     "toggle-dark-mode": "Ctrl+H",
     "toggle-custom-mode": "Ctrl+S",
     "toggle-sidebar": "Ctrl+B",
+    "toggle-list-accents": "Ctrl+Shift+L",
+    "list-theme-panel": "Ctrl+Shift+B",
     exit: "Ctrl+Q",
   },
   theme: {

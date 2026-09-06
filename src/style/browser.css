@@ -17,6 +17,32 @@ html.reverse-new-task #main .main-background{
   flex-direction: column-reverse;
   margin-bottom: 16px;
 }
+/* My Day shows a date line under the title (To-Do's "with-subline" toolbar);
+   other lists collapse it, so the header jumps when switching lists. Give
+   every list the with-subline geometry. */
+#main .tasksToolbar {
+  height: 72px;
+}
+#main .tasksToolbar-subline {
+  min-height: 20px;
+}
+#main .tasksToolbar-headline {
+  margin-top: 16px !important;
+}
+/* Search icon sits above the list title icon instead of floating in the
+   header. Moved with a transform only, so the O365 shell's own header
+   measurements stay intact; the offset is computed by src/layout.js. */
+#O365_NavHeader #toDoSearchBox .searchToolbar {
+  transform: translateX(var(--kuro-search-shift, 0px));
+}
+#root #container #O365_NavHeader #Region_3 {
+  position: relative;
+  z-index: 5;
+  background: var(--bg-primary);
+}
+#O365_NavHeader #toDoSearchBox .searchToolbar.search-is-active {
+  transform: none;
+}
 /* * Body  * */
 body {
   background-color: var(--bg-primary) !important;
@@ -36,22 +62,6 @@ html {
 }
 .keyboardNavigation .listItem:focus {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
-}
-html.side-bar-hidden .leftColumn {
-  display: none !important;
-}
-html.side-bar-hidden #container.leftColumn-overlaid #app {
-  padding-left: 0px !important;
-}
-@media all and (max-width: 620px) {
-  .leftColumn,
-  #owaToDoButton,
-  #todoWhatsNewBtn {
-    display: none !important;
-  }
-  #container.leftColumn-overlaid #app {
-    padding-left: 0px !important;
-  }
 }
 /* * Sidebar * */
 .listItem,
@@ -76,7 +86,9 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   z-index: 10;
 }
 #root #container #app #notifications .notificationToast {
-  background: var(--bg-primary-transparent) !important;
+  /* MS To-Do never defined --bg-primary-transparent; without the fallback the
+     toast rendered with no background at all */
+  background: var(--bg-primary-transparent, var(--bg-primary)) !important;
   backdrop-filter: blur(5px);
 }
 #root
@@ -109,9 +121,13 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   background: var(--bg-tertiary) !important;
   color: var(--font-color-secondary) !important;
 }
-.button.red {
-  background: var(--bg-danger, var(--font-color-warning)) !important;
-  color: var(--font-color-danger, var(--font-color-primary)) !important;
+/* To-Do's own destructive button is bold white on red; only the custom theme
+   recolours it (its variables are undefined otherwise, which used to leave
+   dark text on red in the light theme). */
+html.custom-mode .button.red {
+  background: var(--bg-danger, #A80000) !important;
+  color: #FFFFFF !important;
+  font-weight: bold !important;
 }
 .ms-Callout-container .ms-Tooltip * {
   background: var(--bg-secondary);

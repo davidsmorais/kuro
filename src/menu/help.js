@@ -1,41 +1,42 @@
 "use strict";
 const { app, shell } = require("electron");
+const { t } = require("./../locale");
 const dialog = require("./../dialog");
 const {store: settings} = require("./../settings");
 const update = require("./../update");
 const url = require("./../url");
 
 module.exports = {
-  label: "Help",
+  label: t("menu.help.label"),
   submenu: [
     {
-      label: "View License",
+      label: t("menu.help.viewLicense"),
       click() {
         shell.openExternal(url.license);
       },
     },
     {
-      label: `Version ${app.getVersion()}`,
+      label: t("menu.help.version", {version: app.getVersion()}),
       enabled: false,
     },
     {
-      label: "Kuro Homepage",
+      label: t("menu.help.homepage"),
       click() {
         shell.openExternal(url.homepage);
       },
     },
     {
-      label: "Check for Update",
+      label: t("menu.help.checkForUpdate"),
       click() {
         update.check();
       },
     },
     {
-      label: "Update Check Frequency",
+      label: t("menu.help.updateCheckFrequency"),
       enabled: !settings.get("disableAutoUpdateCheck"),
       submenu: [
         {
-          label: "Once Every 4 Hours",
+          label: t("menu.help.every4Hours"),
           type: "checkbox",
           checked: settings.get("updateCheckPeriod") === "4",
           click(item) {
@@ -44,7 +45,7 @@ module.exports = {
           },
         },
         {
-          label: "Once Every 8 Hours",
+          label: t("menu.help.every8Hours"),
           type: "checkbox",
           checked: settings.get("updateCheckPeriod") === "8",
           click(item) {
@@ -53,7 +54,7 @@ module.exports = {
           },
         },
         {
-          label: "Once Every 12 Hours",
+          label: t("menu.help.every12Hours"),
           type: "checkbox",
           checked: settings.get("updateCheckPeriod") === "12",
           click(item) {
@@ -62,7 +63,7 @@ module.exports = {
           },
         },
         {
-          label: "Once a Day",
+          label: t("menu.help.onceADay"),
           type: "checkbox",
           checked: settings.get("updateCheckPeriod") === "24",
           click(item) {
@@ -73,7 +74,7 @@ module.exports = {
       ],
     },
     {
-      label: "Disable Automatic Update Check",
+      label: t("menu.help.disableAutoUpdateCheck"),
       type: "checkbox",
       checked: settings.get("disableAutoUpdateCheck"),
       click(item) {
@@ -85,7 +86,7 @@ module.exports = {
       type: "separator",
     },
     {
-      label: "Keyboard Shortcuts Reference",
+      label: t("menu.help.keyboardShortcuts"),
       click() {
         dialog.confirmKey();
       },
@@ -94,16 +95,16 @@ module.exports = {
       type: "separator",
     },
     {
-      label: "Search",
+      label: t("menu.help.search"),
       submenu: [
         {
-          label: "Issues",
+          label: t("menu.help.issues"),
           click() {
             shell.openExternal(url.search);
           },
         },
         {
-          label: "Feature Requests",
+          label: t("menu.help.featureRequests"),
           click() {
             shell.openExternal(url.searchFeatureRequests);
           },
@@ -111,19 +112,19 @@ module.exports = {
       ],
     },
     {
-      label: "Fork Source",
+      label: t("menu.help.forkSource"),
       click() {
         shell.openExternal(url.source);
       },
     },
     {
-      label: "Report Issue",
+      label: t("menu.help.reportIssue"),
       click() {
         shell.openExternal(url.issue);
       },
     },
     {
-      label: "Community Discussion",
+      label: t("menu.help.community"),
       click() {
         shell.openExternal(url.community);
       },

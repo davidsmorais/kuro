@@ -27,10 +27,15 @@ Checkout our [Installation Guide](https://github.com/davidsmorais/kuro/wiki/Inst
 ### Snapcraft
 
 Kuro can be found on the [Snap Store](https://snapcraft.io/kuro-desktop/).
-If you have Snap installed on your system you can install Kuro by running
+If you have Snap installed on your system you can install Kuro from the **stable** channel by running
 ```
 sudo snap install kuro-desktop
 ```
+Then launch it from your desktop's application menu, or run `kuro-desktop` (snap puts the binary in `/snap/bin`, which is normally on your `PATH`; if it is not, run `/snap/bin/kuro-desktop`).
+
+> ⚠️ Do **not** use `--edge`: the edge channel is outdated and no longer maintained. If you previously installed it, switch with `sudo snap refresh kuro-desktop --stable`.
+
+Kuro stores its settings in `~/.config/Kuro/` (`~/snap/kuro-desktop/current/.config/Kuro/` for the snap), following the XDG base directory spec. A `~/.kuro.json` from older versions is moved there automatically on first start.
 ### AUR
 
 Kuro can be found in [AUR](https://aur.archlinux.org/packages/kuro-appimage) (Thanks to [Reverier-Xu](https://github.com/Reverier-Xu)).
@@ -48,6 +53,17 @@ yay -S kuro-appimage
 
 * **Do not request new package types**. You can submit the PR or an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) to have them built.
 
+
+
+### Wayland
+
+Kuro runs through XWayland by default. To run natively on Wayland (crisp HiDPI scaling), start it with Electron's standard environment variable, for example:
+
+```
+ELECTRON_OZONE_PLATFORM_HINT=auto kuro-desktop
+```
+
+Note that the optional global shortcuts only work on X11.
 
 ## Bug 🐞, Questions ❓ or  Feature Request 🚀 ?
 Submit an [issue](https://github.com/davidsmorais/kuro/issues/new/choose) or a PR.

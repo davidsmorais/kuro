@@ -1,0 +1,305 @@
+/* Per-list theme picker, built by src/theme-panel.js. Geometry mirrors To-Do's
+   own settings pane (360px wide, below the 48px header, slides in from the
+   right) so the two feel like the same UI. */
+/* Palette button in the header, left of the settings gear */
+#kuro-theme-btn {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--font-color-brand, #2564CF);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+#kuro-theme-btn:hover {
+  background: var(--bg-hover, rgba(0, 0, 0, 0.06));
+}
+#kuro-theme-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s var(--kuro-ease, ease-out);
+}
+#kuro-theme-btn:active svg {
+  transform: scale(0.88);
+}
+/* The pane */
+.kuro-theme-pane {
+  position: fixed;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  z-index: 1000000;
+  width: 360px;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary, #FFFFFF);
+  color: var(--font-color-primary, #292827);
+  border-left: 1px solid var(--bg-separator, #E1DFDD);
+  box-shadow: rgba(0, 0, 0, 0.133) 0 1.6px 3.6px 0, rgba(0, 0, 0, 0.11) 0 0.3px 0.9px 0;
+  font-size: 14px;
+  line-height: 20px;
+  transform: translateX(100%);
+  transition: transform 0.35s var(--kuro-ease, ease-out);
+}
+.kuro-theme-pane.is-open {
+  transform: none;
+}
+.kuro-theme-pane[hidden] {
+  display: none;
+}
+/* Content settles in as the pane arrives (same bounce as zashboard cards) */
+.kuro-theme-pane.is-open .kuro-theme-pane__scroll {
+  animation: kuro-bounce-in 0.4s var(--kuro-ease, ease-out) both;
+}
+/* To-Do styles every button (100% size, its own font/colour); injected sheets
+   lose ties with the page's own, so each control below sets its size itself */
+.kuro-theme-pane button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.kuro-theme-pane__header {
+  position: relative;
+  flex: none;
+}
+.kuro-theme-pane__title {
+  margin: 0;
+  padding: 20px 56px 18px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+}
+.kuro-theme-pane__close {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--font-color-secondary, #484644);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+.kuro-theme-pane__close:hover {
+  background: var(--bg-hover, #F5F5F5);
+  color: var(--font-color-primary, #292827);
+}
+.kuro-theme-pane__close svg {
+  width: 12px;
+  height: 12px;
+}
+.kuro-theme-pane__scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 16px;
+}
+.kuro-theme-pane__list {
+  margin: 0 0 12px;
+  color: var(--font-color-secondary, #605E5C);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.kuro-theme-pane__list:empty {
+  display: none;
+}
+.kuro-theme-pane__hint {
+  margin: 8px 0 0;
+  color: var(--font-color-secondary, #605E5C);
+  font-size: 12px;
+  line-height: 16px;
+}
+.kuro-theme-pane__tabs {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--bg-separator, #E1DFDD);
+}
+.kuro-theme-pane__tab {
+  flex: 1 1 0;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--font-color-secondary, #605E5C);
+  font-weight: 600;
+  transition: color 0.18s ease-out, background-color 0.2s ease-out;
+}
+.kuro-theme-pane__tab:hover {
+  background: var(--bg-hover, #F5F5F5);
+}
+.kuro-theme-pane__tab.is-active {
+  color: var(--font-color-primary, #292827);
+}
+/* Underline that slides between tabs, positioned by src/theme-panel.js */
+.kuro-theme-pane__tab-indicator {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--bg-brand, #007262);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, width;
+}
+.kuro-theme-pane__tab-indicator.is-ready {
+  opacity: 1;
+  transition: transform 0.55s var(--kuro-ease-spring, ease-out), width 0.32s var(--kuro-ease, ease-out), opacity 0.15s ease-out;
+}
+.kuro-theme-pane__label {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.kuro-theme-pane__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.kuro-theme-pane__swatch {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--swatch);
+  transition: transform 0.2s var(--kuro-ease, ease-out), box-shadow 0.2s ease-out;
+}
+.kuro-theme-pane__swatch:hover {
+  transform: scale(1.08);
+}
+.kuro-theme-pane__swatch:active {
+  transform: scale(0.94);
+}
+.kuro-theme-pane__swatch.is-light {
+  --kuro-flash-inset: var(--swatch-ring);
+  box-shadow: inset 0 0 0 2px var(--swatch-ring);
+}
+.kuro-theme-pane__swatch.is-active::after,
+.kuro-theme-pane__scene.is-active::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px solid var(--font-color-primary, #292827);
+  border-radius: inherit;
+  animation: kuro-ring-in 0.35s var(--kuro-ease-spring, ease-out) both;
+}
+@keyframes kuro-ring-in {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.kuro-theme-pane__scenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.kuro-theme-pane__scene {
+  position: relative;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--bg-secondary, #FAF9F8);
+  transition: transform 0.2s var(--kuro-ease, ease-out), box-shadow 0.2s ease-out;
+}
+.kuro-theme-pane__scene:hover {
+  transform: scale(1.04);
+}
+.kuro-theme-pane__scene:active {
+  transform: scale(0.97);
+}
+.kuro-theme-pane__scene-label {
+  width: 100%;
+  padding: 3px 2px;
+  border-radius: 0 0 8px 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Same gradients as src/style/list-backgrounds.css */
+.kuro-theme-pane__scene[data-scene="list-color"] {
+  background: linear-gradient(135deg, var(--bg-brand, #007262), var(--bg-brand-hover, #1E9484));
+}
+.kuro-theme-pane__scene[data-scene="sunset"] {
+  background: linear-gradient(160deg, #FF9A6C, #EE5A7A 45%, #6A3D9A);
+}
+.kuro-theme-pane__scene[data-scene="ocean"] {
+  background: linear-gradient(160deg, #1E8FB8, #1C5B9B 55%, #0E2F5A);
+}
+.kuro-theme-pane__scene[data-scene="forest"] {
+  background: linear-gradient(160deg, #7FBF7F, #2F7D4F 55%, #123D2A);
+}
+.kuro-theme-pane__scene[data-scene="aurora"] {
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(88, 255, 200, 0.55), transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(120, 90, 255, 0.55), transparent 55%),
+    linear-gradient(180deg, #0B1E3A, #102B52);
+}
+.kuro-theme-pane__scene[data-scene="sand"] {
+  background: linear-gradient(160deg, #F6E3C5, #E5C39A 55%, #C9A074);
+}
+.kuro-theme-pane__scene[data-scene="night"] {
+  background: linear-gradient(180deg, #0D1026, #1A1F3D 60%, #24184A);
+}
+.kuro-theme-pane__scene[data-scene="berry"] {
+  background: linear-gradient(160deg, #B8336A, #7A1F5C 55%, #3A0F3F);
+}
+.kuro-theme-pane__none {
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+  padding: 6px 16px;
+  border: 1px solid var(--bg-separator, #8A8886);
+  border-radius: 2px;
+  background: var(--bg-primary, #FFFFFF);
+  font-weight: 600;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+}
+.kuro-theme-pane__none:hover {
+  background: var(--bg-hover, #F5F5F5);
+}
+.kuro-theme-pane__none.is-active {
+  border-color: var(--bg-brand, #007262);
+  color: var(--bg-brand, #007262);
+}
+@media (prefers-reduced-motion: reduce) {
+  .kuro-theme-pane,
+  .kuro-theme-pane__tab-indicator.is-ready,
+  .kuro-theme-pane__swatch,
+  .kuro-theme-pane__scene,
+  #kuro-theme-btn svg {
+    transition: none;
+  }
+  .kuro-theme-pane.is-open .kuro-theme-pane__scroll,
+  .kuro-theme-pane__swatch.is-active::after,
+  .kuro-theme-pane__scene.is-active::after {
+    animation: none;
+  }
+}

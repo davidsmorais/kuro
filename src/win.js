@@ -4,7 +4,10 @@ const { is } = require("./util");
 const file = require("./file");
 const { store: settings } = require("./settings");
 
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow, nativeTheme } = electron;
+
+// MS To-Do's page backgrounds, so the window doesn't flash before first paint
+const PAGE_BACKGROUND = { dark: "#11100f", light: "#ffffff" };
 
 class Win {
   get _screenDimensions() {
@@ -40,13 +43,15 @@ class Win {
     return Object.assign({}, this._minDimensions, this._lastState, {
       alwaysOnTop: settings.get("alwaysOnTop"),
       autoHideMenuBar: settings.get("menuBarHidden"),
+      backgroundColor: settings.get("autoNightMode") && nativeTheme.shouldUseDarkColors
+        ? PAGE_BACKGROUND.dark
+        : PAGE_BACKGROUND.light,
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),
       titleBarStyle: "default",
       webPreferences: {
         nodeIntegration: false,
-        enableRemoteModule: true,
         sandbox: false,
         plugins: true,
         preload: file.preload,
@@ -54,14 +59,14 @@ class Win {
     });
   }
 
-  activate(command) {
+  activate(command, ...args) {
     const [win] = BrowserWindow.getAllWindows();
 
     if (is.darwin) {
       win.restore();
     }
 
-    win.webContents.send(command);
+    win.webContents.send(command, ...args);
   }
 
   appear() {

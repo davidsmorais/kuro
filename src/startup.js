@@ -1,14 +1,16 @@
 "use strict";
-const { app, remote } = require("electron");
 const AutoLaunch = require("auto-launch");
 const { is } = require("./util");
 const {store: settings} = require("./settings");
 
+// The executable path works in the main process and in the preload alike (the
+// old `remote` module is gone). macOS needs the .app bundle; an AppImage must
+// point at the image itself, its mount point does not survive a reboot.
 const _settings = {
   name: "Kuro",
   path: is.darwin
-    ? (app || remote.app).getPath("exe").replace(/\.app\/Content.*/, ".app")
-    : undefined,
+    ? process.execPath.replace(/\.app\/Contents.*/, ".app")
+    : (process.env.APPIMAGE || undefined),
   isHidden: true,
 };
 

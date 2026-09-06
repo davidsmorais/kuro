@@ -15,4 +15,5 @@ module.exports = {
   source: "https://github.com/davidsmorais/kuro",
   update:
     "https://raw.githubusercontent.com/davidsmorais/kuro/master/docs/update.json",
+  updateApi: "https://api.github.com/repos/davidsmorais/kuro/releases/latest",
 };

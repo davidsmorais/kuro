@@ -1,0 +1,103 @@
+/*
+ * List backgrounds (View > List Background). The chosen background id is set
+ * on <html data-kuro-background="…"> by src/background.js for the list that is
+ * currently open; the list column (#main) is painted with it. Task cards keep
+ * their own surface colour, so text stays readable.
+ */
+html[data-kuro-background] #app #main {
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: local !important;
+}
+/* Solid colour picked in the theme panel (variable set by src/background.js) */
+html[data-kuro-background="color"] #app #main {
+  background-color: var(--kuro-list-bg) !important;
+  background-image: none !important;
+}
+html[data-kuro-background="list-color"] #app.theme-blue #main {
+  --kuro-bg-top: #765EE6;
+  --kuro-bg-bottom: #1C9FFF;
+}
+html[data-kuro-background="list-color"] #app.theme-red #main {
+  --kuro-bg-top: #E84F53;
+  --kuro-bg-bottom: #EBBD94;
+}
+html[data-kuro-background="list-color"] #app.theme-purple #main {
+  --kuro-bg-top: #954DB0;
+  --kuro-bg-bottom: #7159F0;
+}
+html[data-kuro-background="list-color"] #app.theme-green #main {
+  --kuro-bg-top: #51A03E;
+  --kuro-bg-bottom: #AADF5D;
+}
+html[data-kuro-background="list-color"] #app.theme-skyblue #main {
+  --kuro-bg-top: #558DEB;
+  --kuro-bg-bottom: #53D2E5;
+}
+/* Fallback for views without a list theme (My Day): Kuro's brand colour.
+   Gradients above are To-Do's own light-mode list gradients, hardcoded
+   because in dark mode To-Do collapses them to one flat tone. */
+html[data-kuro-background="list-color"] #app #main {
+  --kuro-bg-top: var(--bg-brand);
+  --kuro-bg-bottom: var(--bg-brand-hover);
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--kuro-bg-top) 70%, var(--bg-primary)),
+    color-mix(in srgb, var(--kuro-bg-bottom) 70%, var(--bg-primary))
+  ) !important;
+}
+html[data-kuro-background="sunset"] #app #main {
+  background-image: linear-gradient(160deg, #FF9A6C 0%, #EE5A7A 45%, #6A3D9A 100%) !important;
+}
+html[data-kuro-background="ocean"] #app #main {
+  background-image: linear-gradient(160deg, #1E8FB8 0%, #1C5B9B 55%, #0E2F5A 100%) !important;
+}
+html[data-kuro-background="forest"] #app #main {
+  background-image: linear-gradient(160deg, #7FBF7F 0%, #2F7D4F 55%, #123D2A 100%) !important;
+}
+html[data-kuro-background="aurora"] #app #main {
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(88, 255, 200, 0.55), transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(120, 90, 255, 0.55), transparent 55%),
+    linear-gradient(180deg, #0B1E3A 0%, #102B52 100%) !important;
+}
+html[data-kuro-background="sand"] #app #main {
+  background-image: linear-gradient(160deg, #F6E3C5 0%, #E5C39A 55%, #C9A074 100%) !important;
+}
+html[data-kuro-background="night"] #app #main {
+  background-image:
+    radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.12), transparent 25%),
+    linear-gradient(180deg, #0D1026 0%, #1A1F3D 60%, #24184A 100%) !important;
+}
+html[data-kuro-background="berry"] #app #main {
+  background-image: linear-gradient(160deg, #B8336A 0%, #7A1F5C 55%, #3A0F3F 100%) !important;
+}
+/* Keep the list header readable: light text on dark backgrounds, dark text on
+   light ones. Toolbar buttons that To-Do paints itself (.active, .selectedButton)
+   keep their own colours. */
+html[data-kuro-tone="dark"] #app #main .tasksToolbar-headline,
+html[data-kuro-tone="dark"] #app #main .tasksToolbar-headline *,
+html[data-kuro-tone="dark"] #app #main .tasksToolbar-subline,
+html[data-kuro-tone="dark"] #app #main .tasksToolbar-subline *,
+html[data-kuro-tone="dark"] #app #main .listTitle,
+html[data-kuro-tone="dark"] #app #main .listTitle-icon,
+html[data-kuro-tone="dark"] #app #main .toolbarButton:not(.active):not(.selectedButton),
+html[data-kuro-tone="dark"] #app #main .toolbarButton:not(.active):not(.selectedButton) .fluentIcon {
+  color: #FFFFFF !important;
+}
+html[data-kuro-tone="dark"] #app #main .toolbarButton:not(.active):not(.selectedButton):hover {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+html[data-kuro-tone="light"] #app #main .tasksToolbar-headline,
+html[data-kuro-tone="light"] #app #main .tasksToolbar-headline *,
+html[data-kuro-tone="light"] #app #main .tasksToolbar-subline,
+html[data-kuro-tone="light"] #app #main .tasksToolbar-subline *,
+html[data-kuro-tone="light"] #app #main .listTitle,
+html[data-kuro-tone="light"] #app #main .listTitle-icon,
+html[data-kuro-tone="light"] #app #main .toolbarButton:not(.active):not(.selectedButton),
+html[data-kuro-tone="light"] #app #main .toolbarButton:not(.active):not(.selectedButton) .fluentIcon {
+  color: #323130 !important;
+}
+html[data-kuro-tone="light"] #app #main .toolbarButton:not(.active):not(.selectedButton):hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}

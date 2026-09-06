@@ -1,7 +1,8 @@
 "use strict";
+const {t} = require("./../locale");
 
 module.exports = {
-  label: "Edit",
+  label: t("menu.edit.label"),
   submenu: [
     {
       type: "separator",

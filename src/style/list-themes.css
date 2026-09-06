@@ -1,0 +1,68 @@
+/*
+ * Follow List Colors (setting `listAccents`, class `list-accents` on <html>).
+ *
+ * MS To-Do web marks the current list's colour theme on `#app.theme-<name>`
+ * (blue | red | purple | green | skyblue) and ships one palette per theme as
+ * `--list-theme-<name>-primary-0/10`, `-top` and `-bottom` custom properties
+ * (dark mode collapses all of them to a single pastel tone). The web app only
+ * uses the `primary-*` tones (list title, toolbar icons, checkboxes, add-task
+ * row); `-top`/`-bottom` is the gradient the official clients paint behind the
+ * list and is left unused on the web.
+ *
+ * With the option on, the list view and the list's own sidebar entry follow
+ * that palette instead of Kuro's brand colour. Backgrounds are a separate
+ * feature (src/background.js). Nothing outside the current list is recoloured
+ * (see issue #91).
+ */
+html.list-accents #app.theme-blue {
+  --list-accent: var(--list-theme-blue-primary-10);
+  --list-accent-strong: var(--list-theme-blue-primary-0);
+  --list-accent-top: var(--list-theme-blue-top);
+  --list-accent-bottom: var(--list-theme-blue-bottom);
+}
+html.list-accents #app.theme-red {
+  --list-accent: var(--list-theme-red-primary-10);
+  --list-accent-strong: var(--list-theme-red-primary-0);
+  --list-accent-top: var(--list-theme-red-top);
+  --list-accent-bottom: var(--list-theme-red-bottom);
+}
+html.list-accents #app.theme-purple {
+  --list-accent: var(--list-theme-purple-primary-10);
+  --list-accent-strong: var(--list-theme-purple-primary-0);
+  --list-accent-top: var(--list-theme-purple-top);
+  --list-accent-bottom: var(--list-theme-purple-bottom);
+}
+html.list-accents #app.theme-green {
+  --list-accent: var(--list-theme-green-primary-10);
+  --list-accent-strong: var(--list-theme-green-primary-0);
+  --list-accent-top: var(--list-theme-green-top);
+  --list-accent-bottom: var(--list-theme-green-bottom);
+}
+html.list-accents #app.theme-skyblue {
+  --list-accent: var(--list-theme-skyblue-primary-10);
+  --list-accent-strong: var(--list-theme-skyblue-primary-0);
+  --list-accent-top: var(--list-theme-skyblue-top);
+  --list-accent-bottom: var(--list-theme-skyblue-bottom);
+}
+/* * Sidebar: only the active (current) list carries its colour * */
+html.list-accents #app[class*="theme-"] .listItem-container.active {
+  background: color-mix(in srgb, var(--list-accent) 14%, transparent) !important;
+}
+html.list-accents #app[class*="theme-"] .listItem-container.active::before {
+  background-color: var(--list-accent);
+}
+html.list-accents #app[class*="theme-"] .listItem-container.active .listItem-icon,
+html.list-accents #app[class*="theme-"] .listItem-container.active .listItem-title {
+  color: var(--list-accent);
+}
+/* * Brand-coloured controls inside the list view follow the list colour * */
+html.list-accents #app[class*="theme-"] .button.blue {
+  background: var(--list-accent);
+}
+html.list-accents #app[class*="theme-"] .button.blue:hover {
+  background: var(--list-accent-strong);
+}
+html.list-accents #app[class*="theme-"] .button.blueText,
+html.list-accents #app[class*="theme-"] .button:hover.blueText {
+  color: var(--list-accent);
+}

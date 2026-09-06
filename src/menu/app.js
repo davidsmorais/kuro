@@ -1,6 +1,7 @@
 "use strict";
 const {app} = require("electron");
 const {setAcc} = require("./../keymap");
+const {t} = require("./../locale");
 const dialog = require("./../dialog");
 
 module.exports = {
@@ -27,7 +28,7 @@ module.exports = {
     }, {
       type: "separator",
     }, {
-      label: "Exit",
+      label: t("menu.app.exit"),
       accelerator: setAcc("exit", "CmdorCtrl+Q"),
       click() {
         dialog.confirmExit();
