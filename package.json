@@ -21,6 +21,7 @@
     "postinstall": "electron-builder install-app-deps",
     "icons": "electron-icon-maker --input=./static/Icon.png --output=./build/",
     "test": "xo && stylelint 'src/style/*.css'",
+    "test:wayland": "node test/wayland.js && xo test/wayland.js",
     "release": "yarn version && rm -rf dist build && yarn icons && electron-builder --publish never",
     "build-snap": "electron-builder --linux snap",
     "build-flatpak": "electron-builder build --linux flatpak",
@@ -83,7 +84,8 @@
   "build": {
     "appId": "com.davidsmorais.kuro",
     "snap": {
-      "title": "Kuro"
+      "title": "Kuro",
+      "allowNativeWayland": true
     },
     "files": [
       "**/*",
@@ -123,6 +125,11 @@
     "linux": {
       "category": "Office",
       "icon": "icons/png",
+      "executableArgs": [
+        "--no-sandbox",
+        "--ozone-platform-hint=auto",
+        "--enable-wayland-ime"
+      ],
       "description": "Kuro is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries. (Ao fork)",
       "synopsis": "Elegant Microsoft To-Do desktop app (Ao fork)",
       "publish": {
