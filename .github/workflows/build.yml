@@ -10,9 +10,11 @@ jobs:
   BuildOrRelease:
     # the type of machine to run the job on
     runs-on: ${{ matrix.os }}
-    
+
     # create a build matrix for jobs
     strategy:
+      # let the Windows build finish even when the Linux one fails, and vice versa
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
 
@@ -20,24 +22,26 @@ jobs:
       - name: ⚙️ Check out Git repository
         uses: actions/checkout@v4
 
-      - name: ⚙️📦️ Build(Linux)
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      # electron-builder needs: rpmbuild (rpm), bsdtar (pacman), flatpak +
+      # flatpak-builder + eu-strip (flatpak). AppImage, deb and snap need
+      # nothing extra. The flatpak runtime/sdk are installed from Flathub by
+      # flatpak-builder itself.
+      - name: ⚙️ Install Linux packaging tools
         if: matrix.os == 'ubuntu-latest'
         run: |
-          docker run --rm \
-          --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS_TAG|TRAVIS|TRAVIS_REPO_|TRAVIS_BUILD_|TRAVIS_BRANCH|TRAVIS_PULL_REQUEST_|APPVEYOR_|CSC_|GH_|GITHUB_|BT_|AWS_|STRIP|BUILD_') \
-          --env ELECTRON_CACHE="/root/.cache/electron" \
-          --env ELECTRON_BUILDER_CACHE="/root/.cache/electron-builder" \
-          -v ${PWD}:/project \
-          -v ${PWD##*/}-node-modules:/project/node_modules \
-          -v ~/.cache/electron:/root/.cache/electron \
-          -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-          electronuserland/builder \
-          /bin/bash -c "yarn install && yarn icons && yarn run electron-builder --publish never"
-      
-      - name: ⚙️📦️ Build(Windows)
-        if: matrix.os == 'windows-latest'
-        run: yarn install && yarn icons && yarn run electron-builder --publish never
-      
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends rpm libarchive-tools flatpak flatpak-builder elfutils
+          flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+      - name: ⚙️📦️ Build
+        run: yarn install --frozen-lockfile && yarn icons && yarn run electron-builder --publish never
+
       - name: 🌐️ Upload results
         uses: actions/upload-artifact@v4
         with:
@@ -50,7 +54,7 @@ jobs:
             dist/*.rpm
             dist/*.flatpak
             dist/*.exe
-      
+
       - name: 🚀️ release
         uses: softprops/action-gh-release@v2
         with:
