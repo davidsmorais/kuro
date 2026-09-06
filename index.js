@@ -1,6 +1,7 @@
 "use strict";
 const { app, BrowserWindow, Menu, shell, session } = require("electron");
 const fs = require("fs");
+const path = require("path");
 const kebabCase = require("lodash/kebabCase");
 const { is, readSheet } = require("./src/util");
 const file = require("./src/file");
@@ -26,6 +27,23 @@ let mainWindow;
 
 if (!app.requestSingleInstanceLock()) {
   app.quit();
+}
+
+// Wayland desktops (GNOME, KDE) match a window - and its notifications - to
+// a .desktop file by app id, not by StartupWMClass as on X11; without it the
+// window shows a generic icon. Electron derives the app id from this name.
+// electron-builder names the file after the executable; snaps and flatpaks
+// use their own ids.
+if (is.linux && app.isPackaged) {
+  const executable = path.basename(process.execPath);
+  let desktopFile = `${executable}.desktop`;
+  if (process.env.FLATPAK_ID) {
+    desktopFile = `${process.env.FLATPAK_ID}.desktop`;
+  } else if (process.env.SNAP_NAME) {
+    desktopFile = `${process.env.SNAP_NAME}_${executable}.desktop`;
+  }
+
+  app.setDesktopName(desktopFile);
 }
 
 app.on("second-instance", () => {
