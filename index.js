@@ -106,6 +106,12 @@ app.whenReady().then(() => {
 
     webContents.insertCSS(customThemeCss);
 
+    fs.readFile(file.userStyle, "utf8", (error, css) => {
+      if (!error && css.trim()) {
+        webContents.insertCSS(css);
+      }
+    });
+
     if (!shown) {
       if (store.get("launchMinimized")) {
         mainWindow.hide();
