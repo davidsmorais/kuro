@@ -1,0 +1,59 @@
+/* Locate button in the detail header and the row flash, built by src/locate-task.js */
+.kuro-locate-btn {
+  flex: none;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  margin: 0 2px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--font-color-secondary, #605E5C);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.55;
+  transition: opacity 0.15s ease-out, background-color 0.15s ease-out;
+}
+.kuro-locate-btn:hover {
+  opacity: 1;
+  background: var(--bg-hover, rgba(0, 0, 0, 0.06));
+}
+.kuro-locate-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.kuro-locate-btn.kuro-locate-miss {
+  opacity: 1;
+  color: #D01B2A;
+  animation: kuro-locate-shake 0.4s ease-in-out;
+}
+/* Outline, not box-shadow: user stylesheets often use box-shadow for row accents */
+.taskItem.kuro-locate-flash .taskItem-body {
+  animation: kuro-locate-flash 1.6s ease-out;
+}
+@keyframes kuro-locate-flash {
+  0%,
+  40% {
+    outline: 2px solid #2564CF;
+    outline-offset: -2px;
+  }
+  100% {
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+  }
+}
+@keyframes kuro-locate-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}

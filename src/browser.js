@@ -5,6 +5,7 @@ const nav = require("./nav");
 const { store } = require("./settings");
 const startup = require("./startup");
 const dialog = require("./dialog");
+const locateTask = require("./locate-task");
 
 ipc.on("search", () => {
   nav.click(".search");
@@ -155,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   mode.restore();
+  locateTask.mount();
 });
 
 // Open links in system browser
